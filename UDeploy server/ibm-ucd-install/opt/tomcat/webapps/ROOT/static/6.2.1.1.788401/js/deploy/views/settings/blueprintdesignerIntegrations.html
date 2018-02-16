@@ -1,0 +1,19 @@
+<div class="masterContainer">
+  <div class="innerContainer">
+    <div id="integrations"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    require([
+        "deploy/widgets/integration/pattern/PatternIntegrationProviderList"
+        ],
+    function(
+        PatternIntegrationProviderList
+    ) {
+        var integrationProviderList = new PatternIntegrationProviderList();
+        integrationProviderList.placeAt("integrations");
+    });
+    /* ]]> */
+</script>

@@ -1,0 +1,6235 @@
+/*
+* Licensed Materials - Property of IBM Corp.
+* IBM UrbanCode Deploy
+* (c) Copyright IBM Corporation 2011, 2016. All Rights Reserved.
+*
+* U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+* GSA ADP Schedule Contract with IBM Corp.
+*/
+/**************************************************************************************************
+ * Styling supplements for common page elements
+ *************************************************************************************************/
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.breadcrumb-arrow {
+  margin: 0px 9px;
+}
+
+._webext_detail_header .detailDiv {
+  padding: 3px 0px;
+}
+
+.description {
+  font-weight: bold;
+}
+
+.inline-block, .inlineBlock {
+  display: inline-block;
+}
+
+.dj_iequirks .inlineBlock {
+  display: inline;
+  zoom: 1;
+}
+
+.dj_ie7 .inlineBlock {
+  display: inline;
+  zoom: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.description-text {
+    color: #777;
+    font-family: Georgia;
+    font-style: italic;
+}
+div.hr {
+    background-image: none;
+    border-top: 1px solid #CCC;
+    height: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.align-top {
+  vertical-align: top;
+  margin: 5px;
+}
+
+.overflow-visible {
+    overflow: visible !important;
+}
+
+.listTopButtons {
+    margin: 14px 0 14px -5px;
+}
+.listTopButtons:empty {
+    display: none;
+    margin: 0;
+}
+
+.webextTable .actionsPlaceholder {
+    width: 130px;
+}
+
+.genericDetail {
+    background: none;
+    background-color: #F0F0F0;
+    border-top: none;
+}
+
+.no-double-click-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: moz-none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.one-line-overflow-text, .one-line-overflow-text-click-to-show {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.one-line-overflow-text-click-to-show:active {
+    text-overflow: normal;
+    white-space: normal;
+    overflow: visible;
+}
+
+/**************************************************************************************************
+ * Tab Manager (Keywords: Tabs, Tab)
+ *************************************************************************************************/
+.topLevelTabs .tabManager {
+    white-space: nowrap;
+}
+.tabManager .tab.configurationTab {
+    background-image: url('../../images/icons/pencil-sprite.png');
+    background-repeat: no-repeat;
+    background-position: 10px 0;
+    padding-left: 30px;
+}
+.tabManager .tab.configurationTab:hover {
+    background-position: 10px -30px;
+}
+.tabManager .tab.configurationTab:active {
+    background-position: 10px -60px;
+}
+.tabManager .tab.configurationTab.selected {
+    background-position: 10px 8px;
+}
+.tabManager .tab.configurationTab.selected:hover {
+    background-position: 10px -22px;
+}
+.tabManager .tab.configurationTab.selected:active {
+    background-position: 10px -52px;
+}
+
+/**************************************************************************************************
+ * Header Menu (My Profile Submenu) (Keywords: Header, My Profile)
+ *************************************************************************************************/
+ .oneui .dijitPopup.dijitMenuPopup .dijitMenuTable.my-profile-menu .dijitMenuItem:hover {
+    background-color: #CCE8F2;
+}
+ .oneui .dijitPopup.dijitMenuPopup .dijitMenuTable.my-profile-menu .dijitMenuItem .dijitMenuItemLabel {
+    color: #222;
+}
+
+/**************************************************************************************************
+ * About Popup (Keywords: About, Popup)
+ *************************************************************************************************/
+.about-popup.dijitDialog, .license-popup.dijitDialog {
+    overflow: visible;
+    width: 400px;
+    top: 200px !important;
+}
+
+.about-popup .dijitDialogTitleBar {
+    background: url("../../lib/webext/images/webext/login/ibmLogoDark.png") 30px 50px no-repeat;
+    border: none;
+    height: 50px;
+}
+
+.about-popup.dijitDialog .close-popup-button {
+    background-image: url("../../lib/idx/themes/oneui/idx/widget/images/popupClose.png");
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 28px;
+    height: 28px;
+    z-index: 1004;
+    cursor: pointer;
+}
+
+.about-popup .dijitDialogPaneContent {
+    padding: 20px 50px 50px;
+    border: none;
+}
+
+.about-popup .product-name {
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.about-popup .product-version {
+    font-size: 11px;
+    padding-bottom: 20px;
+}
+
+.about-popup .product-description {
+    line-height: 1.2;
+}
+
+/**************************************************************************************************
+ * Get Started Popup (Keywords: Get Started, Popup)
+ *************************************************************************************************/
+.get-started-popup.dijitDialog {
+    font-family: Helvetica Neue;
+    background-color: #10222b;
+    color: #fff;
+    font-weight: 100;
+    width: 800px;
+    height: 440px;
+    top: 100px !important;
+    border: none;
+}
+
+.get-started-popup .dijitDialogTitleBar {
+    border: none;
+}
+
+.get-started-popup.dijitDialog .close-popup-button {
+    background-image: url("../../lib/idx/themes/oneui/idx/widget/images/popupClose.png");
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 29px;
+    height: 28px;
+    z-index: 1004;
+    cursor: pointer;
+}
+
+.get-started-popup .content {
+    text-align: center;
+}
+
+.get-started-popup .message {
+    margin-top: 40px;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.get-started-popup .title {
+    text-align: center;
+    font-weight: 400;
+    line-height: 1em;
+    font-size: 2.5em;
+}
+
+.get-started-popup .bottomrow {
+    padding-top: 40px;
+    margin: auto;
+    text-align: center;
+}
+
+.get-started-popup .badgecontainer {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: auto;
+    vertical-align: top;
+}
+
+.get-started-popup .secondarytaskbadges {
+    border: 5px solid #1d3649;
+    border-radius: 50%;
+    background: #f3f3f3;
+    width: 75px;
+    height: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+}
+
+.get-started-popup .tutorial {
+    background:url(../../images/getStarted/Tutorial.png) no-repeat center #fff;
+}
+
+.get-started-popup .videos {
+    background:url(../../images/getStarted/Videos.png) no-repeat center #fff;
+}
+
+.get-started-popup .questions {
+    background:url(../../images/getStarted/Questions.png) no-repeat center #fff;
+}
+
+.get-started-popup .documentation {
+    background:url(../../images/getStarted/Documentation.png) no-repeat center #fff;
+}
+
+.get-started-popup .tutorial:hover {
+    background:url(../../images/getStarted/Tutorial.hover.png) no-repeat center #fff;
+    cursor:pointer;
+}
+
+.get-started-popup .videos:hover {
+    background:url(../../images/getStarted/Videos.hover.png) no-repeat center #fff;
+    cursor:pointer;
+}
+
+.get-started-popup .questions:hover {
+    background:url(../../images/getStarted/Questions.hover.png) no-repeat center #fff;
+    cursor:pointer;
+}
+
+.get-started-popup .documentation:hover {
+    background: url(../../images/getStarted/Documentation.hover.png) no-repeat center #fff;
+    cursor: pointer;
+}
+
+.get-started-popup .secondarytaskbadges:hover {
+    border: 5px solid #144d14;
+    cursor: pointer;
+}
+
+.get-started-popup .secondarytasklbl {
+    text-align: center;
+    padding-top: 7px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    font-size: 1.2em;
+}
+/**************************************************************************************************
+ * Version File Compare (Keywords: Version, Compare)
+ *************************************************************************************************/
+.versionFileCompare .lineContainer {
+  position: relative;
+  width: 100%;
+  alignment-baseline: top;
+}
+.versionFileCompare .title {
+  width: 48%;
+  text-align: left;
+  margin-left: 1%;
+  font-size: 18pt;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: 2px solid black;
+}
+.versionFileCompare .titleContainer {
+  position: relative;
+  padding: 5px;
+}
+.versionFileCompare .ellipsisContainer {
+  width: 100%;
+  alignment-baseline: top;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.versionFileCompare .leftEll {
+  background-color: #F6F6F6;
+  text-align: center;
+  width: 50%;
+  padding-bottom: 6px;
+  display: inline-block;
+}
+.versionFileCompare .rightEll {
+  background-color: #F6F6F6;
+  text-align: center;
+  width: 50%;
+  padding-bottom: 6px;
+  display: inline-block;
+}
+.versionFileCompare .originalContainer {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  font-size: 9pt;
+  font-family: monospace;
+  word-wrap: break-word;
+  border-right: 1px solid #A3A3A3;
+  /*allow mozilla/firefox to do the breaking*/
+  -moz-hyphens: auto;
+  word-break: break-all;
+}
+.versionFileCompare .original {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  white-space: pre-wrap;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+.versionFileCompare .changeContainer {
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  font-size: 9pt;
+  font-family: monospace;
+  word-wrap: break-word;
+}
+.versionFileCompare .change {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  white-space: pre-wrap;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+.versionWarning {
+  padding-left: 30px;
+}
+
+/**************************************************************************************************
+ * Filters (Keywords: Filter)
+ *************************************************************************************************/
+.filter {
+   margin-left: 5px;
+   margin-right: 5px;
+}
+
+/**************************************************************************************************
+ * Tags (Keywords: Tags, Tag, Tag Selector, Tag Display)
+ *************************************************************************************************/
+.tagSelector {
+  cursor: pointer;
+  position: relative;
+}
+
+.tagSelector .columnForm .underField {
+  margin: 24px -4px -4px !important
+}
+
+.tagSelect, .versionSelect {
+  position: absolute;
+  top: -8px;
+  z-index: 999;
+  background-color: #ffffff;
+  border: 1px solid #CCC;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 3px 20px -3px #333;
+  white-space: nowrap;
+}
+
+.versionSelect {
+  position: relative;
+  top: 0;
+  padding: 10px;
+}
+
+.latest-version-link {
+  padding-left: 10px;
+  vertical-align: top;
+}
+
+.tagSelect .tag-select-drop-down {
+  vertical-align: top;
+  padding: 8px;
+  border-right: 1px solid #CCC;
+}
+.new-tag-link {
+  vertical-align: top;
+  padding: 14px;
+  margin-left: -1px;
+  border-left: 1px solid #CCC;
+}
+.appComponentSelector .tagBox,
+.versionSelector .tagDisplay .tagBox,
+.roleSelector .tagDisplay .tagBox,
+tr.dojoDndAvatarItem .tagDisplay .tagBox {
+  background-color: #00B2EF;
+  border-color: #00649D;
+  color: #FFF;
+}
+.appComponentSelector .tagDelete,
+.versionSelector .tagDisplay .tagDelete,
+.roleSelector .tagDisplay .tagDelete {
+  border-left: 1px solid #00649D;
+}
+tr.dojoDndAvatarItem .tagDisplay .tagDelete {
+  display: none;
+}
+.appComponentSelector .tagDelete:hover,
+.versionSelector .tagDisplay .tagDelete:hover,
+.roleSelector .tagDisplay .tagDelete:hover {
+  color: #444;
+}
+.roleSelector {
+  max-width: 500px;
+  margin-top: 2px;
+}
+.roleSelector .tagDisplay .tagBox {
+  margin-bottom: 3px;
+}
+.roleSelector .showTeam {
+  margin-top: 2px;
+}
+
+.versionSelectorComponent {
+  display: inline-block;
+}
+
+.teamSelectorComponent {
+  display:inline-block;
+  margin-bottom: -9px;
+}
+
+.team-selector {
+    margin: 5px 10px 15px;
+}
+.team-selector-buttons {
+    text-align: right;
+    padding: 8px 5px 3px;
+    margin: 5px -5px 0;
+    border-top: 1px solid #CCC;
+}
+.teamForm {
+    background-color: #F7FBFE;
+    padding: 5px;
+    border: 1px solid #CCC;
+    min-width: 290px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px -1px #AAA;
+    margin: 5px 0;
+}
+
+.teamForm:hover, .teamForm:active {
+    box-shadow: 0 0 1px 0 #82D1F5;
+}
+.teamForm:hover, .teamForm:active,
+.teamForm:hover .team-selector-buttons,
+.teamForm:active .team-selector-buttons {
+    border-color: #82D1F5 !important;
+}
+
+.version-secetion-checkbox-option {
+    margin: 8px 0 0;
+}
+.version-secetion-checkbox-option .labelsAndValues-helpCell {
+    margin: -2px 40px 0 10px;
+}
+.version-selection-dialog {
+    width: 800px;
+}
+@media only screen and (max-width: 800px) {
+    .version-selection-dialog {
+        width: 100%;
+        left: 0;
+    }
+}
+/*****************************
+ * Tag Display
+ *****************************/
+ /* oneui inserts a 1px border that looks terrible.
+    Remove it. */
+.oneui .dojoDndItemBefore,
+.oneui .dojoDndItemAfter {
+  border-top: 0px;
+}
+
+.tagBox {
+  border: 2px solid;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.tagBox.darkColor {
+  color: #EEE
+}
+
+.tagBox .tagName {
+  display: inline-block;
+  margin: 1px 4px;
+  top: -1px;
+}
+
+.tagDelete:hover {
+    background-color: #FFEEEE;
+    cursor: pointer;
+    -moz-border-top-right-radius: 2px;
+    -moz-border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.darkColor .tagDelete:hover {
+    color: #666;
+}
+
+.tagDisplay {
+  display: inline-block;
+}
+.tagDisplay .tagContainer {
+  display: inline-block;
+  margin-left: 20px;
+}
+.tagDisplay .tagBox {
+  display: inline-block;
+  position: relative;
+  margin: 0px 2px -4px 2px;
+  top: -2px;
+}
+
+.tagDisplay .tagDelete {
+  border-left-width: 1px;
+  border-left-color: #EEEEEE;
+  padding: 1px 4px 2px;
+  font-weight: bold;
+}
+
+.resourceVarianceDiff {
+  display:none;
+}
+
+.webextTable > table > tbody > tr.resourceVarianceChildChanged,
+.table-compare-children-changed {
+  background-color:#FFF69B;
+}
+
+.webextTable > table > tbody > tr.resourceVarianceChanged,
+.table-compare-changed {
+  background-color:#FABE79;
+}
+
+.webextTable > table > tbody > tr.resourceVarianceError,
+.table-compare-error {
+  background-color:#AD1F25;
+  color: #FFFFFF;
+}
+
+.webextTable > table > tbody > tr.resourceVarianceAdded,
+.table-compare-added {
+  background-color:#B3D66D;
+}
+
+.webextTable > table > tbody > tr.resourceVarianceRemoved,
+.table-compare-removed {
+  background-color:#F2BCBC;
+}
+
+.webextTable tr:hover .resourceVarianceDiff  {
+  display:inline-block;
+}
+
+.resource-compare-tree .resource-compare-placeholder-cell * {
+  display: none;
+}
+
+.tagDisplay .tagDelete:hover {
+    background-color: #FFEEEE;
+    cursor: pointer;
+    -moz-border-top-right-radius: 2px;
+    -moz-border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.tagDisplay .darkColor .tagDelete:hover {
+    color: #666;
+}
+
+.tagRequirementSelector .webext-select {
+    margin-bottom: 5px;
+}
+
+.tagRequirementList {
+    margin-top: -5px;
+    max-width: 500px;
+}
+
+.tagRequirementSelector .webext-select .dijit.dijitReset.dijitInline.dijitTextBox.dijitComboBox.dijitValidationTextBox {
+    width: 250px;
+}
+
+.selectAttach .webext-select
+.dijit.dijitReset.dijitInline.dijitLeft.dijitTextBox.dijitComboBox.dijitValidationTextBox {
+    width: 200px;
+}
+
+.appComponentSelector .componentList .tagBox,
+.tagRequirementList .tagRequirement {
+    float: left;
+    margin-top:5px;
+    margin-right:5px;
+    display: table;
+}
+
+.appComponentSelector .componentList .tagBox .tagName {
+  display: inline-block;
+  margin: 5px 8px;
+  top: -1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 640px;
+}
+
+.appComponentSelector .componentList .tagDelete{
+    float: right;
+    border-left-color:black;
+    border-left-width:1px;
+    border-left-style:solid;
+    padding-bottom:5px;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:5px;
+    font-weight:bold;
+}
+
+.tagRequirement .tagDelete {
+    border-left-color:black;
+    border-left-width:1px;
+    border-left-style:solid;
+    padding-bottom:2px;
+    padding-left:5px;
+    padding-right:5px;
+    font-weight:bold;
+}
+
+.tagRequirement .requirementType {
+    background: white;
+    border-color: transparent;
+    margin-left: 3px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tagRequirement.ieTagRequirement .requirementType {
+    display: inline-block;
+}
+
+.tagRequirement .requirementValue {
+    width: 30px;
+    text-align: center;
+    background: white;
+    border-color: transparent;
+    margin-left: 3px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tagRequirement.ieTagRequirement .requirementValue {
+    display: inline-block;
+}
+
+/**************************************************************************************************
+ * Resource Role Editor (Keywords: Resource Role)
+ *************************************************************************************************/
+.resourceRolePropertyEditor {
+  margin: 10px 0px;
+  padding: 10px;
+  background-color: #f6f6f6;
+  border: 1px solid #bbbbbb;
+}
+.resourceRolePropertyEditorTitle {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/**************************************************************************************************
+ * Environment Template (Keywords: Environment, Template, EnvironmentTemplate)
+ *************************************************************************************************/
+.environmentTemplateResources .environmentTemplateResource-options {
+  margin-top: 20px;
+}
+
+/**************************************************************************************************
+ * Resource Tree (Keywords: Resource Tree, Resource Group, Component, Application, Mappings)
+ *************************************************************************************************/
+.readOnlyResourceRow {
+  background-color: #f6f6f6;
+}
+.readOnlyResourceRow a, .readOnlyResourceRow span {
+  font-style: italic;
+}
+.statusNotApplicable {
+  background-color: #f7f7f7;
+}
+tr:hover .statusNotApplicable,
+tr.selected .statusNotApplicable {
+  background-color: inherit;
+}
+
+.resource-template-description {
+    max-width: 300px;
+}
+
+/**
+ * Resource group / component / application environment mappings
+ */
+.componentGroupList .componentGroupListContainer,
+.configurationTree .configurationTreeContainer,
+.resourceConfigurationTree .resourceConfigurationTreeContainer,
+.resourceGroupTree .resourceGroupTreeContainer {
+  min-height: 400px;
+  border: 1px solid #CCC;
+  margin-top: 10px;
+}
+
+.componentGroupList .componentList,
+.configurationTree .configurationTreeDiv,
+.resourceConfigurationTree .resourceConfigurationTreeDiv,
+.resourceGroupTree .resourceGroupTreeDiv {
+  float: left;
+  width: 225px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.resourceGroupTree .resourceGroupTreeDiv {
+  width: 425px;
+  overflow-x: hidden;
+  position: relative;
+}
+.configurationTree .configurationTreeDiv,
+.resourceConfigurationTree .resourceConfigurationTreeDiv {
+  width: 280px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.configurationTree .configurationTreeDiv > div {
+    margin: 0 -1px 10px;
+}
+
+.resourceConfigurationTree .resourceConfigurationTreeDiv {
+  width: 425px;
+}
+
+.componentGroupList .componentDetail,
+.configurationTree .configurationDetail,
+.resourceConfigurationTree .resourceConfigurationDetail,
+.resourceGroupTree .resourceGroupDetail {
+  margin-left: 225px;
+  border-left: 1px solid #CCC;
+  padding: 0px 20px;
+  height: 100%;
+  min-height: 400px;
+  background-color: #F5F5F5;
+}
+
+.resourceConfigurationTree .resourceConfigurationTreeContainer,
+.resourceConfigurationTree .resourceConfigurationDetail,
+.resourceGroupTree .resourceGroupDetail {
+  border: 1px solid #dbdbdb;
+}
+
+.resourceConfigurationTree .resourceConfigurationDetail {
+  background-color: #fafafa;
+  overflow-y: auto;
+  max-height:400px;
+}
+
+.resourceConfigurationTree .resourceConfigurationDetail,
+.resourceGroupTree .resourceGroupDetail {
+  margin-left: 425px;
+}
+
+.configurationTree .configurationDetail {
+  margin-left: 280px;
+}
+.configurationTree .centered-expand-collapse {
+    position: relative;
+    top: 10px;
+}
+
+.componentGroupList .componentEntry {
+  position: relative;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.componentGroupList .selectedComponentEntry {
+  background-color: #aaccff;
+}
+
+.componentGroupList .componentEntry .componentArrow {
+  height: 10px;
+  width: 8px;
+  position: absolute;
+  right: 4px;
+  top: 6px;
+  display: none;
+}
+.componentGroupList .selectedComponentEntry .componentArrow,
+.componentGroupList .componentEntry:hover .componentArrow {
+  display: block;
+}
+
+/**************************************************************************************************
+ * Resource Selector (Keywords: Resource Selector)
+ *************************************************************************************************/
+.resourceSelector .resourceSelectorValue {
+  display: inline-block;
+  border: 1px solid #dbdbdb;
+  padding: 4px;
+}
+
+.edit-resource-condition {
+    min-height: 26px;
+}
+.edit-resource-condition > div {
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+/**************************************************************************************************
+ * Property Box Widget (Keywords: Property, Properties)
+ *************************************************************************************************/
+.propertyBox {
+  width: 300px;
+}
+
+.dijitTextBox.propertyTextarea {
+  width: auto;
+}
+.dijitTextBox textarea {
+  padding: 3px 10px;
+}
+
+/**************************************************************************************************
+ * Application Wizard Environment Options (Keywords: Application Environment, List)
+ *************************************************************************************************/
+.applicationWizard .environment-controls {
+    width: 100%;
+    vertical-align: middle;
+    position: relative;
+    margin: 1px;
+}
+
+.applicationWizard .environment-controls .addEnvironmentMenu {
+    position: absolute;
+    top: 20px;
+    left: -135px;
+    z-index: 999;
+    width: 130px;
+    margin-left: 140px;
+    border: 1px solid #979797;
+    background-color: white;
+}
+
+.applicationWizard .environment-template-option:hover {
+    background-color: #D4F3FC;
+    cursor: pointer;
+}
+
+.applicationWizard .environment-controls .created-environments-title {
+    font-weight: normal;
+    font-size: 1.4em;
+}
+
+.applicationWizard .environment-controls .button-container {
+    float: right;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: inline-flex;
+}
+
+.applicationWizard .environment-controls .icon-button {
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+    margin-top: 1px;
+    background-repeat: none;
+}
+.applicationWizard .environment-controls .icon-button:hover {
+    cursor: pointer;
+}
+
+.applicationWizard .add-button {
+    background-image: url('../../images/wizard/environment/add.png');
+}
+.applicationWizard .environment-controls .add-button:hover {
+    background-image: url('../../images/wizard/environment/add-hov.png');
+}
+
+.applicationWizard .environment-controls .clone-button {
+    background-image: url('../../images/wizard/environment/duplicate.png');
+}
+.applicationWizard .environment-controls .clone-button-disabled {
+    background-image: url('../../images/wizard/environment/duplicate-gray.png');
+}
+.applicationWizard .environment-controls .clone-button:hover {
+    background-image: url('../../images/wizard/environment/duplicate-hov.png');
+}
+
+.applicationWizard .environment-controls .remove-button {
+    background-image: url('../../images/wizard/environment/remove.png');
+    margin-right: 5px;
+}
+.applicationWizard .environment-controls .remove-button-disabled {
+    background-image: url('../../images/wizard/environment/remove-gray.png');
+    margin-right: 5px;
+}
+.applicationWizard .environment-controls .remove-button:hover {
+    background-image: url('../../images/wizard/environment/remove-hov.png');
+}
+.applicationWizard .selected {
+    background-color: rgb(244, 244, 244);
+}
+
+.applicationWizard .environment-option {
+    position: relative;
+    height: 33px;
+    line-height: 33px;
+    margin-bottom: 2px;
+}
+
+.applicationWizard .environment-option .environment-option-content {
+    position: relative;
+    display: inline-block;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.applicationWizard .environment-option .full-length {
+    width: 250px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.applicationWizard .environment-option .partial-length {
+    width: 130px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.applicationWizard .environment-option .required-property-wrapper {
+    display: inline-block;
+    float: right;
+    width: 120px;
+}
+
+.applicationWizard .environment-option .environment-req-props {
+    color: #656565;
+    font-size: 0.65em;
+    margin-right: 8px;
+}
+
+.applicationWizard .environment-option .environment-name-container {
+    display: inline-block;
+}
+
+.applicationWizard .environment-option .environment-name {
+    font-weight: bolder;
+}
+
+.applicationWizard .environment-option .propStatusIcon {
+    height: 100%;
+    width: 16px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.applicationWizard .environment-option .complete {
+    background: url('../../images/wizard/environment/dark-complete.png') no-repeat;
+}
+.applicationWizard .environment-option .partial {
+    background: url('../../images/wizard/environment/dark-incomplete.png') no-repeat;
+}
+.applicationWizard .environment-option .empty {
+    background: url('../../images/wizard/environment/dark-empty.png') no-repeat;
+}
+
+.color-hint-spacer {
+    padding-left: 10px;
+    display: inline;
+    margin-right: 5px;
+}
+
+/**************************************************************************************************
+ * Application Environment List (Keywords: Application Environment, List, Environment Compliancy)
+ *************************************************************************************************/
+.environment-summary {
+    padding: 0;
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease, padding 0.15s ease, border 0.1s ease, margin 0.15s ease;
+    -moz-transition: opacity 0.2s ease, padding 0.15s ease, border 0.1s ease, margin 0.15s ease;
+    transition: opacity 0.2s ease, padding 0.15s ease, border 0.1s ease, margin 0.15s ease;
+}
+.environment-summary.initial-hide-environment {
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+}
+.environment-summary:first-child, .environment-summary:first-child:hover {
+    margin-top: 0px;
+}
+.environment-summary .environment-summary-highlight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0px;
+    background-color: #EEE;
+    -webkit-transition: width 0.6s ease;
+    -moz-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+}
+.environment-summary:hover .environment-summary-highlight {
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+}
+.environment-summary .environment-summary-highlight.right {
+    right: -30px;
+}
+.environment-summary .environment-summary-highlight.left {
+    left: -30px;
+}
+.environment-summary:hover .environment-summary-highlight {
+    width: 30px;
+}
+.dojoDndSourceMoved .environment-summary.dojoDndItem:hover .environment-summary-highlight {
+    width: 0px;
+}
+
+.agentMappingTargetTree .environment-name-container,
+.environment-summary .environment-name-container {
+    height: 36px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.agentMappingTargetTree .environment-name-container > div,
+.environment-summary .environment-name-container > div {
+    vertical-align: middle;
+}
+.environment-summary .environment-information-container {
+    width: 60%;
+    height: 36px;
+    float: right;
+}
+.agentMappingTargetTree .environment-name-container,
+.environment-summary .environment-name-container div,
+.environment-summary .environment-name-container a,
+.environment-summary .environment-information-container span,
+.environment-summary .environment-information-container .compliancy-label,
+.environment-summary .environment-information-container .environment-compliancy > span,
+.environment-summary .environment-information-container .environment-latest-snapshot > div,
+.environment-summary .environment-information-container .environment-latest-snapshot > a,
+.environment-summary .environment-information-container .external-blueprint > div,
+.environment-summary .environment-information-container .external-blueprint > a {
+    color: #FFF;
+}
+.agentMappingTargetTree.light-colored-environment .environment-name-container,
+.environment-summary.light-colored-environment .environment-name-container div,
+.environment-summary.light-colored-environment .environment-name-container a,
+.environment-summary.light-colored-environment .environment-information-container span,
+.environment-summary.light-colored-environment .environment-information-container .compliancy-label,
+.environment-summary.light-colored-environment .environment-information-container .environment-compliancy > span,
+.environment-summary.light-colored-environment .environment-information-container .environment-latest-snapshot > div,
+.environment-summary.light-colored-environment .environment-information-container .environment-latest-snapshot > a,
+.environment-summary.light-colored-environment  .environment-information-container .external-blueprint > div,
+.environment-summary.light-colored-environment  .environment-information-container .external-blueprint > a {
+    color: #444;
+}
+
+.agentMappingTargetTree .environment-name-container {
+    line-height: 36px;
+}
+
+.agentMappingTargetTree .environment-name-container span,
+.environment-summary .environment-name-container a {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+.environment-summary .environment-name-container .environment-name-label-overflow {
+    margin-left: 100px;
+}
+.environment-summary .environment-name-container .environment-name.cloud-environment {
+    margin-left: 0;
+    padding-left: 40px;
+}
+.environment-summary .environment-name-container .reset-environment-name a {
+    -webkit-transition: margin-left 0.25s linear;
+    -moz-transition: margin-left 0.25s linear;
+    transition: margin-left 0.25s linear;
+}
+.agentMappingTargetTree .environment-name,
+.environment-summary .environment-name {
+    margin-left: 10px;
+    font-size: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 8px 0 0 10px;
+    min-height: 36px;
+}
+.agentMappingTargetTree .environment-name,
+    line-height: 36px;
+}
+.dj_gecko .environment-summary .environment-name {
+    margin-top: 2px;
+}
+
+.environment-summary .environment-inner-container {
+    white-space: nowrap;
+    margin-right: 250px;
+}
+
+.environment-summary .environment-summary-buttons {
+    float: left;
+}
+.environment-summary .button-container {
+    vertical-align: top;
+    width: 36px;
+}
+.environment-summary .button-container.environment-actions, .environment-summary .button-container.preview-snapshot {
+    border-right: 1px solid #FFF;
+}
+.environmentSummary .button-container .dijitDropDownButton {
+    margin: 0px;
+}
+.oneui .environmentSummary .button-container .dijitDropDownButton .dijitButtonNode {
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+}
+.oneui .environmentSummary .button-container .dijitDropDownButton .dijitButtonNode .dijitButtonText {
+    padding: 0;
+}
+.oneui .environmentSummary .button-container .dijitDropDownButton .dijitButtonNode .dijitButtonContents {
+    text-shadow: none;
+    margin-top: 2px;
+    font-size: 1.4em;
+}
+.oneui .environmentSummary .button-container .dijitDropDownButton .dijitButtonNode .dijitArrowButtonInner {
+    display: none;
+}
+.environment-summary .button-container .environment-summary-button,
+.oneui .environment-summary .button-container .dijitDropDownButton .dijitButtonNode {
+    height: 36px;
+    width: 36px;
+    -webkit-transition-property: background-color;
+    -moz-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.environment-summary .button-container .environment-summary-button:hover,
+.oneui .environment-summary .button-container .dijitDropDownButton .dijitButtonNode:hover {
+    background:rgb(175,175,175);
+    background:rgba(255,255,255,0.25);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);
+    cursor: pointer;
+}
+.environment-summary .button-container .environment-summary-button:active,
+.oneui .environment-summary .button-container .dijitDropDownButton .dijitButtonNode:active,
+.oneui .environment-summary .button-container .dijitDropDownButton.dijitDropDownButtonOpened .dijitButtonNode {
+    background:rgb(75,75,75);
+    background:rgba(0,0,0,0.4);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);
+    cursor: pointer;
+}
+.oneui .environment-summary .button-container .dijitDropDownButton .dijitOffScreen {
+    left: -100% !important;
+}
+
+.environment-summary .button-container.environment-actions .dijitDropDownButton {
+    margin-top: 0px;
+}
+.environment-summary .button-container .environment-summary-button > div,
+.environment-summary .button-container.environment-actions .dijitDropDownButton .dijitIcon {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    top: 4px;
+}
+.environment-summary .button-container .environment-summary-button > div {
+    top: 5px;
+    left: 6px;
+}
+.environment-summary .cloud-container > div {
+    position: relative;
+    left: 10px;
+}
+.environment-summary .cloud-container {
+    vertical-align: top;
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    margin-left: -40px;
+}
+
+.environment-summary .expand-node-container {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -18px;
+    cursor: pointer;
+    opacity: 0.25;
+}
+.environment-summary:hover .expand-node-container {
+    opacity: 0.8;
+}
+.agentMappingTargetTree .expandNode,
+.environment-summary .expandNode {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    background: url(../../lib/webext/images/webext/icons/misc-arrow-sprite.png) no-repeat;
+    background-position: 0px -330px;
+    position: relative;
+    top: 9px;
+}
+.dark-colored-environment.environment-summary:hover .expandNode {
+    background-position: -48px -330px;
+}
+.dojoDndMove .environment-summary.dojoDndItem .expandNode {
+    display: none;
+}
+.environment-summary .expand-node-container:hover .expandNode {
+    opacity: 0.6;
+}
+.environment-summary .expand-node-container:active .expandNode {
+    background-position: -32px -330px;
+}
+.agentMappingTargetTree.expanded .expand-node-container .expandNode,
+.environment-summary.expanded .expand-node-container .expandNode {
+    background-position: 0px -270px;
+}
+.dark-colored-environment.environment-summary.expanded:hover .expandNode {
+    background-position: -48px -270px;
+}
+.environment-summary.expanded .expand-node-container:active .expandNode {
+    background-position: -32px -270px;
+}
+
+.environment-summary .environmentLatestSnapshot {
+    border-right: none;
+}
+
+.environment-summary .environment-information-container .environment-compliancy {
+    position: relative;
+    width: 240px;
+    border-right: none;
+    height: 20px;
+    padding: 4px;
+    top: 4px;
+    right: 4px;
+    float: right;
+}
+.environment-summary .environment-information-container .environment-compliancy .environment-compliancy-wrapper {
+    position: relative;
+    text-align: center;
+}
+.environment-summary .environment-information-container .compliancy-label {
+    float: right;
+    text-align: right;
+    margin: 4px 10px 0 0;
+}
+.snapshot-environment-summary .environment-information-container .compliancy-label {
+    margin-top: 10px;
+}
+.environment-summary .environment-latest-snapshot,
+.environment-summary .external-blueprint {
+  padding: 4px 4px 4px 8px;
+  height: 30px;
+  width: 80%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: top;
+}
+.environment-summary .external-blueprint {
+    width: 40%;
+}
+.environment-summary .environment-latest-snapshot.blueprint-environment {
+    width: 40%;
+}
+.environment-summary .environment-inner-container .no-link {
+    font-style: italic;
+}
+.environment-summary .environment-latest-snapshot > div,
+.environment-summary .environment-information-container .compliancy-label > div {
+    height: 15px;
+}
+.environment-summary .environment-compliancy > span {
+    z-index: 5;
+    position: relative;
+}
+.environment-summary .environment-information-container .environment-compliancy-wrapper > span {
+    position: relative;
+    top: 2px;
+}
+
+.environment-summary .environment-compliancy .successMeter {
+    position: absolute;
+    height: 20px;
+    top: 0px;
+    left: 0px;
+}
+.environment-summary .environment-information-container .environment-compliancy .successMeter {
+    background: #8CC63F;
+    background: -webkit-linear-gradient(to right, #8CC63F 75%, transparent 25%);
+    background: -moz-linear-gradient(to right, #8CC63F 75%, transparent 25%);
+    background: -ms-linear-gradient(to right, #8CC63F 75%, transparent 25%);
+    background: linear-gradient(to right, #8CC63F 75%, transparent 25%);
+    background-size: 3px 2px;
+}
+.dj_ie9 .environment-summary .environment-information-container .environment-compliancy .successMeter,
+.dj_ie8 .environment-summary .environment-information-container .environment-compliancy .successMeter,
+.dj_ie7 .environment-summary .environment-information-container .environment-compliancy .successMeter {
+    background: none;
+    background-image: url('../../images/meter/green-stripe-meter.png');
+}
+.environmentSummary .environment-compliancy .failMeter {
+    position: absolute;
+    height: 20px;
+    top: 0px;
+    right: 0px;
+}
+.environment-summary .environment-information-container .environment-compliancy .failMeter {
+    background: #D9182D;
+    background: -webkit-linear-gradient(to right, #D9182D 75%, transparent 25%);
+    background: -moz-linear-gradient(to right, #D9182D 75%, transparent 25%);
+    background: -ms-linear-gradient(to right, #D9182D 75%, transparent 25%);
+    background: linear-gradient(to right, #D9182D 75%, transparent 25%);
+    background-size: 3px 2px;
+}
+.dj_ie9 .environment-summary .environment-information-container .environment-compliancy .failMeter,
+.dj_ie8 .environment-summary .environment-information-container .environment-compliancy .failMeter,
+.dj_ie7 .environment-summary .environment-information-container .environment-compliancy .failMeter {
+    background: none;
+    background-image: url('../../images/meter/red-stripe-meter.png');
+}
+
+@media (min-resolution: 144dppx),
+(-webkit-min-device-pixel-ratio: 1.5),
+(min--moz-device-pixel-ratio: 1.5),
+(-o-min-device-pixel-ratio: 3/2),
+(min-device-pixel-ratio: 1.5),
+(min-resolution: 1.5dppx) {
+    .environment-summary .environment-information-container .environment-compliancy .successMeter,
+    .environment-summary .environment-information-container .environment-compliancy .failMeter {
+        background-size: 3px 2px;
+    }
+}
+
+.environment-summary .webextTable .environment-compliancy .successMeter,
+.environment-summary .webextTable .environment-compliancy .failMeter {
+    height: 100%;
+}
+.environment-summary .webextTable {
+    margin-top: 10px;
+}
+.environment-summary .environment-details .listTopButtons {
+    display: none;
+}
+
+.environment-summary .environment-compliancy .meter-overlay {
+    position: absolute;
+    height: 28px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.environment-summary .environment-compliancy .meter-overlay .meter-overlay-bar {
+    height: 28px;
+    width: 1px;
+    border-right: 1px solid;
+}
+.environment-summary .environment-compliancy .noMeter {
+    position: absolute;
+    height: 20px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.environment-summary .environment-details {
+    display: none;
+}
+.environment-summary.expanded .environment-details, .dojoDndSourceMoved .environment-summary.expanded.dojoDndItem:hover .environment-details {
+    display: block;
+    border: 4px solid #FFF;
+    border-top: none;
+    padding: 10px;
+    padding-top: 2px;
+    background-color: #FFF;
+    -webkit-transition: border-left-width 0.08s linear 0s, padding-left 0.08s linear 0s;
+    -moz-transition: border-left-width 0.08s linear 0s, padding-left 0.08s linear 0s;
+    transition: border-left-width 0.08s linear 0s, padding-left 0.08s linear 0s;
+}
+.environment-summary.expanded:hover .environment-details {
+    border-left-width: 0;
+    padding-left: 14px;
+    -webkit-transition: border-left-width 0.08s linear 0.3s, padding-left 0.08s linear 0.3s;
+    -moz-transition: border-left-width 0.08s linear 0.3s, padding-left 0.08s linear 0.3s;
+    transition: border-left-width 0.08s linear 0.3s, padding-left 0.08s linear 0.3s;
+}
+.dojoDndSourceMoved .environment-summary.dojoDndItem:hover .environment-summary-highlight {
+    width: 0px;
+}
+.environment-summary.expanded .environment-details .webextTable .no-items-in-table > thead {
+    display: none;
+}
+.environment-summary.expanded .environment-details .webextTable .no-items-in-table .noDataRow {
+    border: none;
+}
+.environment-summary.expanded .environment-details .webextTable .no-items-in-table .noDataRow td {
+    font-weight: 300;
+    font-size: 1.2em;
+}
+.environment-summary.expanded .environment-details .webextTable .no-items-in-table .numberOfItemsContainer {
+    margin-top: -10px;
+}
+
+.application-environment-list .saved-notification, .process-save-dialog {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    box-shadow: 0 0 10px 0 #555;
+    z-index: 1000;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 300;
+    padding: 15px;
+    margin: 0;
+    visibility:visible;
+    opacity:1;
+    color: #FFF;
+    -webkit-transition: visibility 0s linear 0s, opacity 0.4s linear, top 0.4s linear, left 0.4s linear, right 0.4s linear;
+    -moz-transition: visibility 0s linear 0s, opacity 0.4s linear, top 0.4s linear, left 0.4s linear, right 0.4s linear;
+    transition: visibility 0s linear 0s, opacity 0.4s linear, top 0.4s linear, left 0.4s linear, right 0.4s linear;
+}
+.fixed-top.application-environment-list .saved-notification {
+    top: 60px;
+    left: 15px;
+    right: 15px;
+}
+.application-environment-list .hide-notification .saved-notification, .process-save-dialog.hide-notification {
+    visibility:hidden;
+    opacity:0;
+    -webkit-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    -moz-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+}
+.application-environment-list .saved-notification .general-icon, .process-save-dialog .general-icon {
+    margin: 0 12px -8px;
+}
+.application-environment-list .environment-list-help-text {
+    float: right;
+    margin-top: 5px;
+}
+.application-environment-list .environment-list-help-text .number-of-environments {
+    margin-left: 20px;
+}
+.fixed-top.application-environment-list .environment-list-help-text .number-of-environments {
+    position: fixed;
+    right: 15px;
+    top: 50px;
+    margin-left: 20px;
+    z-index: 100;
+    background-color: #EEE;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #555;
+    opacity: 1;
+    -webkit-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    -moz-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+}
+.fixed-top.application-environment-list .environment-list-help-text .number-of-environments:hover {
+    opacity: 0;
+}
+.application-environment-list .environments-expand-collapse-all {
+    float: right;
+    margin: 5px 12px 0 0;
+}
+.application-environment-list .environments-expand-collapse-all > a {
+    margin-left: 20px;
+}
+.application-environment-list-filter {
+    background-color: #EEE;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.fixed-top .application-environment-list-filter {
+    position: fixed;
+    padding: 10px 40px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    box-shadow: 0 0 10px 0 #555;
+    z-index: 10;
+    min-width: 890px;
+}
+.fixed-top.application-environment-list .environment-list {
+    margin-top: 75px;
+}
+
+.application-environment-list-filter .add-item-icon {
+    display: none;
+    position: absolute;
+    left: 9px;
+}
+.fixed-top .application-environment-list-filter .add-item-icon {
+    display: block;
+}
+
+.environment-list-search-box {
+    margin-right: 10px;
+}
+.environment-list-search-box.webext-select {
+    margin-left: 10px;
+}
+.environment-list-search-box, .environment-list-search-box .dijitTextBox,
+.environment-list-search-box, .environment-list-search-box .dijitComboBox {
+    width: 280px;
+}
+.application-environment-list > .listTopButtons {
+    min-height: 26px;
+}
+
+.snapshot-environment-list > .application-environment-list > .listTopButtons {
+    margin-top: -20px;
+}
+
+.environment-summary .environment-name-container .dojoDndHandle {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+}
+.oneui .environment-summary.dojoDndItemOver {
+    cursor: default;
+}
+.environment-summary .dojoDndHandle:active,
+.environment-summary.dojoDndItemBefore,
+.environment-summary.dojoDndItemBefore .dojoDndHandle,
+.environment-summary.dojoDndItemBefore .dojoDndHandle a,
+.environment-summary.dojoDndItemAfter,
+.environment-summary.dojoDndItemAfter .dojoDndHandle,
+.environment-summary.dojoDndItemAfter .dojoDndHandle a {
+    cursor: move;
+    cursor: -webkit-grabbing !important;
+    cursor: -moz-grabbing !important;
+    -webkit-user-select: text;
+}
+.environment-summary.dojoDndItemBefore {
+    border: none;
+    border-top: 2px solid #444;
+    padding-top: 10px !important;
+    margin-top: 10px !important;
+}
+.environment-summary.dojoDndItemAfter {
+    border: none;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px !important;
+    margin-bottom: 10px !important;
+}
+.dojoDndSourceMoved .environment-summary.dojoDndItemAnchor {
+    opacity: 0.25;
+}
+.dojoDndSourceMoved .environment-summary {
+}
+.dojoDndAvatarItem .environment-summary {
+    white-space: nowrap;
+    min-width: 600px;
+}
+.dojoDndAvatarItem .environment-summary .environment-summary-buttons,
+.dojoDndAvatarItem .environment-summary .environment-inner-container,
+.dojoDndAvatarItem .environment-summary .environment-compliancy span,
+.dojoDndAvatarItem .environment-summary .expand-node-container {
+    display: none;
+    opacity: 0;
+    font-size: 0;
+}
+.dojoDndAvatarItem .environment-summary .environment-name {
+    margin-left: 10px;
+}
+.dojoDndAvatarItem .environment-summary .environment-name-container {
+    min-width: 200px;
+}
+
+/**
+ * Compliancy reports
+ */
+.environment-compliancy {
+  display: inline-block;
+}
+.dj_ie7 .environment-compliancy {
+  display: inline;
+  zoom: 1;
+}
+
+.environment-compliancy .compliancyHeaderContainer {
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;
+}
+.dj_ie7 .environmentCompliancy .compliancyHeaderContainer {
+  display: inline;
+  zoom: 1;
+}
+
+.environmentCompliancy .compliancyHeader, .snapshotCompliancy {
+  display: block;
+  padding: 5px 15px;
+  border: 1px solid #cccccc;
+}
+.snapshotCompliancy {
+  padding: 5px 7px;
+}
+
+.roleLabel, .statusLabel {
+  display: inline-block;
+  margin-left: 3px;
+  padding: 0px 2px;
+}
+.dj_ie7 .roleLabel, .statusLabel {
+  display: inline;
+  zoom: 1;
+}
+
+
+/**************************************************************************************************
+ * Component Usage (Keywords: Component, Usage, Version History, Calendar)
+ *************************************************************************************************/
+.version-history-calendar {
+  min-height: 500px;
+  margin-bottom: 40px;
+}
+
+.version-history-calendar .version-calendar {
+  width: 100%;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.version-history-calendar .version-calendar-buttons {
+  height: 40px;
+  width: 120px;
+  text-align: center;
+}
+
+.version-history-calendar .version-calendar-buttons .today-link {
+  position: relative;
+  margin-top: -5px;
+  padding: 5px;
+}
+.version-history-calendar .version-calendar-buttons.calendar-fixed-control .today-link {
+  border: 1px solid #CCC;
+  background-color: #FFF;
+  box-shadow: 0px 0px 2px 1px #DDDDDD;
+}
+
+.version-history-calendar .version-calendar-buttons.calendar-fixed-control .calendar-control-container {
+  position: fixed;
+  top: 20px;
+  z-index: 10;
+}
+
+.version-history-calendar .version-calendar-buttons .calendar-button-container {
+  padding: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #CCC;
+  background-color: #FFF;
+  box-shadow: 0px 0px 2px 1px #DDDDDD;
+}
+
+.version-history-calendar .version-calendar-buttons .calendar-expander {
+  position: absolute;
+  left: -15px;
+  margin-top: 30px;
+  width: 160px;
+  overflow-x: hidden;
+}
+.version-history-calendar .version-calendar-buttons .calendar-expander .environment-expander {
+  margin: 0 6px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 155px;
+}
+.version-history-calendar .version-calendar-buttons.calendar-fixed-control .calendar-expander {
+  margin-top: 95px;
+}
+
+.version-history-calendar .version-calendar-buttons .calendar-arrow {
+  margin: 0 7px;
+}
+
+.version-history-calendar .version-calendar-buttons .calendar-arrow.back-month .arrow.back-arrow,
+.version-history-calendar .version-calendar-buttons .calendar-arrow.forward-month .arrow.forward-arrow {
+  margin: 0 -1px;
+}
+
+.version-history-calendar .version-calendar-buttons .arrow,
+.version-history-calendar .version-calendar-row .environment-expander {
+  background: url("../../lib/webext/images/webext/icons/misc-arrow-sprite.png") no-repeat;
+  height: 16px;
+  width: 10px;
+}
+
+.version-history-calendar .version-calendar-buttons .arrow.back-arrow {
+  background-position: 0 -360px;
+}
+.version-history-calendar .version-calendar-buttons .calendar-arrow:hover .arrow.back-arrow {
+  background-position: -16px -360px;
+}
+.version-history-calendar .version-calendar-buttons .calendar-arrow:active .arrow.back-arrow {
+  background-position: -32px -360px;
+}
+
+.version-history-calendar .version-calendar-buttons .arrow.forward-arrow {
+  background-position: 0 -330px;
+}
+.version-history-calendar .version-calendar-buttons .calendar-arrow:hover .arrow.forward-arrow {
+  background-position: -16px -330px;
+}
+.version-history-calendar .version-calendar-buttons .calendar-arrow:active .arrow.forward-arrow {
+  background-position: -32px -330px;
+}
+
+.version-history-calendar .version-calendar-header {
+  margin-left: 150px;
+}
+
+.version-history-calendar .version-calendar-header .version-date-column {
+  height: 100%;
+  width: 3.1%;
+  vertical-align: top;
+}
+
+.version-history-calendar .version-calendar-header .version-date-column .version-date-label {
+  text-align: center;
+  font-size: 10px;
+  padding: 5px 0;
+  margin-top: -10px;
+  color: #555;
+}
+
+.version-history-calendar .version-calendar-header .version-date-column .version-date-month {
+  background-color: #FAFAFA;
+  padding: 4px 8px 4px 4px;
+  font-weight: bold;
+}
+
+.version-history-calendar .version-calendar-header .version-date-column .version-date-month-header {
+  position: absolute;
+  top: 0px;
+  height: 78px;
+  border-left: 2px solid #CCC;
+  text-indent: 4px;
+}
+
+.version-history-calendar .version-calendar-header .version-date-column .version-date-number {
+  text-align: center;
+  font-size: 10px;
+  padding: 4px 0 8px;
+  color: #555;
+}
+
+.version-history-calendar .version-calendar-header .version-date-column .version-date-contents {
+  border: 2px solid #CCC;
+  border-left-style: dashed;
+  border-left-width: 1px;
+  border-right-width: 0px;
+  background-color: #FFF;
+  height: 100%;
+}
+.version-history-calendar .version-calendar-header .version-date-column.tomorrow-day .version-date-contents {
+  border-left-style: none;
+}
+.version-history-calendar .version-calendar-header .version-date-column.current-month .version-date-contents {
+  border-left-style: solid;
+  border-left-width: 2px;
+}
+
+.version-history-calendar .version-calendar-header .version-date-column.current-day .version-date-label {
+  background-color: #7EDAFF !important;
+  border-radius: 5px 5px 0 0;
+}
+
+.version-history-calendar .version-calendar-header .version-date-column.current-day .version-date-contents,
+.version-history-calendar .version-calendar-header .version-date-column.current-day .version-date-number,
+.version-history-calendar .version-calendar-header .version-date-column.current-day .version-date-label.bottom-date-label {
+  border-left: 2px solid #7DEAFF;
+  border-right: 2px solid #7DEAFF;
+  background-color: #D5F5FC;
+}
+
+.version-history-calendar .version-calendar-header .version-date-column.current-day .version-date-label.bottom-date-label {
+  border-bottom: 2px solid #7DEAFF;
+  border-radius: 0 0 5px 5px;
+}
+.version-history-calendar .version-calendar-header .version-date-column .version-date-label.bottom-date-label {
+  margin-top: 0;
+}
+
+.version-history-calendar .version-calendar .version-calendar-contents {
+  position: absolute;
+  top: 120px;
+  width: 99.2%;
+}
+
+.version-history-calendar .version-calendar .version-calendar-environment {
+  position: absolute;
+  left: 0;
+  width: 170px;
+  min-height: 20px;
+  vertical-align: top;
+}
+
+.version-history-calendar .version-calendar .version-calendar-environment .environment-name {
+  font-weight: bold;
+  padding: 1px 5px;
+  border-radius: 5px;
+  margin-left: 2px;
+  vertical-align: top;
+  width: 118px;
+}
+
+.version-history-calendar .version-calendar .version-calendar-environment .color-box {
+  width: 16px;
+  height: 16px;
+}
+
+.version-history-calendar .version-calendar .version-calendar-version {
+  background-color: #FFF;
+  min-height: 14px;
+  padding: 4px 0;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-indent: 5px;
+}
+.version-history-calendar .version-calendar-row .version-calendar-version.same-version {
+  margin-top: -26px;
+}
+.version-history-calendar .version-calendar-row.environment-collapsed .version-calendar-version.same-version {
+  margin-top: -8px;
+}
+.version-history-calendar .version-calendar-row .version-calendar-version.same-version.same-day {
+  margin-top: -3px;
+  min-height: 8px;
+  font-size: 0;
+}
+.version-history-calendar .version-calendar-row .version-calendar-version.same-version.same-day .mouse-over-popup {
+  margin-top: 12px;
+}
+.version-history-calendar .version-calendar .version-calendar-version.dark-color-environment {
+  color: #FFF;
+}
+.version-history-calendar .version-calendar .version-calendar-version:hover,
+.version-history-calendar .version-calendar-key .version-calendar-version.current-version {
+  box-shadow: 0px 0px 5px 2px #AAA !important;
+  -moz-box-shadow: 0px 0px 5px 2px #AAA !important;
+  -webkit-box-shadow: 0px 0px 5px 2px #AAA !important;
+}
+.version-history-calendar .version-calendar .version-calendar-version.current-version {
+  font-weight: bold;
+  border-right: 10px solid #FFF;
+  vertical-align: top;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.version-history-calendar .version-calendar-key {
+    position: absolute;
+    top: -30px;
+    right: -10px;
+}
+.version-history-calendar .version-calendar-key .version-calendar-key-label {
+    margin: 3px 8px 0 0;
+}
+.version-history-calendar .version-calendar-key .version-calendar-version.current-version {
+    min-width: 180px;
+    background-color: #DDD;
+    color: #777;
+}
+
+.version-history-calendar .version-calendar .version-calendar-version .calendar-popup {
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: normal;
+  text-indent: 0;
+}
+
+.version-history-calendar .version-calendar .version-calendar-version .calendar-popup .version-date-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.version-history-calendar .version-calendar-row {
+  background: rgba(231, 246, 249, .6);
+  margin: 0 0 14px -20px;
+  padding: 5px 0 1px 170px;
+  min-height: 26px;
+  position: relative;
+}
+
+.version-history-calendar .version-calendar-row.environment-collapsed {
+  min-height: 20px;
+  margin-bottom: 10px;
+}
+.version-history-calendar .version-calendar-row.environment-collapsed .version-calendar-environment {
+}
+
+.version-history-calendar .version-calendar-row.environment-collapsed .version-calendar-version {
+  min-height: 0px;
+  font-size: 0px;
+  padding: 2px 0;
+}
+
+.version-history-calendar .version-calendar-row .environment-expander {
+  margin: 0 5px -5px;
+}
+
+.version-history-calendar .version-calendar-row.environment-collapsed .version-calendar-environment .environment-expander {
+  background-position: 0 -60px;
+}
+.version-history-calendar .version-calendar-row.environment-collapsed .version-calendar-environment:hover .environment-expander {
+  background-position: -16px -60px;
+}
+.version-history-calendar .version-calendar-row.environment-collapsed .version-calendar-environment:active .environment-expander {
+  background-position: -32px -60px;
+}
+.version-history-calendar .version-calendar-row.environment-expanded .version-calendar-environment .environment-expander {
+  background-position: 0 0;
+}
+.version-history-calendar .version-calendar-row.environment-expanded .version-calendar-environment:hover .environment-expander {
+  background-position: -16px 0;
+}
+.version-history-calendar .version-calendar-row.environment-expanded .version-calendar-environment:active .environment-expander {
+  background-position: -32px 0;
+}
+
+.version-history-calendar .version-calendar-right-blocker {
+  height: 40px;
+  width: 20px;
+  background-color: #FFF;
+  position: absolute;
+  top: 0;
+  right: -41px;
+  border-left: 1px solid #CCC;
+}
+
+/**************************************************************************************************
+ * Popup (Keywords: Pop Up)
+ *************************************************************************************************/
+.mouse-over-popup {
+    position: absolute;
+    margin-top: 8px;
+    z-index: 2;
+}
+
+.mouse-over-popup .popup-container {
+    max-width: auto;
+    background-color: #FFF;
+    color: #666;
+    padding: 4px 8px;
+    border: 1px solid #555;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+    margin-top: -2px;
+    position: relative;
+}
+
+.mouse-over-popup .popup-container.fixed-popup-width {
+    max-width: 400px !important;
+}
+
+.mouse-over-popup .popup-pointer {
+    height: 10px;
+    width: 50px;
+    background-image: url('../../images/popup/popup-pointer.png');
+    background-repeat: no-repeat;
+    margin: -5px 0px 0px -9px;
+    position: relative;
+    z-index: 10;
+}
+
+.inventory-popup .inventory-popup-contents {
+    min-width: 40px;
+    text-align: center;
+}
+
+.inventory-popup .inventory-popup-contents div {
+    margin-bottom: 10px;
+}
+.inventory-popup .inventory-popup-contents div:last-child {
+    margin-bottom: 0px;
+}
+
+/**************************************************************************************************
+ * Team Member Selector (Keywords: Teams, Team, Team Member, Selector)
+ **************************************************************************************************/
+.team-member-selector {
+    min-width: 600px;
+    border: 1px solid #CCC;
+    padding: 0px 7px 7px 7px;
+    background-color: #EEE;
+    border-radius: 5px;
+}
+.edit-user .right-panel-container {
+    top: 0;
+}
+.edit-user.right-panel-show .team-member-selector,
+.edit-user.minimize-roles .columnForm {
+    margin-right: 540px;
+    min-width: 500px;
+}
+.edit-user.right-panel-show.right-panel-top .team-member-selector {
+    margin-right: 520px;
+}
+.edit-user.panel-with-scroll-bars.right-panel-show .team-member-selector {
+    margin-right: 560px;
+}
+.edit-user.panel-with-scroll-bars.right-panel-show.right-panel-top .team-member-selector {
+    margin-right: 540px;
+}
+
+.team-member-selector:hover, .team-member-selector.dojoDndContainerOver {
+    background-color: #BFE2EF;
+    border-color: #53ABCC;
+}
+.team-member-selector .selector-header-container .selector-header {
+    padding: 11px 12px;
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+.team-member-selector .selector-header-container .selector-button {
+    float: right;
+    margin: 4px -4px;
+}
+.team-member-selector .selector-header-container .selector-button .member-select-button-compact .dijitButtonNode {
+    min-width: 30px;
+    position: relative;
+    bottom: 1px;
+    vertical-align: top;
+    margin-top: 3px;
+}
+
+.team-member-selector .selector-member-container .selector-label {
+    min-width: 40px;
+    color: #888;
+    font-size: 11px;
+    padding: 2px 4px;
+    margin: 4px;
+}
+
+.team-member-selector .selector-header-container .selector-header-expand {
+    position: absolute;
+    left: 15px;
+}
+.team-member-selector .selector-header-container .selector-header-expand .team-expander {
+  background: url("../../lib/webext/images/webext/icons/misc-arrow-sprite.png") no-repeat;
+  height: 12px;
+  width: 10px;
+  margin: 15px 10px 15px 15px;
+}
+.team-member-selector .selector-header-container .selector-header-expand .team-expander.team-collapsed {
+  background-position: 0 -60px;
+}
+.team-member-selector .selector-header-container .selector-header-expand:hover .team-expander.team-collapsed {
+  background-position: -16px -60px;
+}
+.team-member-selector .selector-header-container .selector-header-expand:active .team-expander.team-collapsed {
+  background-position: -32px -60px;
+}
+.team-member-selector .selector-header-container .selector-header-expand .team-expander.team-expanded {
+  background-position: 0 0;
+}
+.team-member-selector .selector-header-container .selector-header-expand:hover .team-expander.team-expanded {
+  background-position: -16px 0;
+}
+.team-member-selector .selector-header-container .selector-header-expand:active .team-expander.team-expanded {
+  background-position: -32px 0;
+}
+
+.team-member-selector .selector-member-container .selector-users {
+    border-bottom: 1px dashed #CCC;
+}
+.team-member-selector .selector-member-container .selector-users, .team-member-selector .selector-member-container .selector-groups {
+    padding: 4px;
+    min-height: 25px;
+    background-color: #FFF;
+}
+
+.team-member-selector .selector-member-container .team-member-block {
+    padding: 2px 5px;
+    color: #FFF;
+    margin: 3px 4px;
+}
+.team-member-selector .selector-member-container .team-member-block:hover,
+.team-member-selector .selector-member-container .team-member-block.hover {
+  box-shadow: 0px 0px 6px 2px #AAA !important;
+  -moz-box-shadow: 0px 0px 6px 2px #AAA !important;
+  -webkit-box-shadow: 0px 0px 6px 2px #AAA !important;
+}
+.team-member-selector .selector-member-container .selector-users .team-member-block {
+    background-color: #53ABCC;
+}
+.team-member-selector .selector-member-container .selector-users .team-member-block:hover,
+.team-member-selector .selector-member-container .selector-users .team-member-block.hover {
+    background-color: #1B6A86;
+}
+.team-member-selector .selector-member-container .selector-groups .team-member-block {
+    background-color: #9169BF;
+}
+.team-member-selector .selector-member-container .selector-groups .team-member-block:hover,
+.team-member-selector .selector-member-container .selector-groups .team-member-block.hover {
+    background-color: #4E2C70;
+}
+.team-member-selector .selector-member-container .selector-groups .team-member-block .group-popup-title {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.team-member-selector .selector-member-container .team-member-block.hidden {
+    height: 0px;
+    width: 0px;
+    padding: 0;
+    margin: 0;
+    display: none !important;
+}
+
+.team-member-selector .selector-member-container .team-member-block .remove-team-member {
+    position: absolute;
+    margin: -8px 0 0 -11px;
+    height: 0px;
+    width: 20px;
+}
+.team-member-selector.team-edit-mode .selector-member-container .team-member-block .remove-team-member,
+.team-member-selector .selector-member-container .team-member-block:hover .remove-team-member {
+    height: 20px;
+}
+
+.team-member-selector .selector-permission-container .edit-role-permissions-note {
+    border-bottom: 1px dashed #CCC;
+    background-color: #FFF;
+    text-align: center;
+    padding: 5px;
+}
+.team-member-selector .selector-permission-container.hide-permissions {
+    display: none;
+}
+.team-member-selector .selector-permission-container .twoPaneManager {
+    margin: 0;
+}
+.team-member-selector .selector-permission-container .twoPaneManager .twoPaneList {
+    min-height: 265px;
+    width: 160px;
+}
+.team-member-selector .selector-permission-container .twoPaneManager .twoPaneList .twoPaneEntry {
+    font-weight: normal;
+}
+.team-member-selector .selector-permission-container .twoPaneManager .twoPaneContainer {
+    border: none;
+    border-top: 1px solid #CCC;
+    margin: 0;
+}
+.team-member-selector .selector-permission-container .twoPaneManager .twoPaneDetail {
+    background-color: #FFF;
+    margin-left: 160px;
+}
+.team-member-selector .selector-permission-container .twoPaneManager .twoPaneDetail h2 {
+    font-weight: normal;
+}
+
+.edit-user .columnForm {
+    margin-top: -20px;
+}
+.edit-user.edit-team-read-only .columnForm {
+    margin-top: 9px;
+}
+.edit-user .columnForm .labelsAndValues-row {
+    margin-bottom: 20px;
+}
+.edit-user .columnForm .labelsAndValues-labelCell {
+    text-align: left;
+    width: 100px !important;
+}
+.edit-user .columnForm .labelsAndValues-valueCell {
+    width: 100%;
+    padding-left: 0;
+}
+.edit-user .columnForm .selector-permission-container .labelsAndValues-row {
+    margin-bottom: 10px;
+}
+.edit-user .columnForm .selector-permission-container .twoPaneDetail .roleDefaultActions {
+    position: relative;
+}
+.edit-user .columnForm .selector-permission-container .labelsAndValues-labelCell {
+    left: 0px;
+    text-align: right;
+}
+
+.labelsAndValues-row-verticalAlign-top .labelsAndValues-labelCell{
+    padding-top:.2em;
+}
+
+.labelsAndValues-row-verticalAlign-top > div{
+    vertical-align:top;
+}
+
+.edit-user .columnForm .selector-permission-container .labelsAndValues-valueCell {
+    width: auto;
+    padding-left: 15px;;
+}
+
+.edit-user .team-list .team-save-button {
+    position: relative;
+    top: 48px;
+    left: 315px;
+    margin: 0 !important;
+}
+.edit-user .add-members-button {
+    position: absolute;
+    top: 68px;
+    left: 430px;
+}
+.edit-user.edit-team-read-only .add-members-button {
+    left: 330px;
+}
+.create-new-team .edit-user .add-members-button {
+    display: none;
+}
+
+.edit-user .right-panel-containe {
+    top: 0;
+}
+.edit-user.right-panel-top .right-panel-container {
+    position: fixed;
+    z-index: 1;
+}
+.edit-user.right-panel-top .right-panel-container .right-panel {
+    min-height: 100%;
+    overflow-y: scroll;
+}
+.edit-user .right-panel-container .right-panel .right-panel-groups {
+    margin-bottom: 400px;
+}
+
+.edit-user .right-panel .treeTable .collapseSpace {
+    display: none;
+}
+.edit-user .right-panel .treeTable .user-email-cell {
+    word-break: break-all;
+    max-width: 160px;
+}
+.edit-user .right-panel .treeTable tr.hover {
+    background-color: #CCE8F2;
+}
+
+.edit-user .right-panel .dnd-handle-text {
+    font-size: 14px;
+    border: 1px solid #CCC;
+    padding: 0 2px 3px;
+    margin-left: 4px;
+}
+
+.edit-user .right-panel-role-minimizer-container.hide-minimizer {
+    display: none;
+}
+.edit-user .right-panel-role-minimizer-text.containerLabel {
+    vertical-align: top;
+    font-size: 15px;
+    margin: 8px 12px;
+    padding: 8px 10px;
+    padding-left: 10px !important;
+    background-color: #FFF;
+    border: 4px solid #1183AD;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 2px #888 !important;
+}
+.edit-user .right-panel-role-minimizer-container {
+    position: absolute;
+    text-align: right;
+    margin-left: -400px;
+    width: 400px;
+    z-index: 10;
+    top: 5px;
+}
+.edit-user .right-panel-top .right-panel-role-minimizer {
+    position: fixed;
+    margin-left: -100px;
+}
+.edit-user.minimize-roles .team-member-selector, .edit-user.minimize-roles.right-panel-show.right-panel-top .team-member-selector {
+    min-width: 160px;
+    padding: 0;
+    margin: 0 6px 0 0;
+    border-radius: 5px;
+    text-align: center;
+}
+.edit-user.minimize-roles .columnForm .team-role-row .labelsAndValues-labelCell,
+.edit-user.minimize-roles .team-member-selector .selector-header-expand,
+.edit-user.minimize-roles .team-member-selector .selector-button,
+.edit-user.minimize-roles .team-member-selector .selector-member-container,
+.edit-user.minimize-roles .team-member-selector .selector-permission-container {
+    display: none;
+}
+.edit-user.minimize-roles .columnForm .team-role-row {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.team-manager .twoPaneManager .twoPaneDetail {
+    background-color: #FFF;
+}
+
+.team-object-mapping-divider {
+    height: 8px;
+    margin: 0 -20px;
+    border-top: 1px solid #CCC;
+}
+
+.manage-teams-button {
+    margin: 14px 0 0 20px;
+    vertical-align: top;
+}
+
+/**************************************************************************************************
+ * RightPanel (Keywords: Right Panel, Panel, Resource No Agents)
+ **************************************************************************************************/
+.right-panel-container {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.right-panel {
+    top: 0;
+    height: 100%;
+    background-color: #FFF;
+    box-shadow: -1px 1px 4px 0 #CCC;
+    border-left: 1px solid #CCC;
+    position: relative !important;
+    padding: 0 20px;
+    z-index: 20;
+    overflow-y: auto;
+}
+
+.right-panel .panel-header {
+    padding-top: 15px;
+}
+
+.right-panel .panel-title {
+    font-size: 1.6em;
+    color: #222;
+    text-shadow: #C6C6C6 0px 1px 1px;
+}
+.right-panel panel-subtitle {
+    font-size: 1.6em;
+    color: #222;
+    text-shadow: #C6C6C6 0px 1px 1px;
+}
+.right-panel .panel-title {
+    font-size: 1.6em;
+    color: #222;
+    text-shadow: #C6C6C6 0px 1px 1px;
+}
+
+.right-panel .panel-close-button {
+    float: right;
+    background-position: 0 -144px;
+    height: 24px;
+    width: 24px;
+    position: relative;
+    bottom: 5px;
+}
+.right-panel .panel-close-button:hover {
+    background-position: 0 -168px;
+}
+.right-panel .panel-close-button:active {
+    background-position: 0 -144px;
+}
+
+#blueprintManager .resourceList .right-panel-container {
+    top: 0;
+}
+
+#resourceTemplateEditManager .resourceList .right-panel-container {
+    top: 0;
+}
+
+.resourceList .right-panel-container {
+    top: 162px;
+}
+.resourceList.all-resources .right-panel-container {
+    top: 155px;
+}
+.resourceList.resource-group .right-panel-container, .resourceList.application-environment .right-panel-container {
+    top: 191px;
+}
+.resourceList.configuration-table .right-panel-container {
+    top: 90px;
+}
+
+.right-panel .panel-header .panel-subtitle {
+    width: 60%;
+    float: left;
+    margin-top: 8px;
+}
+.right-panel .panel-header .panel-title-contents {
+    width: 40%;
+    float: left;
+    text-align: right;
+}
+
+.resourceList .right-panel .panel-content .webextTable .tableFilterRow .icon_delete {
+    margin-left: -22px;
+}
+
+.resourceList .right-panel-container.right-panel-top {
+    top: 0;
+}
+.resourceList .right-panel-container.right-panel-top {
+    position: fixed;
+    z-index: 1;
+}
+.resourceList .right-panel-container.right-panel-top .right-panel {
+    min-height: 100%;
+    overflow-y: scroll;
+}
+
+.webextTable .sortableColumn span {
+    display: inline-block;
+    margin-right: 18px;
+}
+.expandCollapse {
+    float: right;
+    margin-top: -30px;
+}
+.executionLog .expandCollapse {
+    margin-top: 10px;
+}
+.with-description-text .expandCollapse {
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+.with-description-text .listTopButtons {
+    margin-left: 12px;
+}
+.with-top-buttons .listTopButtons {
+    margin-left: 12px;
+    margin-bottom: -10px;
+}
+
+.expandCollapse:empty {
+    display: none;
+}
+
+.right-panel-container .webext-switch .webext-switch-label {
+    width: 130px;
+    font-size: 1em;
+}
+
+@media only screen and (min-width: 1400px) {
+    .table-show-right-panel {
+        margin-right: 540px;
+    }
+}
+
+/**************************************************************************************************
+ * Workflow Editors
+ **************************************************************************************************/
+
+.mxWindowPane .listTopButtons {
+    margin: 0px;
+}
+.activityTreeCell .expandableCellContent>div {
+  position: relative;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+.activityTreeCell .expandableCellContent>div .iconContainer {
+  vertical-align: middle;
+}
+.activityTreeCell .expandableCellContent>div .processActivityName {
+  margin: 0px 0px 4px 5px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 1px;
+}
+
+.process-step-cell > .cellWrapper {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+}
+.process-step-cell > .cellWrapper:active {
+    cursor: move;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+}
+
+.process-step-cell .copied-step-cell {
+    white-space: nowrap;
+}
+.process-step-cell .copied-step-cell .closeStepIcon {
+    cursor: pointer;
+    z-index: 900;
+    vertical-align: middle;
+    opacity: 0.2;
+    margin: 0 -12px 0 -8px;
+}
+.process-step-cell .copied-step-cell .collapseSpace {
+    display: none;
+}
+.process-step-cell:hover .copied-step-cell .closeStepIcon:hover {
+    opacity: 1;
+}
+.process-step-cell:hover .copied-step-cell .closeStepIcon {
+    opacity: 0.6;
+}
+.process-step-cell .copied-step-cell .expandableCellContent {
+    margin-right: 16px;
+}
+
+/* Override dijit/Dialog to prevent double scroll bars when editing plugin steps. */
+.process-editor > .dijitDialog > div > .dijitDialogPaneContent {
+    overflow: visible !important;
+}
+
+/**************************************************************************************************
+ * Execution Log (Keywords: Execution, Log)
+ **************************************************************************************************/
+.genericDetail .back-navigation-link {
+    width: 100%;
+    border-top: 1px solid #CCC;
+    padding-top: 20px;
+    clear: both;
+    position: relative;
+    top: 10px;
+}
+.genericDetail .back-navigation-link .detailLabel {
+    display: none;
+}
+.genericDetail .back-navigation-link .detailField {
+    width: 100%;
+    text-align: left;
+}
+.genericDetail .back-navigation-link .detailField .general-icon {
+    margin-right: 5px;
+    height: 19px;
+    position: relative;
+    top: 4px;
+}
+.genericDetail .back-navigation-link .detailField a > div {
+    padding: 10px 24px 10px 14px;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    position: relative;
+    box-shadow: 0 0 2px 0 #CCC;
+    border-radius: 3px;
+}
+.genericDetail .back-navigation-link .detailField a.no-link {
+    text-decoration: none;
+}
+.genericDetail .back-navigation-link .detailField a.no-link .blank-icon {
+    width: 2px;
+    height: 13px;
+}
+.genericDetail .back-navigation-link .detailField a.no-link span {
+    text-decoration: none;
+    font-weight: bold;
+    color: #888;
+}
+.genericDetail .back-navigation-link .detailField a.has-arrow > div:before,
+.genericDetail .back-navigation-link .detailField a.has-arrow > div:after {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+.genericDetail .back-navigation-link .detailField a.has-arrow > div:before {
+    border: 19px solid transparent;
+    border-right: 19px solid #D0D0D0;
+    left: -38px;
+    top: -1px;
+}
+.genericDetail .back-navigation-link .detailField a.has-arrow > div:after {
+    border: 18px solid transparent;
+    border-right: 18px solid #FFF;
+    left: -35px;
+    top: 0px;
+}
+
+.executionLog .progressCell,
+.executionLog .executionSummaryRow td.progressCell {
+  padding: 0px 0px 0px 0px;
+  position: relative;
+  width: 100px;
+}
+
+.executionLog .webextTable > table > tbody > tr td.progressCell .cellWrapper,
+.executionLog .webextTable > table > tr td.progressCell .cellWrapper,
+.executionLog .executionSummaryRow td.progressCell .cellWrapper {
+  padding: 4px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  top: 0px;
+  height: auto;
+  min-height: 20px;
+}
+.dj_gecko .executionLog .executionSummaryRow td.progressCell .cellWrapper {
+    position: relative;
+}
+
+.executionLog .progressCell .progressContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.executionLog .progressCell .progressLabel {
+  text-align: center;
+  font-weight: bold;
+  z-index: 4;
+  width: 100%;
+  position: relative;
+}
+
+.executionLog .progressCell .progressMeter {
+  position: relative;
+  height: 100%;
+  margin-bottom: -17px;
+}
+
+.executionLog .process-control-links {
+    position: relative;
+    top: 10px;
+}
+
+.dj_gecko .executionLog .webextTable > table > tbody > tr td.progressCell .cellWrapper,
+.dj_gecko .executionLog .webextTable > table > tr td.progressCell .cellWrapper {
+  position: relative;
+  min-height: 30px;
+}
+.dj_gecko .executionLog .progressCell .progressContainer {
+  min-height: 30px;
+}
+.dj_gecko .executionLog .progressCell .progressLabel {
+  margin-top: -17px;
+}
+.dj_gecko .executionLog .progressCell .progressMeter {
+  height: 100%;
+  margin-bottom: 0;
+  min-height: 30px;
+}
+
+.executionLog .rowOfInterest {
+  background-color: #F5F5F5;
+}
+
+.executionLog .executionSummaryRow {
+  border-top: 2px solid #AAA;
+}
+
+.executionLog .executionSummaryRow td {
+  font-size: 12px;
+  border-collapse: collapse;
+  border: 1px solid #dbdbdb;
+  font-weight: bold;
+  padding: 5px 3px;
+  text-align: left;
+}
+
+.executionLog .executionSummaryRow td .cellWrapper {
+  padding: 3px;
+}
+
+.timeline-dock-checkbox-container {
+    float: right;
+    position: relative;
+    bottom: 40px;
+}
+.timeline-dock-checkbox-container .dijitFocusedLabel {
+    outline: none;
+}
+.timeline-fixed-position .timeline-dock-checkbox-container {
+    right: 30px;
+    bottom: 20px;
+}
+.timeline-collapsed.timeline-fixed-position .timeline-dock-checkbox-container {
+    bottom: 10px;
+}
+
+.executionLog .containerLabel {
+  padding-left: 0px;
+}
+.executionLog .containerLabel.timeline-fixed-position {
+  color: #FFF;
+  box-shadow: none;
+}
+
+.execution-log-timeline .timeline-container {
+    white-space: nowrap;
+    margin: 0 0 30px 30px;
+    position: relative;
+}
+.execution-log-timeline.timeline-collapsed .timeline-container {
+    margin-bottom: 22px;
+}
+
+.execution-log-timeline.timeline-fixed-position {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 800;
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 1px solid #AAA;
+    box-shadow: 0px 0px 2px 1px #CCC;
+}
+.dj_ie7 .execution-log-timeline.timeline-fixed-position, .dj_ie8 .execution-log-timeline.timeline-fixed-position {
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#EAFFFFFF', endColorstr='#EAFFFFFF',GradientType=1);
+}
+.execution-log-timeline.timeline-fixed-position .timeline-container {
+    margin: 0 30px 20px 60px;
+}
+
+.execution-log-timeline .containerLabel {
+    display: none;
+}
+.execution-log-timeline.timeline-fixed-position .containerLabel {
+    display: block;
+    padding: 20px 30px 0;
+}
+.execution-log-timeline.timeline-collapsed.timeline-fixed-position .containerLabel {
+    padding: 10px 30px 0;
+    margin-bottom: -10px;
+}
+
+.execution-log-timeline .timeline-time-container {
+    margin-top: 20px;
+}
+
+.execution-log-timeline .timeline-time-container .timeline-header-box-time-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.execution-log-timeline .timeline-time-container .timeline-header-box-time-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+.execution-log-timeline .timeline-time-container .timeline-header-box {
+    text-align: center;
+    width: 25%;
+}
+.execution-log-timeline .timeline-time-container .timeline-header-box-summary {
+    text-align: center;
+    width: 100%;
+}
+.execution-log-timeline .timeline-time-container .timeline-header-label {
+    font-weight: bold;
+}
+.execution-log-timeline .timeline-time-container .timeline-header-label,
+.execution-log-timeline .timeline-time-container .timeline-header-text {
+    color: #777;
+}
+
+.execution-log-timeline .timeline-time-container.timeline-background {
+    margin-top: 3px;
+    margin-right: -2px;
+}
+.execution-log-timeline.timeline-collapsed .timeline-time-container.timeline-background {
+    margin-top: 5px;
+}
+
+.execution-log-timeline .timeline-time-container.timeline-background .timeline-section {
+    height: 30px;
+    border-bottom: 1px dashed #CCC;
+}
+.execution-log-timeline.timeline-collapsed .timeline-time-container.timeline-background .timeline-section {
+    height: 10px;
+    border-bottom: 1px dashed #DDD;
+}
+.execution-log-timeline .timeline-time-container.timeline-background .timeline-section.bottom-timeline-section {
+    border-bottom: none;
+}
+
+.execution-log-timeline .timeline-time-container.timeline-background .timeline-section .timeline-icon-section {
+    position: relative;
+    right: 24px;
+    top: 6px;
+    width: 20px;
+}
+.execution-log-timeline.timeline-collapsed .timeline-time-container.timeline-background .timeline-section .timeline-icon-section {
+    zoom: 0.6;
+    top: 1px;
+}
+
+.execution-log-timeline .timeline-container .timeline-step {
+    height: 10px;
+    min-width: 4px;
+    position: absolute;
+}
+.execution-log-timeline.timeline-collapsed .timeline-container .timeline-step {
+    height: 3px;
+}
+.execution-log-timeline .timeline-container .timeline-step.timeline-step-color-1,
+.execution-log-timeline .timeline-container .timeline-step.timeline-step-color-1 .timeline-step-border {
+    background-color: #B3D66D;
+}
+.execution-log-timeline .timeline-container .timeline-step.timeline-step-color-2,
+.execution-log-timeline .timeline-container .timeline-step.timeline-step-color-2 .timeline-step-border {
+    background-color: #B3D66D;
+}
+.execution-log-timeline .timeline-container .timeline-step.timeline-step-color-not-started,
+.execution-log-timeline .timeline-container .timeline-step.timeline-step-color-not-started .timeline-step-border {
+    background-color: #CCC;
+}
+.execution-log-timeline .timeline-container .timeline-step.timeline-step-color-failed,
+.execution-log-timeline .timeline-container .timeline-step.timeline-step-color-failed .timeline-step-border {
+    background-color: #E88686;
+}
+.execution-log-timeline .timeline-container .timeline-step .timeline-step-border {
+    height: 16px;
+    width: 2px;
+    position: relative;
+    top: -3px;
+}
+.execution-log-timeline.timeline-collapsed .timeline-container .timeline-step .timeline-step-border {
+    height: 9px;
+}
+.execution-log-timeline .timeline-container .timeline-step .timeline-step-border-left {
+    float: left;
+}
+.execution-log-timeline .timeline-container .timeline-step .timeline-step-border-right {
+    float: right;
+}
+.execution-log-timeline .timeline-container .timeline-step:hover, .execution-log-timeline .timeline-container .timeline-step.hover {
+    box-shadow: 0px 0px 4px 1px #888;
+    -moz-box-shadow: 0px 0px 4px 1px #888;
+    -webkit-box-shadow: 0px 0px 4px 1px #888;
+    z-index: 5;
+}
+.execution-log-timeline .timeline-container .timeline-step.hover-item,
+.execution-log-timeline .timeline-container .timeline-step.hover-item .timeline-step-border {
+    background-color: #FFF69B;
+    z-index: 20;
+}
+
+.execution-log-timeline .timeline-container .status-container {
+    border: none;
+    border-radius: 100%;
+    height: 14px;
+    width: 14px;
+    margin: -3px 4px;
+}
+
+.execution-log-timeline .timeline-container .timeline-step .timeline-step-number .mouse-over-popup .popup-contents {
+    font-size: 12px;
+}
+
+.execution-log-timeline .timeline-container .icon-container .general-icon {
+    margin: 0;
+}
+
+.execution-log-timeline .timeline-container .timeline-length {
+    height: 3px;
+    vertical-align: top;
+    margin-top: 5px;
+    background-color: #AAA;
+    position: relative;
+}
+
+.execution-log-timeline.timeline-collapsed .timeline-expander {
+  background-position: 0 -60px;
+}
+.execution-log-timeline.timeline-collapsed .timeline-expander:hover {
+  background-position: -16px -60px;
+}
+.execution-log-timeline.timeline-collapsed .timeline-expander:active {
+  background-position: -32px -60px;
+}
+.execution-log-timeline .timeline-expander {
+  background-position: 0 0;
+  background-image: url("../../lib/webext/images/webext/icons/misc-arrow-sprite.png");
+  height: 16px;
+  width: 10px;
+  position: absolute;
+  margin: -34px 0 0 -15px;
+}
+.execution-log-timeline.timeline-collapsed.timeline-fixed-position .timeline-expander {
+    left: 30px;
+    margin-top: -5px;
+}
+.execution-log-timeline.timeline-fixed-position .timeline-expander {
+    left: 30px;
+    margin-top: -14px;
+}
+.execution-log-timeline .timeline-expander:hover {
+  background-position: -16px 0;
+}
+.execution-log-timeline .timeline-expander:active {
+  background-position: -32px 0;
+}
+
+.execution-log-timeline .timeline-step .mouse-over-popup {
+    margin-top: 15px;
+    z-index: 1000;
+}
+.execution-log-timeline.timeline-collapsed .timeline-step .mouse-over-popup {
+    margin-top: 9px;
+}
+.execution-log-timeline .timeline-step .mouse-over-popup .popup-contents-container {
+    margin: 2px 8px;
+}
+.execution-log-timeline .mouse-over-popup .popup-label {
+    font-weight: bold;
+    text-align: right;
+    margin: 0 2px 0 4px;
+}
+.execution-log-timeline .mouse-over-popup .popup-text {
+    text-align: left;
+    margin: 0 4px 0 2px;
+}
+.execution-log-timeline .mouse-over-popup .name-label {
+    margin-bottom: 20px;
+}
+.execution-log-timeline .mouse-over-popup .popup-line {
+    margin-bottom: 4px;
+}
+.execution-log-timeline .icon-container .mouse-over-popup {
+    margin-top: 6px;
+}
+
+.execution-log-timeline .general-icon .mouse-over-popup .popup-contents span {
+    white-space: nowrap;
+}
+
+.executionLog .status-cell-failed {
+    background-color: #F2BCBC;
+}
+
+.executionLog .status-color-block {
+    height: 20px;
+    width: 20px;
+    vertical-align: top;
+    margin: -3px 6px -3px 0;
+}
+.executionLog .timeline-header-box .status-color-block {
+    height: 16px;
+    width: 16px;
+    vertical-align: top;
+    margin: -1px 4px -3px 0;
+    border-radius: 100%;
+}
+
+.executionLog .webextTable .cellWrapper .mouse-over-popup {
+    margin-top: 4px;
+}
+
+.webextTable > table > tbody > tr.hover, .executionLog .webextTable > table > tfoot > tr:hover {
+    background-color: #CCE8F2;
+}
+
+.executionLog .webextTable .tableHoverActions {
+    display: inline-block !important;
+    padding: 8px 5px;
+}
+.executionLog .webextTable tr:hover .tableHoverActions .table-actions-container,
+.executionLog .webextTable td.drop-down-button-visible .tableHoverActions .table-actions-container,
+.executionLog .webextTable tr.selected .tableHoverActions .table-actions-container {
+    display: inline-block !important;
+}
+.executionLog .webextTable .tableHoverActions {
+    background: url('../../images/icons/general-sprite.png') -176px -46px no-repeat;
+    height: 1px;
+    width: 8px;
+}
+.executionLog .webextTable tr:hover .tableHoverActions, .executionLog .webextTable tr.selected .tableHoverActions,
+.executionLog .webextTable td.drop-down-button-visible .tableHoverActions,
+.executionLog .webextTable .tableHoverActions.always-show-actions {
+    background-color: #CCE8F2;
+    background-image: none;
+    height: auto;
+    width: auto;
+}
+.executionLog .webextTable .tableHoverActions .table-actions-container {
+    display: none;
+    font-weight: normal;
+}
+.executionLog .webextTable .tableHoverActions.always-show-actions {
+    background-color: #FFF;
+}
+.executionLog .webextTable .tableHoverActions.always-show-actions .table-actions-container {
+   display: inline;
+   padding-right: 5px;
+}
+.popup-contents .execution-log-process-link {
+    margin: 4px;
+    display: block;
+}
+
+.failed-state-color, .disconnected-state-color {
+    background-color: #E88686;
+}
+.success-state-color, .connected-state-color {
+    background-color: #B3D66D;
+}
+.running-state-color {
+    background-color: #F2F3C4;
+}
+.warning-state-color {
+    background-color: #DE9C59;
+}
+
+.installable-state-color {
+    background-color: #82d1F5
+}
+.gray-state-color, .grey-state-color {
+    background-color: #CCC;
+}
+
+/* Styling for input/output property tables, and iteration properties for activities. */
+.activity-property-name > div {
+  width: 150px;
+  word-break: break-all;
+}
+.activity-property-value > div {
+  width: 370px;
+  word-break: break-all;
+}
+
+/**************************************************************************************************
+ * Reports Page (Keywords: Reports)
+ **************************************************************************************************/
+.report-page, .reportPage {
+    margin-top: 10px;
+}
+
+.report-sidebar {
+    width: 260px;
+    float: left;
+    border: solid 1px #DBDBDB;
+    border-bottom: none;
+}
+
+.report-sidebar .report-accordion {
+}
+
+.report-sidebar .report-accordion .dijitTitlePaneTitle,
+.report-sidebar .report-accordion .dijitTitlePaneTitle .dijitTitlePaneTitleFocus,
+.report-form-table .report-column-edit-button.dijitButton .dijitButtonNode,
+.mxWindow td.mxWindowTitle {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ededed 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #ededed));
+    background: -webkit-linear-gradient(top, #ffffff 0%, #ededed 100%);
+    background: -o-linear-gradient(top, #ffffff 0%, #ededed 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%, #ededed 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #ededed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #FFF;
+    padding: 4px 10px 4px 0px;
+}
+
+.report-sidebar .report-accordion .dijitTitlePaneTitle:hover,
+.report-sidebar .report-accordion .dijitTitlePaneTitle:hover .dijitTitlePaneTitleFocus,
+.report-form-table .report-column-edit-button.dijitButton:hover .dijitButtonNode {
+  background: -moz-linear-gradient(top, #fafafa 0%, #dbdbdb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #dbdbdb));
+  background: -webkit-linear-gradient(top, #fafafa 0%, #dbdbdb 100%);
+  background: -o-linear-gradient(top, #fafafa 0%, #dbdbdb 100%);
+  background: -ms-linear-gradient(top, #fafafa 0%, #dbdbdb 100%);
+  background: linear-gradient(to bottom, #fafafa 0%, #dbdbdb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#dbdbdb', GradientType=0 );
+}
+
+.report-form-table .report-column-edit-button.dijitButton:active .dijitButtonNode {
+  background: -moz-linear-gradient(top, #dbdbdb 0%, #fafafa 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dbdbdb), color-stop(100%, #fafafa));
+  background: -webkit-linear-gradient(top, #dbdbdb 0%, #fafafa 100%);
+  background: -o-linear-gradient(top, #dbdbdb 0%, #fafafa 100%);
+  background: -ms-linear-gradient(top, #dbdbdb 0%, #fafafa 100%);
+  background: linear-gradient(to bottom, #dbdbdb 0%, #fafafa 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#fafafa', GradientType=0 );
+}
+
+.report-sidebar .report-accordion .dijitTitlePaneTitle .dijitTitlePaneTitleFocus {
+    background: none !important;
+}
+
+.report-sidebar .report-accordion .dijitTitlePaneContentInner {
+    padding: 0;
+}
+
+.report-sidebar .report-accordion .dijitTitlePaneTitle,
+.report-sidebar .report-accordion .dijitTitlePaneContentOuter {
+    border: none;
+}
+.report-sidebar .report-accordion .dijitTitlePaneTitle,
+.report-link-div .linkPointer,
+.report-link-div-selected .linkPointer {
+    border-bottom: solid 1px #DBDBDB;
+}
+
+.report-link-div, .report-link-div-selected {
+    position: relative;
+}
+
+.report-link-div .linkPointer,
+.report-link-div-selected .linkPointer {
+    background-color: #FFF;
+    color: #888;
+    font-size: 12px;
+    padding: 10px 25px;
+    display: block;
+    cursor: pointer;
+}
+
+.report-link-div-selected .linkPointer {
+    background-color:#BFE2EF;
+    color: #1183AD ;
+}
+
+.report-link-div .iconMinus, .report-link-div-selected .iconMinus {
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    cursor: pointer;
+    display: none;
+}
+
+.report-link-div:hover .linkPointer {
+    background-color: #F2F9FD;
+}
+
+.report-link-div:hover .iconMinus, .report-link-div-selected:hover .iconMinus {
+  display: inline;
+}
+
+.oneui .report-accordion .dijitTitlePane .dijitArrowNode {
+    background-image:none;
+}
+
+.report-main {
+    vertical-align: top;
+    margin-left: 280px;
+}
+
+.report-main .report-form-table {
+}
+
+.report-main .report-table .chart-help-link-container {
+    text-align: right;
+    margin: -20px 8px 20px 0;
+}
+
+.report-form-table .report-form, .report-form-table .report-button-span.report-form-field {
+    vertical-align: top;
+}
+
+.report-form-field .webext-select {
+    margin-bottom: 0px;
+}
+
+.report-form-field > .webext-multi-select > .selected-items-list {
+    margin-bottom: 0px;
+}
+
+.report-form-table .report-form .report-date-picker .date-range-selector,
+.report-form-table .report-form .report-button-span .report-button,
+.report-form-table .report-form .report-form-field .report-form-field .dialogMultiSelect,
+.report-form-table .report-form .report-form-field .report-form-field .dijitSelect {
+    margin-bottom: 10px;
+}
+
+.report-form-table .has-form-widget {
+    margin-bottom: 20px;
+}
+
+.report-form-table .report-form .report-date-picker .date-range-selector .date-range-wrapper .selectedDate .dijitTextBox {
+    width: 120px;
+    margin-left: 7px;
+}
+
+.report-form-table .report-form .report-form-field {
+  vertical-align: top;
+  padding: 0 10px 0 0;
+}
+
+.report-main .report-table .webextTableFooter {
+    position: absolute;
+    left: 306px;
+    right: 30px;
+}
+
+.report-form-table .report-table .webextTable > table > tbody > tr .cellWrapper {
+    white-space: nowrap;
+}
+
+.report-breadcrumb-container {
+    background: #EDF9FF;
+    border: 1px solid #BFE8FA;
+    padding: 15px 10px 15px 18px;
+    margin-bottom: 10px;
+}
+.report-breadcrumb-container .report-breadcrumb {
+    color:#00B2EF;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+.report-breadcrumb-container img {
+    margin:auto 2px auto 3px;
+}
+.report-breadcrumb-container .report-link {
+    float:right;
+    margin: -5px 0 0 10px;
+}
+
+.date-range-selector .date-range-wrapper {
+    vertical-align: top;
+}
+
+.dialogMultiSelect .dijitButtonNode,
+.dijitPopup .dijitDateTextBox .dijitInputContainer {
+    padding:3px 6px 4px 6px !important;
+    color:#009ee1;
+}
+.customDateRangeSelector {
+    background: #FFF;
+    border: 1px solid #DBDBDB;
+    padding: 15px;
+    margin-top: -3px;
+}
+.customDateRangeSelector .inlineBlock .dijitTextBox {
+    min-width: 100px;
+}
+.customDateRangeSelector .dijitButton {
+    position: relative;
+    top: 18px;
+    left: 14px;
+}
+
+.customDateRangeSelector .dijitComboBox .dijitDownArrowButton {
+    height: 30px;
+}
+
+.chart-outer-container {
+    background-color: #FFF;
+    border: solid 1px #DBDBDB;
+}
+
+.highcharts-outer-container {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+.dj_gecko .highcharts-outer-container {
+    margin-top: 1px;
+}
+
+.print-view .highcharts-outer-container {
+    width: 600px !important;
+}
+
+.applicationList, .processList {
+    margin-top: -6px;
+}
+
+.dj_ie7 .report-definition-list .sideBar {
+  position: relative;
+  margin-left: -27px;
+  margin-right: 27px;
+}
+
+/**************************************************************************************************
+ * Popup Content
+ **************************************************************************************************/
+.popupContent .popupTitle {
+    font-weight: bold;
+    font-size: medium;
+    margin: 5px;
+}
+.popupContent .popupMessage {
+    margin: 10px 5px 15px 5px;
+}
+.popupContent .popupButtons {
+    text-align: right;
+}
+.popupTooltip {
+    width: 350px;
+}
+
+/**************************************************************************************************
+ * Workflow Activity List (Keywords: Workflow, Activity, List)
+ *************************************************************************************************/
+table.fixedLayout {
+  table-layout: fixed;
+}
+
+.securityAddMember {
+  float: right;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.securityMember {
+    margin-left: 10px;
+}
+
+.oneui .dijitTooltipABRight .dijitTooltipConnector {
+    right: 8px;
+}
+
+.securityRemoveMember {
+  cursor: pointer;
+}
+
+.roleName {
+  font-weight: bold;
+}
+
+.roleActions {
+  margin-left: 20px;
+}
+
+/**************************************************************************************************
+ * Code Editor (Keywords: Code, Editor)
+ *************************************************************************************************/
+ .codeEditor .editor {
+    position: relative;
+    width: 400px;
+    height: 300px;
+ }
+
+/**************************************************************************************************
+ * mxWindow / Process Editor Styles (Keywords: mxGraph, Process Designer)
+ *************************************************************************************************/
+.mxWindowPane .centered-expand-collapse, .centered-expand-collapse {
+    left: 0;
+    width: 100%;
+    text-align: center;
+    float: none;
+    margin-top: 0;
+}
+
+.mxWindowPane .left-align-expand-collapse {
+    left: 0;
+    float: none;
+    margin-top: 0;
+}
+
+.mxWindowPane .fileTree {
+    padding: 8px 0 0;
+}
+.mxWindowPane .fileTree .webextTable {
+    margin-top: 0;
+}
+.mxWindowPane .fileTree .webextTable > table > thead > tr > td,
+.mxWindowPane .fileTree  .webextTable > table > tbody > tr > td {
+    border-left: none;
+    border-right: none;
+}
+.mxWindowPane .fileTree .file-tree-footnote {
+    padding: 5px;
+    margin: -5px 5px 5px;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+}
+.mxWindow .mxWindowPane > .mxWindowPane,
+.mxWindow .mxWindowPane > .mxWindowPane .webextTable > table > thead > tr > td {
+    background-color: #FAFAFA;
+}
+
+.baseGraph .mx-graph-top-pane {
+    top: -1px;
+}
+.baseGraph .mx-graph-bottom-pane {
+    top: 151px;
+}
+.baseGraph .mx-graph-pane {
+    position: absolute;
+    left: 0px;
+}
+
+.mxWindowPane .toolbar-container {
+    padding: 4px;
+    text-align: center;
+    background-color: #FFF;
+}
+
+.mxWindow td.mxWindowTitle {
+    background: none;
+    border-bottom: 1px solid #CCC;
+    padding: 6px 0;
+    background-color: #FAFAFA;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-shadow: none;
+    color: #555;
+}
+.mxWindow.tool-palette td.mxWindowTitle {
+    display: none;
+}
+
+.baseGraph .process-outline-box {
+    z-index: 1;
+    overflow: hidden;
+    width: 240px;
+    height: 110px;
+    background: #FFF;
+    border: 1px solid #CCC;
+    border-top: none;
+    border-left: none;
+}
+
+#graphContainer div.mxWindow {
+    background: none;
+    background-color: #F8F8F8;
+    box-shadow: none;
+    border: 1px solid #CCC;
+    border-left: none;
+    position: relative;
+}
+#graphContainer div.mxWindow.tool-palette {
+    background-color: #FFF;
+}
+
+/* Line 1011 for Save Process Styles **/
+.process-save-dialog.process-saved {
+    background-color: #8CC63f;
+}
+.process-save-dialog.process-error {
+    background-color: #F04E37;
+}
+
+.graph-print-container-title {
+    font-size: 1.2em;
+    margin-bottom: 6px;
+}
+.graph-print-poster-pages-title {
+    margin-bottom: 2px;
+}
+.graph-print-container {
+    margin: 10px 0 30px;
+    text-align: center;
+}
+.graph-print-buttons-container {
+    text-align: right;
+    padding-top: 20px;
+    margin-top: -12px;
+    border-top: 1px solid #AAA;
+}
+.graph-print-buttons-container .dijitButton:last-child {
+    margin-right: 0px;
+}
+
+.graph-print-format-container, .graph-print-style-container {
+    height: 90px;
+    min-width: 90px;
+    padding: 20px;
+    margin: 0px 10px 14px;
+    background-color: #EEE;
+    border: 2px solid #EEE;
+    vertical-align: top;
+    cursor: pointer;
+}
+.graph-print-format-container.selected-print-option,
+.graph-print-style-container.selected-print-option {
+    border-color: #00B2EF;
+}
+.graph-print-style-container.selected-print-option {
+    background-color: #D9EDF6;
+}
+
+.graph-print-container .dijitSpinner {
+    width: 120px;
+}
+.graph-print-container label {
+    outline: none !important;
+    cursor: pointer;
+}
+
+.graph-print-format-container .normal-print-block {
+    height: 60px;
+    width: 40px;
+    background-color: #FFF;
+    border: 2px solid #555;
+    margin: auto;
+    margin-bottom: 8px;
+}
+.graph-print-format-container .poster-print-block {
+    height: 26px;
+    width: 15px;
+    background-color: #FFF;
+    border: 2px solid #555;
+    margin: auto;
+    margin-bottom: 4px;
+}
+.graph-print-format-container .poster-print-block-container {
+    width: 50px;
+    margin: auto;
+}
+.graph-print-format-container .poster-print-block.poster-print-block-left {
+    margin-right: 4px;
+}
+.graph-print-format-container.selected-print-option .normal-print-block,
+.graph-print-format-container.selected-print-option .poster-print-block {
+    background-color: #00B2EF;
+    border-color: #00B2EF;
+}
+.graph-print-container-subtitle {
+    margin-top: 4px;
+}
+.selected-print-option .graph-print-container-subtitle {
+    color: #00B2EF;
+}
+
+.graph-print-style-container .normal-print-style-block,
+.graph-print-style-container .outline-print-style-block {
+    height: 60px;
+    width: 60px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid #7F1C7D;
+}
+.graph-print-style-container .normal-print-style-block {
+    background-color: #7F1C7D;
+    color: #FFF;
+}
+.graph-print-style-container .outline-print-style-block {
+    background-color: #FFF;
+    border: 2px solid #3B0256;
+    color: #222;
+}
+.graph-print-style-container-subtitle {
+    position: relative;
+    top: 5px;
+}
+
+.graph-edit-properties.labelsAndValues-valueCell {
+    width: 400px;
+}
+
+/**************************************************************************************************
+ * Settings
+ **************************************************************************************************/
+.settings-index {
+    margin: 10px 0 0;
+}
+
+.settings-index .category {
+    width: 49%;
+    min-height: 450px;
+    vertical-align: top;
+    margin-right: -1px;
+}
+.settings-index.all-settings .category {
+    width: 32%;
+}
+
+.settings-index .category-wrapper {
+    height: 100%;
+    vertical-align: top;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.settings-index .category-label {
+    font-size: 1.7em;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #222;
+    font-weight: 300;
+}
+
+.settings-index .category-divider {
+    margin: 0 1%;
+    width: 1px;
+    min-height: 460px;
+    background-color: #AAA;
+}
+
+.settings-index .category-links {
+}
+
+.dj_ie7 .settings-index .link-container {
+    zoom: 1;
+    display: inline;
+}
+
+.settings-index .link-container {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+.settings-index .link-container a {
+    display: inline-block;
+}
+.settings-index .link-container a:hover .inner-link-text {
+    text-decoration: underline;
+}
+.settings-index .link-container .output-log-download-link {
+    font-size: 0.8em;
+    font-style: italic;
+    font-family: Georgia;
+    position: relative;
+    top: 1px;
+    left: 8px;
+}
+
+.settings-index .link-container .inner-link-text {
+    padding: 10px 0 12px 42px;
+    color: #444;
+}
+
+.settings-index .general-icon {
+    width: 15px;
+    height: 16px;
+}
+
+
+.logButtons {
+    margin-bottom: -5px
+}
+
+.rolePermissions .expandNode {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  background: url(../../lib/webext/images/webext/icons/misc-arrow-sprite.png) no-repeat;
+  background-position: 0 -330px;
+  position: relative;
+  top: 2px;
+}
+.rolePermissions .expandNode:hover {
+  background-position: -16px -330px;
+}
+.rolePermissions .expandNode:active {
+  background-position: -32px -330px;
+}
+.rolePermissions .expanded.expandNode {
+  background: url(../../lib/webext/images/webext/icons/misc-arrow-sprite.png) no-repeat;
+  background-position: 0 -270px;
+}
+.rolePermissions .collapsedRolePermissions {
+  height: 0px;
+  overflow: hidden;
+}
+.rolePermissions > .subActionContainer {
+  border-top: 1px dotted #999;
+  padding-top: 7px;
+  padding-left: 18px;
+}
+.rolePermissions > .subActionContainer.collapsedRolePermissions {
+  border-top: 0px;
+  padding-top: 0px;
+}
+.rolePermissions .subAction {
+  margin-bottom: 3px;
+}
+
+.form-container, .systemSettings .underField {
+    max-width: 1400px;
+    margin: 10px auto 20px;
+}
+.systemSettings .underField {
+    border-top: 1px solid #CCC;
+    padding: 15px 0;
+    margin: 0 auto !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.9);
+    -moz-box-shadow: 0 -4px 6px -6px;
+    box-shadow: 0 -4px 6px -6px;
+}
+.systemSettings .underField .dijitButton {
+    margin-left: 10px;
+}
+
+.settings-column {
+    width: 50%;
+    vertical-align: top;
+}
+.settings-section {
+    vertical-align: top;
+    width: 100%;
+}
+.settings-section-inner {
+    border: 2px solid #00B2EF;
+    background-color: #FFF;
+    margin: 10px;
+    border-radius: 3px;
+}
+.settings-section .labelsAndValues-row {
+    padding: 6px 12px;
+    margin: -1px 0 0 0;
+    border-top: 1px solid #DDD;
+    -webkit-transition: background-color 0.25s;
+    -moz-transition: background-color 0.25s;
+    transition: background-color 0.25s;
+}
+.settings-section .labelsAndValues-row:nth-child(2) {
+    border-top-color: #00B2EF;
+}
+.settings-section .labelsAndValues-row.section-label-row, .settings-section .labelsAndValues-row.section-label-row:hover {
+    background-color: #00B2EF;
+    border-top: none;
+}
+.settings-section .labelsAndValues-row:hover {
+    background-color: #DFF5FF;
+    -webkit-transition: background-color 0.1s;
+    -moz-transition: background-color 0.1s;
+    transition: background-color 0.1s;
+}
+.settings-section .sectionLabel {
+    font-size: 1.4em;
+    margin: 0px !important;
+    font-weight: 200 !important;
+    border: none;
+    color: #FFF;
+    position: relative;
+    top: 6px;
+    left: 2px;
+}
+.settings-section .section-label-row .sectionLabel {
+    width: auto;
+}
+.settings-section .labelsAndValues-row.section-label-row > .labelsAndValues-labelCell {
+    display: none;
+}
+.settings-section .labelsAndValues-row > .labelsAndValues-labelCell {
+    width: 40% !important;
+}
+.settings-section .labelsAndValues-labelCell {
+    text-align: left;
+    font-weight: 400;
+    padding-top: 0;
+    padding-right: 10px;
+}
+.settings-section .labelsAndValues-row.text-widget-row  > .labelsAndValues-valueCell,
+.settings-section .labelsAndValues-row.select-widget-row  > .labelsAndValues-valueCell,
+.settings-section .labelsAndValues-row.historyCleanupTimePicker  > .labelsAndValues-valueCell {
+    width: 46%;
+}
+.settings-section .labelsAndValues-valueCell .domNode {
+    margin-top: 0px !important;
+}
+.settings-section .labelsAndValues-valueCell {
+    margin-left: 0;
+    padding-left: 0;
+}
+.settings-section .section-label-row .labelsAndValues-valueCell {
+    width: 100%;
+}
+.settings-section .labelsAndValues-valueCell .dijitValidationTextBoxLabel {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.settings-section .labelsAndValues-valueCell .dijitTextBox {
+    width: 100% !important;
+    min-width: 180px;
+}
+.settings-section .default-snapshot-dropdown .dijitButtonContents .dijitButtonText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 155px;
+}
+.settings-section .dijitButton {
+    margin: 3px 0px;
+}
+
+@media only screen and (min-width: 1100px) {
+    .settings-section .labelsAndValues-row.text-widget-row  > .labelsAndValues-valueCell,
+    .settings-section .labelsAndValues-row.select-widget-row  > .labelsAndValues-valueCell,
+    .settings-section .labelsAndValues-row.historyCleanupTimePicker  > .labelsAndValues-valueCell {
+        width: 50%;
+    }
+    .settings-section .default-snapshot-dropdown .dijitButtonContents .dijitButtonText {
+        max-width: 190px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .settings-section .default-snapshot-dropdown .dijitButtonContents .dijitButtonText {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .systemSettings .underField .dijitButton {
+        margin-left: 15px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .settings-column {
+        width: 80%;
+        margin: 0 10%;
+    }
+    .settings-section .labelsAndValues-row.text-widget-row  > .labelsAndValues-valueCell,
+    .settings-section .labelsAndValues-row.select-widget-row  > .labelsAndValues-valueCell,
+    .settings-section .labelsAndValues-row.historyCleanupTimePicker  > .labelsAndValues-valueCell {
+        width: 50%;
+    }
+    .settings-section .default-snapshot-dropdown .dijitButtonContents .dijitButtonText {
+        max-width: 100%;
+    }
+}
+
+
+/**************************************************************************************************
+ * Calendar
+ **************************************************************************************************/
+.calendar, #calendarContainer {
+    padding-top: 10px;
+}
+.dojoxCalendar {
+    width: auto;
+}
+.calendar .calendar-sidebar {
+    float: left;
+}
+
+.calendar .calendar-title {
+    float: right;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin: 3px 10px 0 0;
+}
+
+.calendar .calendar-sidebar .dijitCalendarContainer.dijitCalendar {
+    width: 240px;
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid #CCC;
+}
+
+.calendar .dojoxCalendar {
+    margin-left: 260px;
+}
+
+.oneui .dijitCalendarCurrentDate span.dijitCalendarDateLabel {
+    background-color: #D5F5FC !important;
+    color: #00B2EF;
+    font-weight: bold;
+}
+
+.dojoxCalendar .buttonContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 31px;
+}
+.dojoxCalendar .buttonContainer .dijitToolbar {
+  border-bottom: 1px solid #DDD;
+  border-radius: 2px;
+  background: none;
+}
+.dojoxCalendar .buttonContainer .dijitToolbar .current-calendar-view .dijitButtonText {
+  font-weight: bold;
+}
+.oneui .dojoxCalendar .buttonContainer .dijitToolbarSeparator {
+    background: none;
+    background-color: #DDD;
+    width: 1px;
+    padding: 0;
+}
+.dojoxCalendar .viewContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 31px;
+  bottom: 0;
+  overflow: hidden;
+}
+.dojoxCalendar .view {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.dojoxCalendarColumnView .dojoxCalendarEvent.entry .endTime {
+    display: none !important;
+}
+
+.oneui .calendar-sidebar .dijitCalendar {
+    background-color: #FFF
+}
+.oneui .calendar-sidebar .dijitCalendar .dijitCalendarDateTemplate.highlighted-date .dijitCalendarDateLabel {
+    background-color: #EBF6FA;
+    font-weight: bold;
+}
+.oneui .calendar-sidebar .dijitCalendar .dijitCalendarArrow,
+.oneui .calendar-sidebar .dijitCalendar .dijitCalendarNextYear,
+.oneui .calendar-sidebar .dijitCalendar .dijitCalendarPreviousYear {
+    border-color: #FFF;
+}
+.oneui .calendar-sidebar .dijitCalendar .dijitCalendarArrow:hover {
+}
+
+.calendar-sidebar-tabs {
+    border-bottom: none;
+    white-space: nowrap;
+    margin-bottom: -1px;
+    width: 234px;
+}
+.calendar-sidebar-tab {
+    width: 50%;
+    height: 18px;
+    padding: 8px 0 4px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 2px;
+    border: 1px solid #E3E3E3;
+    border-bottom-color: #CCC;
+    border-radius: 3px 3px 0 0;
+    background-color: #FFF;
+}
+.current-calendar-tab {
+    font-weight: bold;
+    border-top: 2px solid #008ABF;
+    border-left-color: #CCC;
+    border-right-color: #CCC;
+    border-bottom: none;
+    padding-bottom: 5px;
+}
+
+.calendar-sidebar-panel {
+    padding: 10px;
+    border: 1px solid #CCC;
+    min-height: 395px;
+    margin-top: -1px;
+    width: 218px;
+}
+.calendar-sidebar-panel-title {
+    font-size: 1.2em;
+    padding-bottom: 5px;
+}
+.calendar-sidebar-panel-section {
+    margin-bottom: 10px;
+}
+.calendar-sidebar-panel-filters .calendar-sidebar-panel-section .dijitValidationTextBox {
+    margin-top: 2px;
+}
+.calendar-sidebar-panel-label {
+    font-weight: bold;
+}
+.calendar-sidebar-environment-color {
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    margin: 2px 5px 0 0;
+    vertical-align: top;
+    box-shadow: 0 0 2px #888;
+}
+
+.calendar-sidebar-create-button-container {
+    padding: 0 10px 10px 10px;
+    border-bottom: 1px solid #CCC;
+    margin: 0 -10px 10px;
+    text-align: center;
+}
+.calendar-sidebar-create-button-container .dijitButtonNode .dijitButtonText {
+    max-width: 180px;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+.calendar-sidebar-button-link {
+    margin-right: 10px;
+}
+.oneui .dijitButton.calendar-sidebar-button {
+    margin-left: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.calendar-sidebar-panel-filters {
+    padding: 0 10px 10px;
+    min-height: 405px;
+}
+.calendar-sidebar-panel .calendar-filter-section {
+    border-bottom: 1px solid #CCC;
+    padding: 10px;
+    margin: 0 -10px;
+}
+
+.calendar-sidebar-panel .add-filter-container {
+    padding: 10px;
+    margin: -11px -10px 0 0;
+    border: 1px solid #CCC;
+    border-top: none;
+    border-right: none;
+    background-color: #FFF;
+}
+.calendar-sidebar-panel .add-filter-icon {
+    margin: 0;
+}
+.calendar-sidebar-panel .add-filter-container,
+.calendar-sidebar-panel .remove-filter-icon {
+    float: right;
+}
+
+.calendar-sidebar-save-message, .calendar-sidebar-hover-container {
+    position: absolute;
+    width: 193px;
+    padding: 10px;
+    background-color: #FFF;
+    border: 2px solid #555;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 #AAA;
+    z-index: 5;
+}
+
+.calendar-sidebar-panel-filters .calendar-sidebar-save-message {
+    margin-top: 10px;
+}
+
+.calendar-sidebar-save-message {
+    margin-top: -1px;
+    background-color: #D4ECFE;
+    border: 2px solid #1A99FC;
+    z-index: 10;
+    text-align: center;
+}
+
+.oneui .calendar-sidebar-panel-section .dijitComboBox .dijitInputField .dijitInputInner {
+    position: relative;
+    right: 5px;
+}
+
+.calendar-sidebar-panel-section .calendar-date-drop-down {
+    width: 110px;
+    margin-right: 4px;
+}
+.calendar-sidebar-panel-section .calendar-time-drop-down {
+    width: 100px;
+}
+
+.calendar-sidebar-panel-section .versionSelector .dijitSelect {
+    margin: 0 4px 4px 0;
+}
+
+.calendar-sidebar-bottom-filter-container {
+    padding: 0px 10px;
+    margin: 0 -10px;
+}
+.calendar-sidebar-modify-button-container,
+.calendar-sidebar-filter-button-container {
+    text-align: center;
+}
+.calendar-sidebar-panel .calendar-update-button,
+.calendar-sidebar-panel .calendar-cancel-button {
+    margin-top: 10px;
+    width: auto !important;
+}
+
+/*********************************************
+ * Calendar Items
+ ********************************************/
+.dojoxCalendarMatrixView .dojoxCalendarEvent {
+    position: absolute;
+    text-align: left;
+    color: #000000;
+    cursor: default;
+    white-space: nowrap;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal {
+    position: absolute;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal .bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: #000000;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: #555;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent .bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: #333;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent.Edited .bg {
+  border: dashed 1px #ffffff;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent.Focused .bg {
+  border: dashed 1px #ffffff;
+}
+
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Edited {
+  border: dashed 1px #FFF;
+  background: #FDB813;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  color: #000;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Focused {
+  border: dashed 1px #000000;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal .labels {
+  position: absolute;
+  left: 3px;
+  right: 1px;
+  bottom: 2px;
+  overflow: hidden;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel .labels {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 0;
+  top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dj_gecko .dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel .labels {
+  top: 1px;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel .labels .startTime,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.no-move .labels .startTime,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal .labels .startTime {
+  font-size: 0.8em;
+  color: #606060;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel .labels .startTime span {
+  margin: 0 4px;
+  padding: 0;
+}
+.dj_gecko .dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel .labels .startTime span {
+  position: relative;
+  top: 1px;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Selected,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Selected .labels .startTime,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Selected .labels .startTime,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Hovered.no-move,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Hovered.entry.no-move .startTime,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected.entry.no-move .startTime,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected .summary {
+  color: #FFF !important;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent.entry.no-move .startTime {
+  color: #444;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Hovered.no-move,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Selected.no-move,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Hovered.entry.no-move .startTime,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected.entry.no-move .startTime {
+  background-image: url("../../images/calendar/calendar-no-move.png");
+}
+
+.dojoxCalendarMatrixView .dojoxCalendarEvent.Edited {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Edited .bg {
+  border: dashed 1px #FFF;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Focused .bg {
+  border: dashed 1px #FFF;
+}
+
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel {
+  color: #444;
+  border-radius: 5px;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent .summary {
+  color: #444;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent.blackout .summary {
+    font-weight: 400;
+    font-size: 1.2em;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent.entry.no-move .summary {
+  color: #888;
+}
+
+.dojoxCalendarMatrixView .dojoxCalendarEvent .handle {
+  z-index: 2;
+  background-color: #F00;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  khtml-user-select: none;
+  user-select: none;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  cursor: e-resize;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent .moveHandle {
+  left: 0;
+  top: 0;
+  width: 100%;
+  cursor: move;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent .resizeEndHandle {
+  right: 0px;
+}
+
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel .startTime,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal .startTime {
+  border-radius: 5px;
+}
+.dj_gecko .dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel .startTime {
+  vertical-align: top;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Selected .startTime {
+  background-color: transparent !important;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.red-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.red-color .startTime,
+.dojoxCalendarColumnView .dojoxCalendarEvent.red-color .bg {
+  background-color: #F2BCBC;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.orange-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.orange-color .startTime,
+.dojoxCalendarColumnView .dojoxCalendarEvent.orange-color .bg {
+  background-color: #FDD6B0;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.yellow-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.yellow-color .startTime,
+.dojoxCalendarColumnView .dojoxCalendarEvent.yellow-color .bg {
+  background-color: #FFE36A;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.green-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.green-color .startTime,
+.dojoxCalendarColumnView .dojoxCalendarEvent.green-color .bg {
+  background-color: #CFE68A;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.blue-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.blue-color .startTime,
+.dojoxCalendarColumnView .dojoxCalendarEvent.blue-color .bg {
+  background-color: #BFE2EF;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.purple-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.purple-color .startTime,
+.dojoxCalendarColumnView .dojoxCalendarEvent.purple-color .bg {
+  background-color: #D2C6E8;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.black-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.black-color .startTime,
+.dojoxCalendarColumnView .dojoxCalendarEvent.black-color .bg {
+  background-color: #DDD;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.entry.no-move {
+  background-color: #E5E5E5;
+}
+
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Hovered.red-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Hovered.red-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Hovered.red-color .bg,
+.dojoxCalendarColumnView .dojoxCalendarEvent.red-color .startTime {
+  background-color: #E88686;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Hovered.orange-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Hovered.orange-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Hovered.orange-color .bg,
+.dojoxCalendarColumnView .dojoxCalendarEvent.orange-color .startTime {
+  background-color: #FABE79;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Hovered.yellow-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Hovered.yellow-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Hovered.yellow-color .bg,
+.dojoxCalendarColumnView .dojoxCalendarEvent.yellow-color .startTime {
+  background-color: #F0CC00;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Hovered.green-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Hovered.green-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Hovered.green-color .bg,
+.dojoxCalendarColumnView .dojoxCalendarEvent.green-color .startTime {
+  background-color: #B3D66D;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Hovered.blue-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Hovered.blue-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Hovered.blue-color .bg,
+.dojoxCalendarColumnView .dojoxCalendarEvent.blue-color .startTime {
+  background-color: #84C7E0;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Hovered.purple-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Hovered.purple-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Hovered.purple-color .bg,
+.dojoxCalendarColumnView .dojoxCalendarEvent.purple-color .startTime {
+  background-color: #AD95CF;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Hovered.black-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Hovered.black-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Hovered.black-color .bg,
+.dojoxCalendarColumnView .dojoxCalendarEvent.black-color .startTime {
+  background-color: #C0C0C0;
+}
+
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Selected,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected {
+  box-shadow: 0 0 6px 0 #000;
+  font-weight: bold;
+  color: #FFF;
+  border-radius: 5px;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Selected.red-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Selected.red-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected.red-color .bg {
+  background-color: #E2515B;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Selected.orange-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Selected.orange-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected.orange-color .bg {
+  background-color: #E6944A;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Selected.yellow-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Selected.yellow-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected.yellow-color .bg {
+  background-color: #D4A600;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Selected.green-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Selected.green-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected.green-color .bg {
+  background-color: #86B347;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Selected.blue-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Selected.blue-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected.blue-color .bg {
+  background-color: #53ABCC;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Selected.purple-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Selected.purple-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected.purple-color .bg {
+  background-color: #9169BF;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Selected.black-color .bg,
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarLabel.Selected.black-color,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected.black-color .bg {
+  background-color: #AAA;
+}
+
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Selected {
+  font-weight: bold;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal.Selected .bg,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected.blackout,
+.dojoxCalendarColumnView .dojoxCalendarEvent.Selected.blackout.black-color .bg {
+  box-shadow: 0 0 4px 0 #000;
+  border-radius: 5px;
+}
+
+/*********************************************
+ * Calendar Matrix View
+ ********************************************/
+.dojoxCalendarMatrixView {
+    cursor: default;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    khtml-user-select: none;
+    user-select: none;
+}
+.dojoxCalendarMatrixView .dojoxCalendarGrid {
+    position: absolute;
+    left: 50px;
+    right: 0px;
+    top: 30px;
+    bottom: 0px;
+}
+.dojoxCalendarMatrixView .dojoxCalendarGridTable {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.dojoxCalendarMatrixView .dojoxCalendarGridTable tr {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dojoxCalendarMatrixView .dojoxCalendarGridTable td {
+    text-align: right;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 1px;
+}
+.dojoxCalendarMatrixView .dojoxCalendarGridTable td span {
+    margin-bottom: 2px;
+    border-top: 1px solid #CCC;
+}
+.dojoxCalendarMatrixView .dojoxCalendarGridTable td span span {
+    margin: -1px 4px 0;
+    display: block;
+    border-top: 1px solid #CCC;
+    font-size: 1.1em;
+}
+.dojoxCalendarMatrixView .dojoxCalendarGridTable td.dojoxCalendarWeekend span span,
+.dojoxCalendarMatrixView .dojoxCalendarGridTable td.first-child span span,
+.dojoxCalendarMatrixView .dojoxCalendarGridTable td.last-child span span,
+.dojoxCalendarMatrixView .dojoxCalendarGridTable td.dojoxCalendarToday span span {
+    margin: -1px 0px 0;
+    padding-right: 2px;
+}
+.dojoxCalendarMatrixView .dojoxCalendarGridTable tr.last-child td {
+}
+.dojoxCalendarMatrixView .dojoxCalendarGridTable td.last-child {
+}
+.dojoxCalendarMatrixView .dojoxCalendarGridTable td.dojoxCalendarToday {
+    background-color: #D5F5FC;
+    font-weight: bold;
+    color: #00B2EF;
+    position: relative;
+}
+.dojoxCalendarMatrixView .dojoxCalendarGridTable .dojoxCalendarWeekend,
+.sunday-first-day-of-week .dojoxCalendarMatrixView .dojoxCalendarGridTable .first-child.dojoxCalendarDayDisabled,
+.sunday-first-day-of-week .dojoxCalendarMatrixView .dojoxCalendarGridTable .last-child.dojoxCalendarDayDisabled,
+.monday-first-day-of-week .dojoxCalendarMatrixView .dojoxCalendarGridTable .last-child.dojoxCalendarDayDisabled,
+.monday-first-day-of-week .dojoxCalendarMatrixView .dojoxCalendarGridTable .last-child .dojoxCalendarDayDisabled:nth-last-child(2) {
+    background-color: #F2F2F2;
+    color: #555;
+}
+.dojoxCalendarMatrixView .dojoxCalendarGridTable .dojoxCalendarDayDisabled {
+    color: #AAA !important;
+}
+.dojoxCalendarMatrixView .dojoxCalendarYearColumnHeader {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 29px;
+    text-align: center;
+    vertical-align: middle;
+}
+.dojoxCalendarMatrixView .dojoxCalendarYearColumnHeader table {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.dojoxCalendarMatrixView .dojoxCalendarYearColumnHeader table td {
+    text-align: center;
+    vertical-align: middle;
+    background-repeat: repeat-x;
+    color: #000000;
+    display: none;
+}
+.dojoxCalendarMatrixView .dojoxCalendarColumnHeader {
+    position: absolute;
+    left: 50px;
+    right: 0px;
+    top: 0px;
+    height: 29px;
+    cursor: default;
+}
+.dojoxCalendarMatrixView .dojoxCalendarColumnHeaderTable {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.dojoxCalendarMatrixView .dojoxCalendarColumnHeaderTable td {
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+    background-repeat: repeat-x;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    khtml-user-select: none;
+    user-select: none;
+    color: #000000;
+}
+.dojoxCalendarMatrixView .dojoxCalendarColumnHeaderTable td.last-child {}
+.dojoxCalendarMatrixView .dojoxCalendarColumnHeaderTable .dojoxCalendarWeekend {
+    color: #888;
+}
+.dojoxCalendarMatrixView .dojoxCalendarRowHeader {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    width: 50px;
+    bottom: 0;
+    cursor: default;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    khtml-user-select: none;
+    user-select: none;
+}
+.dojoxCalendarMatrixView .dojoxCalendarRowHeaderTable {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+}
+.dojoxCalendarMatrixView .dojoxCalendarRowHeaderTable tr {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dojoxCalendarMatrixView .dojoxCalendarRowHeaderTable td {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #FAFAFA;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+}
+.dojoxCalendarMatrixView .dojoxCalendarRowHeaderTable td.last-child {}
+.dojoxCalendarMatrixView .dojoxCalendarRowHeaderTable td.Hover {
+    background-color: #e5f2fe;
+}
+.dojoxCalendarMatrixView .dojoxCalendarRowHeaderTable td.Active {
+    background-color: #a5d1fb;
+}
+.dojoxCalendarMatrixView .dojoxCalendarContainer {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    right: 0px;
+    bottom: 0px;
+    cursor: default;
+}
+.dojoxCalendarMatrixView .dojoxCalendarContainerTable {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.dojoxCalendarMatrixView .dojoxCalendarContainerTable tr {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dojoxCalendarMatrixView .dojoxCalendarContainerTable td {
+    vertical-align: top;
+    border-bottom: solid 1px transparent;
+    border-right: solid 1px transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dojoxCalendarMatrixView .dojoxCalendarContainerTable td div.dojoxCalendarContainerRow {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.dojoxCalendarMatrixView .dojoxCalendarEventContainer {
+    position: absolute;
+    overflow: hidden;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    khtml-user-select: none;
+    user-select: none;
+}
+.dojoxCalendarMatrixView .dojoxCalendarExpand {
+    position: absolute;
+    text-align: center;
+}
+.dojoxCalendarMatrixView .dojoxCalendarExpand span {
+    position: inline-block;
+    vertical-align: middle;
+}
+.dojoxCalendarMatrixView .dojoxCalendarExpand .bg {
+    position: relative;
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+.dojoxCalendarMatrixView .dojoxCalendarExpand.Up .bg {
+    background-color: #e5f2fe;
+    border: 1px solid #909da9;
+}
+.dojoxCalendarMatrixView .dojoxCalendarExpand.Down .bg {
+    background-color: #a5d1fb;
+    border: 1px solid #507ca6;
+}
+
+/*********************************************
+ * Calendar Column View
+ ********************************************/
+.dojoxCalendarColumnView {
+  cursor: default;
+  -webkit-user-select: none;
+}
+.dojoxCalendarColumnView .dojoxCalendarHeader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 29px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dojoxCalendarColumnView .dojoxCalendarScrollContainer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 32px;
+  position: absolute;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dojoxCalendarColumnView .dojoxCalendarGrid {
+  position: absolute;
+  left: 70px;
+  right: 0;
+}
+.dojoxCalendarColumnView .dojoxCalendarGridTable {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.dojoxCalendarColumnView .dojoxCalendarGridTable td {
+  border-right: 4px solid #FFF;
+  border-left: 4px solid #FFF;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dojoxCalendarColumnView .dojoxCalendarGridTable .hour {
+  border-top: 1px solid #DDD;
+}
+.dojoxCalendarColumnView .dojoxCalendarGridTable tr:first-child td {
+  border-top: 1px solid transparent;
+}
+.dojoxCalendarColumnView .dojoxCalendarGridTable .halfhour {
+  border-top: dotted 1px #DDD;
+}
+.dojoxCalendarColumnView .dojoxCalendarGridTable .quarterhour {
+}
+.dojoxCalendarColumnView .dojoxCalendarGridTable .dojoxCalendarToday {
+  background-color: #D5F5FC;
+  border-right: none;
+}
+.dojoxCalendarColumnView .current-time-bar {
+    height: 2px;
+    position: absolute;
+    left: 4px;
+    width: 150%;
+    background-color: #00B2EF;
+    z-index: 20;
+    opacity: 0.5;
+}
+.dojoxCalendarColumnView .dojoxCalendarGridTable tr td.last-child {}
+.dojoxCalendarColumnView .dojoxCalendarGridTable tr:first-child td.dojoxCalendarToday {
+}
+.dojoxCalendarColumnView .dojoxCalendarGridTable .dojoxCalendarWeekend {
+  background-color: #F2F2F2;
+}
+.dojoxCalendarColumnView .dojoxCalendarGridTable tr:first-child .dojoxCalendarWeekend {
+}
+.dojoxCalendarColumnView .dojoxCalendarContainer {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  right: 0;
+  cursor: default;
+}
+.dojoxCalendarColumnView .dojoxCalendarContainerTable {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.dojoxCalendarColumnView .dojoxCalendarContainerTable td {
+  height: 100%;
+  padding: 0;
+  vertical-align: top;
+}
+.dojoxCalendarColumnView .dojoxCalendarContainerColumn {
+  position: relative;
+  margin-left: 2px;
+  margin-right: 9px;
+}
+.dojoxCalendarColumnView .dojoxCalendarEventContainer {
+  position: absolute;
+  overflow: hidden;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  khtml-user-select: none;
+  user-select: none;
+}
+.dojoxCalendarColumnView .dojoxCalendarYearColumnHeader {
+  position: absolute;
+  height: 29px;
+  left: 0;
+  width: 68px;
+  top: 0;
+}
+.dojoxCalendarColumnView .dojoxCalendarYearColumnHeader table {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.dojoxCalendarColumnView .dojoxCalendarYearColumnHeader table td {
+  text-align: center;
+  vertical-align: middle;
+  color: #000000;
+  display: none;
+}
+.dojoxCalendarColumnView .dojoxCalendarColumnHeader {
+  position: absolute;
+  height: 30px;
+  left: 70px;
+  right: 0;
+  top: 0;
+  cursor: default;
+}
+.dojoxCalendarColumnView .dojoxCalendarColumnHeaderTable {
+  border-collapse: collapse;
+  table-layout: fixed;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.dojoxCalendarColumnView .dojoxCalendarColumnHeaderTable td {
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  khtml-user-select: none;
+  user-select: none;
+  color: #000000;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  border-left: 4px solid #FFF;
+  border-right: 4px solid #FFF;
+}
+.dojoxCalendarColumnView .dojoxCalendarColumnHeaderTable td.last-child {}
+.dojoxCalendarColumnView .dojoxCalendarColumnHeaderTable .dojoxCalendarToday {
+  font-weight: bold;
+  color: #00B2EF;
+}
+.dojoxCalendarColumnView .dojoxCalendarColumnHeaderTable .dojoxCalendarToday span {
+  background-color: #D5F5FC;
+  padding: 2px 7px;
+  border-radius: 5px;
+}
+.dojoxCalendarColumnView .dojoxCalendarColumnHeaderTable .dojoxCalendarWeekend {
+  color: #888;
+}
+.dojoxCalendarColumnView .dojoxCalendarColumnHeaderTable td.Hover {
+  cursor: pointer;
+  background-repeat: repeat-x;
+  background-color: #E5F2FE;
+}
+.dojoxCalendarColumnView .dojoxCalendarColumnHeaderTable td.Active {
+  cursor: pointer;
+  background-color: #7dbefa;
+  border-color: #769dc0;
+  background-position: 0 -136px;
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  transition-duration: 0s;
+}
+.dojoxCalendarColumnView .dojoxCalendarRowHeader {
+  position: absolute;
+  width: 68px;
+  cursor: default;
+  height: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  khtml-user-select: none;
+  user-select: none;
+}
+.dojoxCalendarColumnView .dojoxCalendarRowHeaderTable {
+  border-collapse: collapse;
+  table-layout: fixed;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.dojoxCalendarColumnView .dojoxCalendarRowHeaderTable td.dummy {
+  border-top: 1px solid #efefef;
+}
+.dojoxCalendarColumnView .dojoxCalendarRowHeaderTable td {
+  vertical-align: top;
+  text-align: right;
+  background-color: #FFF;
+  color: #555;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dojoxCalendarColumnView .dojoxCalendarRowHeaderTable tr:first-child td {
+  border-top: none;
+}
+.dojoxCalendarColumnView .dojoxCalendarRowHeaderTable tr:first-child td span {
+  display: none;
+}
+.dojoxCalendarColumnView .dojoxCalendarRowHeaderTable td span {
+  padding-right: 4px;
+  position: relative;
+  top: -7px;
+  color: #888;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent {
+  position: absolute;
+  text-align: left;
+  cursor: default;
+  overflow: hidden;
+  color: #FFF;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent .startTime {
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  white-space: nowrap;
+  padding: 1px 2px 2px 3px;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent.Focused .startTime {
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  white-space: nowrap;
+  padding: 1px 2px 2px 3px;
+  border-top: dashed 1px #ffffff;
+  border-left: dashed 1px #ffffff;
+  border-right: dashed 1px #ffffff;
+}
+
+.dojoxCalendarColumnView .dojoxCalendarEvent.Edited .startTime {
+  border-top: dashed 1px #ffffff;
+  border-left: dashed 1px #ffffff;
+  border-right: dashed 1px #ffffff;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent .endTime {
+  position: absolute;
+  font-weight: bold;
+  bottom: 3px;
+  left: 6px;
+  white-space: nowrap;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent .beforeIcon {
+  text-align: center;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent .afterIcon {
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  text-align: center;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent .handle {
+  z-index: 2;
+  background-color: #F00;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  khtml-user-select: none;
+  user-select: none;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent .moveHandle {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  cursor: move;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent .resizeStartHandle {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10px;
+  cursor: n-resize;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent .resizeEndHandle {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  cursor: n-resize;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent dl {
+  margin: 0;
+}
+.dojoxCalendarColumnView .dojoxCalendarEvent dd {
+  margin: 0;
+  padding: 0 3px;
+  text-align: left;
+}
+.dojoxCalendarColumnView .dojoxCalendarVScrollBar {
+  position: absolute;
+  top: 72px;
+  bottom: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  height: 39px;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarGrid {
+  position: absolute;
+  left: 70px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarContainer {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  right: 0;
+  bottom: 0;
+  cursor: default;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarRowHeader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70px;
+  bottom: 0;
+  border-right: none;
+  border-left: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarGridTable td {
+  text-align: right;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarGridTable tr.last-child td {
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarGridTable td.last-child {
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarRowHeaderTable td {
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarEvent .handle {
+  z-index: 2;
+  background-color: #F00;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  khtml-user-select: none;
+  user-select: none;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  cursor: e-resize;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarEvent .moveHandle {
+  left: 0;
+  top: 0;
+  width: 100%;
+  cursor: move;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarEvent.dojoxCalendarHorizontal .labels {
+  position: absolute;
+  left: 3px;
+  right: 1px;
+  bottom: 2px;
+  overflow: hidden;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarEvent .resizeEndHandle {
+  right: 0px;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarEvent .afterIcon {
+  width: auto;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarEvent .endTime {
+  position: relative;
+  bottom: auto;
+  left: auto;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarExpand {
+  position: absolute;
+  text-align: center;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarExpand .bg {
+  position: relative;
+  margin-right: 10%;
+  margin-left: 10%;
+  border-radius: 5px;
+  height: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  khtml-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  -moz-border-radius: 5px;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarExpand.Up .bg {
+  background-color: #e5f2fe;
+  border: 1px solid #909da9;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarExpand.Down .bg {
+  background-color: #a5d1fb;
+  border: 1px solid #507ca6;
+}
+.dojoxCalendarColumnView .dojoxCalendarMatrixView .dojoxCalendarEvent div {
+  white-space: nowrap;
+}
+
+/**************************************************************************************************
+ * Replication Settings
+ **************************************************************************************************/
+ .artifactProgressBarText {
+    margin-top: 20px;
+    margin-right: 10px;
+    display: inline-block
+ }
+
+ .artifactProgressBar {
+    width: 80%;
+    display: inline-block;
+ }
+
+ .artifactDescription {
+    padding: 10px;
+ }
+
+/**************************************************************************************************
+ * Calendar FilteringScrollSelect
+ **************************************************************************************************/
+.filtering-scroll-select .selected-items-list .selected-item-container .filter-dropdown-color {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px -2px 0;
+    border: 2px solid #FFF;
+}
+
+.filter-dropdown-color {
+    height: 14px;
+    width: 14px;
+    border-radius: 14px;
+    margin: 0 5px -4px 0;
+}
+.calendar-sidebar-panel-section .filtering-scroll-select .clear-selected-items.hidden {
+    display: none;
+}
+.calendar-sidebar-panel-section .filtering-scroll-select .has-value .clear-selected-items {
+    display: block;
+}
+.calendar-sidebar-panel-section .filtering-scroll-select .selected-items-list .selected-item-container .remove-selected-item {
+    padding: 1px 4px 2px;
+}
+.calendar-sidebar-panel-section .filtering-scroll-select .selected-items-list .selected-item-container {
+    color: #555;
+}
+.calendar-sidebar-panel-section .filtering-scroll-select .selected-items-list .selected-item-container.black-color {
+    background-color: #DDD;
+}
+.calendar-sidebar-panel-section .filtering-scroll-select .selected-items-list .selected-item-container.red-color {
+    background-color: #F2BCBC;
+}
+.calendar-sidebar-panel-section .filtering-scroll-select .selected-items-list .selected-item-container.orange-color {
+    background-color: #FDD6B0;
+}
+.calendar-sidebar-panel-section .filtering-scroll-select .selected-items-list .selected-item-container.yellow-color {
+    background-color: #FFE36A;
+}
+.calendar-sidebar-panel-section .filtering-scroll-select .selected-items-list .selected-item-container.green-color {
+    background-color: #CFE68A;
+}
+.calendar-sidebar-panel-section .filtering-scroll-select .selected-items-list .selected-item-container.blue-color {
+    background-color: #BFE2EF;
+}
+.calendar-sidebar-panel-section .filtering-scroll-select .selected-items-list .selected-item-container.purple-color {
+    background-color: #D2C6E8;
+}
+
+/**************************************************************************************************
+ * The loading spinner in the top right corner of the UI
+ **************************************************************************************************/
+.top-level-loading-image {
+    background: rgba(255, 255, 255, 0) url('../../lib/webext/images/webext/loading.gif') no-repeat center center;
+    float: right;
+    display: block;
+    height: 48px;
+    width: 48px;
+    position: relative;
+}
+
+
+/**************************************************************************************************
+ * Give the cursor a loading image if the page is processing a call
+ **************************************************************************************************/
+body.busy {
+    cursor: wait !important;
+}
+
+/**************************************************************************************************
+ * One UI Overrides
+ **************************************************************************************************/
+.oneui .dijitMenuTable .dijitMenuHover, .oneui .dijitMenuTable .dijitMenuItem:hover {
+    background-color: #CCE8F2 !important;
+}
+
+.dj_safari .oneui .dijitTextBoxDisabled .dijitInputField .dijitInputInner {
+    color: #555;
+}
+
+._blocker_mask {
+  display: none;
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  z-index:999;
+  background:#fff url('../../lib/webext/images/webext/loading.gif') no-repeat center center;
+  width: 100%;
+  height: 100%;
+}
+
+.oneui .dijitMenuTable .dijitMenuItemActive,
+.oneui .dijitMenuTable .dijitMenuItemFocused,
+.oneui .dijitMenuTable .dijitMenuItemSelected,
+.oneui .dijitMenuTable .dijitMenuItemChecked {
+  background: white;
+}
+.oneui .oneuiHeaderGlobalActionsMenu .dijitMenuActive .dijitMenuItemSelected {
+  background-color: white;
+}
+.oneui .oneuiHeaderGlobalActionsMenu .dijitMenuActive .dijitMenuItemHover {
+  background-color: #cce8f2;
+}
+
+.oneui .dijitDialogPaneContent .columnForm {
+    padding: 0 0 10px;
+    border-bottom: 1px solid #CCC
+}
+
+.oneui .dijitCheckBoxFocused, .oneui .dijitButtonFocused .dijitButtonNode, .oneui .dijitDropDownButtonFocused .dijitButtonNode {
+    outline: none !important; /*Remove and change for accessibility BlueWash*/
+}
+
+.oneui .showTeam .dijitButton .dijitButtonNode,
+.oneui .showTeam .dijitDropDownButton .dijitButtonNode,
+.oneui .showTeam .dijitComboButton .dijitButtonNode,
+.oneui .showTeam .dijitToggleButton .dijitButtonNode {
+    border:none;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+    background: url('../../images/icons/general-sprite.png') no-repeat -96px -64px;
+    width: 16px;
+    height: 16px;
+}
+.oneui .showTeam .dijitButton .dijitButtonNode:hover,
+.oneui .showTeam .dijitDropDownButton .dijitButtonNode:hover,
+.oneui .showTeam .dijitComboButton .dijitButtonNode:hover,
+.oneui .showTeam .dijitToggleButton .dijitButtonNode:hover {
+    background-position: -112px -64px;
+}
+.oneui .showTeam .dijitButton .dijitButtonNode:active,
+.oneui .showTeam .dijitDropDownButton .dijitButtonNode:active,
+.oneui .showTeam .dijitComboButton .dijitButtonNode:active,
+.oneui .showTeam .dijitToggleButton .dijitButtonNode:active {
+    background-position: -128px -64px;
+}
+.oneui .showTeam .dijitButtonFocused .dijitButtonNode,
+.oneui .showTeam .dijitDropDownButtonFocused .dijitButtonNode,
+.oneui .showTeam .dijitToggleButtonFocused .dijitButtonNode {
+    outline: none; /*Remove and change for accessibility BlueWash*/
+}
+.oneui .showTeam .dijitButton .dijitButtonNode {
+    min-width: 5px;
+    padding: 0px;
+}
+
+input[type="file"] {
+  font-family: 'lucida grande', tahoma, arial, verdana, sans-serif !important;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+}
+
+.labelsAndValues-valueCell .restSelect .dijitSelect .dijitButtonContents .dijitInputField {
+  max-width: 260px;
+  overflow: hidden;
+}
+
+/**************************************************************************************************
+ * Unsorted CSS
+ **************************************************************************************************/
+#_webext_logo {
+  margin: 15px 20px;
+  background-image: url('../../images/deploy/logo.png');
+  width: 89px;
+  height: 23px;
+}
+
+div.header {
+  padding-bottom: 3px;
+}
+
+.infoLabel {
+    width: 160px;
+}
+.logHeader {
+  background-color:#BBCCDD;
+  padding : 5px 0px;
+}
+
+.failureBox {
+  background-color: #FFCCCC;
+  padding: 5px;
+  border: 1px solid #992323;
+  font-weight: bold;
+}
+
+.savedNotification, .saved-notification {
+  padding: 5px 8px;
+  display: inline-block;
+  background-color: #8CC63F;
+  font-size: 1.1em;
+  font-weight: 300;
+  color: #FFF;
+  margin: 3px;
+}
+
+.saved-notification.notification-warning {
+    background-color: #F19027;
+}
+
+.dj_ie7 .savedNotification, .dj_ie7 .saved-notification {
+  display: inline;
+  zoom: 1;
+}
+
+/**
+ * Release candidate lifecycle stage progress
+ */
+.lifecycleStageBox {
+  padding: 3px 6px;
+  display: inline-block;
+  font-weight: bold;
+  border: 1px solid #aaaaaa;
+  margin: 0px 5px;
+}
+.dj_ie7 .lifecycleStageBox {
+  display: inline;
+  zoom: 1;
+}
+
+
+.resourceTypeDefaultActions {
+  position: relative;
+}
+
+
+.editResourceConditionComponent {
+  display: inline-block;
+}
+
+.dj_ie7 .editResourceConditionComponent {
+  display: inline;
+  zoom: 1;
+}
+
+.dj_ie7 .versionSelectorComponent {
+  display: inline;
+  zoom: 1;
+}
+
+
+.log-viewer-dialog {
+  padding: 0px;
+  position: relative;
+}
+
+.log-viewer-line-of-interest {
+  background-color: #FFE5DD;
+}
+
+.versionArtifacts .archiveAttach {
+  margin-top: 5px;
+  padding-left: 5px;
+  font-size: 14px;
+  color: #662222;
+}
+
+/* ------------------
+Titles with Tooltips
+------------------*/
+.tooltipTitle {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    display: table;
+}
+.rightPanel-tooltipTitle {
+    padding: 0px;
+    display: table;
+}
+.resourceRole-tooltipTitle {
+    display: table;
+    padding: 5px;
+}
+.title-helpCell {
+    vertical-align: middle;
+}
+.title-text {
+    vertical-align: middle;
+    display: table-cell;
+    padding: 0px;
+}
+.tooltipHidden {
+    display: none;
+}
+
+/* ------------
+TABLE
+------------- */
+.versionLinks img {
+  margin: 3px;
+}
+
+.environmentComponentProperties .dijitTextBox {
+  width: 300px;
+}
+
+.environmentComponentProperties .dijitTextBox.dijitTimeTextBox {
+  width: 9em;
+}
+
+.componentGroupList .propSheetDefValues .dijitTextBox {
+  width: 300px;
+}
+
+.selectorAttach {
+    position: absolute;
+    z-index: 999;
+}
+
+.component-version-selection > .selectorAttach {
+    right: -10px;
+    top: -8px;
+}
+
+.iconBlank{
+    background-image: url('../../lib/webext/images/webext/clear.gif');
+    background-repeat: no-repeat;
+    width: 16px;
+    margin-right: 5px;
+}
+
+.iconWizardPage1 {
+    background-image: url('../../images/deploy/wizardprogress_1.png');
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 40px;
+    background-size: 120px 40px !important;
+    position: absolute;
+    margin: -6px 0 0 110px;
+}
+
+.iconWizardPage2 {
+    background-image: url('../../images/deploy/wizardprogress_2.png');
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 40px;
+    background-size: 120px 40px !important;
+    position: absolute;
+    margin: -6px 0 0 110px;
+}
+
+.environment-error-container {
+    background: #fef3f3;
+    border: 1px solid #f8afad;
+    margin: 3px 20px 10px 20px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    display: block;
+    color: #d2192b;
+    cursor: pointer;
+}
+
+.environment-error-text {
+    color: #d2192b;
+}
+
+.environment-error-detail{
+    padding: 3px 0px 0px 50px;
+}
+
+.agent-list .agent-version-container {
+    display: inline-block;
+    border: 2px solid #666;
+    border-radius: 4px;
+    margin-right: 6px;
+    float: right;
+}
+
+.agent-list .webextTable {
+    margin-top: 20px;
+}
+
+.agent-list .expand-collapse-all-link {
+    position: relative;
+    top: 16px;
+    right: 5px;
+}
+
+.agent-list .agent-version-container div {
+    display: inline-block;
+    padding: 3px;
+}
+
+.agent-list .agent-version-container div:first-child {
+    border-right: 2px solid #666;
+}
+
+.agent-list .agent-version-container div:last-child {
+    font-weight: bold;
+}
+
+.progressCell {
+    min-width: 150px;
+}
+.progressCell .dijitProgressBar {
+    background-color: #C8F08F;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.progressCell .dijitProgressBarFull {
+    border: none;
+    height: 100%;
+}
+.progressCell .dijitProgressBarLabel {
+    padding-top: 6px;
+}
+.progressCell .dijitProgressBarTile {
+    height: 100%;
+    background-color: #B4E051;
+}
+
+.grid-cell-bar-agents .meter {
+    height: 4px;
+    position: relative;
+}
+.grid-cell-bar-agents .meter span {
+    display: block;
+    height: 100%;
+    background-color: #0D72B0;
+    position: relative;
+    overflow: hidden;
+}
+.grid-cell-bar-active-agents .meter {
+    height: 4px;
+    position: relative;
+    background-color: #F5101B;
+}
+.grid-cell-bar-active-agents .meter span {
+    display: block;
+    height: 100%;
+    background-color: #BADA78;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-cell-status {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+}
+.grid-cell-status .name {
+    float: left;
+    display: block;
+    white-space: normal;
+    word-wrap: break-word;
+    padding-right: 10px;
+}
+.grid-cell-status .online,
+.grid-cell-status .offline {
+    position: absolute;
+    display: block;
+    right: 0;
+    border: 1px solid #BADA78;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+.grid-cell-status .online {
+    background-color: #BADA78;
+}
+.grid-cell-status .offline {
+    background-color: #FFFFFF;
+}
+
+.relay-list .relay-version-container {
+    display: inline-block;
+    border: 2px solid #666;
+    border-radius: 4px;
+    margin-right: 6px;
+    float: right;
+}
+
+.relay-list .webextTable {
+    margin-top: 20px;
+}
+
+.relay-list .expand-collapse-all-link {
+    position: relative;
+    top: 16px;
+    right: 5px;
+}
+
+.relay-list .relay-version-container div {
+    display: inline-block;
+    padding: 3px;
+}
+
+.relay-list .relay-version-container div:first-child {
+    border-right: 2px solid #666;
+}
+
+.relay-list .relay-version-container div:last-child {
+    font-weight: bold;
+}
+
+.edit-relay .columnForm {
+    margin-top: 20px;
+}
+.edit-relay .columnForm .labelsAndValues-row {
+    margin-bottom: 20px;
+}
+
+/**************************************************************************************************
+ * Icons (High Resolution)
+ **************************************************************************************************/
+@media (min-resolution: 144dppx),
+(-webkit-min-device-pixel-ratio: 1.5),
+(min--moz-device-pixel-ratio: 1.5),
+(-o-min-device-pixel-ratio: 3/2),
+(min-device-pixel-ratio: 1.5),
+(min-resolution: 1.5dppx) {
+  .about-popup .dijitDialogTitleBar {
+      background-image: url("../../lib/webext/images/webext/login/ibmLogoDark-retina.png");
+      background-size: 85px 30px !important;
+  }
+
+  .snapshotIcon, .executeIcon, .executionLog .webextTable .tableHoverActions,
+  .oneui .showTeam .dijitButton .dijitButtonNode,
+  .oneui .showTeam .dijitDropDownButton .dijitButtonNode,
+  .oneui .showTeam .dijitComboButton .dijitButtonNode,
+  .oneui .showTeam .dijitToggleButton .dijitButtonNode  {
+    background-image: url(../../images/icons/general-retina-sprite.png);
+    background-size: 192px 224px !important;
+  }
+
+  .tabManager .tab.configurationTab {
+    background-image: url('../../images/icons/pencil-retina-sprite.png');
+    background-size: 14px 74px !important;
+  }
+
+  .agentMappingTargetTree .expandNode, .agentMappingTargetTree.expanded .expandNode,
+  .environmentSummary .expandNode, .environmentSummary.expanded .expandNode {
+    background-image: url('../../lib/webext/images/webext/icons/misc-arrow-retina-sprite.png');
+    background-size: 64px 374px !important;
+  }
+
+  .version-history-calendar .version-calendar-buttons .arrow,
+  .version-history-calendar .version-calendar-row .environment-expander,
+  .execution-log-timeline .timeline-expander {
+    background-image: url("../../lib/webext/images/webext/icons/misc-arrow-retina-sprite.png");
+    background-size: 64px 374px !important;
+  }
+
+  .mouse-over-popup .popup-pointer {
+    background-image: url('../../images/popup/popup-retina-pointer.png');
+    background-size: 40px 10px;
+  }
+
+}
+/**************************************************************************************************
+ * Status
+ **************************************************************************************************/
+ .environmentStatusButton {
+  background: url('../../lib/webext/images/webext/icons/general-sprite.png') -27px -375px;
+  display: inline-block;
+  object-fit: none;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  top: 2px;
+  left: 3px;
+}
+.environmentStatusBoxAttached{
+  padding: 2px 5px;
+  border: 1px solid white;
+  position: relative;
+  top: 3px;
+}
+ .statusBox {
+   color: #000;
+   background-color: #FFF;
+ }
+
+/**************************************************************************************************
+ * Wizards
+ **************************************************************************************************/
+ .applicationWizard .editApplication,
+ .wizardFullPage {
+    height: 99%;
+    overflow: auto;
+ }
+
+.applicationWizard .appComponentSelector {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    min-height: 95px;
+}
+
+.applicationWizard .appComponentSelector .selectorControls {
+    padding-bottom: 2px;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.applicationWizard .appComponentSelector .selectorControls > div {
+    display: inline-block;
+}
+
+.applicationWizard .appComponentSelector .selectorControls .requirementLabel {
+    width: 380px;
+    font-size: 120%;
+    vertical-align: bottom;
+    padding-bottom: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.applicationWizard .appComponentSelector .selectorControls .selectAttach {
+}
+
+.applicationWizard .appComponentSelector .selectorControls .createComponent {
+    float: right;
+    padding-top: 9px;
+}
+
+.applicationWizard .appComponentSelector .requirementDescription {
+    margin-top: 1em;
+    font-style: italic;
+    font-weight: bold;
+    color: #777;
+}
+
+.applicationWizard .environment-properties .columnForm {
+    padding-bottom: 36px;
+}
+
+.applicationWizard .agentMappingTargetTree .environment-name,
+  margin-left: 14px;
+}
+
+.applicationWizard .environment-name-container-noPropDefs .environment-name {
+    float: left;
+    display: inline-block;
+    padding: 0px;
+    max-width: 470px;
+    padding-left: 8px;
+}
+
+.applicationWizard .environment-name-container-noDesc-noPropDefs .environment-name {
+    float: left;
+    display: inline-block;
+    padding: 0px;
+    max-width: 340px;
+    padding-left: 8px;
+}
+
+.applicationWizard .environment-name-container-noDesc .environment-name {
+    float: left;
+    display: inline-block;
+    padding: 0px;
+    max-width: 490px;
+    padding-left: 8px;
+}
+.environment-option .expandNode {
+    left: 8px;
+}
+
+.dark-colored-environment.environment-option .expandNode {
+    background-position: -48px -330px;
+}
+
+.dark-colored-environment.environment-option.expanded .expandNode {
+    background-position: -48px -270px;
+}
+
+.applicationWizard .environment-option .expand-node-container {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 20px;
+  cursor: pointer;
+}
+
+.applicationWizard .agentMappingPage {
+    position: relative;
+}
+
+.applicationWizard .agentMappingPage .columns {
+    position: absolute;
+    bottom: 0;
+    top: 3em;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.applicationWizard .agentMappingPage .columnHeader {
+    font-size: 110%;
+    font-weight: bold;
+    border-bottom: 1px #999999 solid;
+    line-height: 20px;
+}
+
+.applicationWizard .agentMappingPage .columnInstructions {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.applicationWizard .agentMappingPage .environmentsColumn,
+.applicationWizard .agentMappingPage .agentsColumn {
+    display: inline-block;
+    width: 45%;
+    max-height: 100%;
+}
+
+.applicationWizard .agentMappingPage .environmentsColumn {
+    position: relative;
+    float: right;
+    height: 100%;
+}
+
+.applicationWizard .agentMappingPage .environmentsAttach {
+    position: absolute;
+    top: 21px;
+    bottom: 0;
+    overflow: auto;
+}
+
+.applicationWizard .agentMappingPage .environmentsColumn > div {
+    width: 99%;
+}
+
+
+.applicationWizard .agentMappingPage .webextTable {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.applicationWizard .agentMappingPage .assignedAgent {
+    position: relative;
+    padding-top:7px;
+    padding-left:11px;
+}
+
+.applicationWizard .agentMappingTargetTree:first-child {
+    margin-top: 10px;
+}
+
+.applicationWizard .agentMappingTargetTree span.del {
+    margin-left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.applicationWizard .agentMappingPage .assignedAgent:hover span.del {
+    display: inline;
+}
+
+.applicationWizard .callToAction {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+/**************************************************************************************************
+ * Application Wizard 3rd page layout
+ **************************************************************************************************/
+.applicationWizard .environmentPage {
+    position: relative;
+}
+
+.applicationWizard .created-environments-column {
+    display: inline-block;
+    width: 40%;
+    min-height: 420px;
+    position: relative;
+}
+
+.applicationWizard .created-environments-list {
+    border: 1px solid #979797;
+    position: absolute;
+    top: 24px;
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+.applicationWizard .create-environment-form-column {
+    display: inline-block;
+    width: 58%;
+    float: right;
+}
+
+.applicationWizard .environment-form {
+    background-color: rgb(244, 244, 244);
+    position: absolute;
+    top: 62px;
+    bottom: 0;
+    max-height: 395px;
+    width: 400px;
+    overflow: auto;
+}
+
+.applicationWizard .environment-form .env-tmpl-dropdown {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.applicationWizard .environment-form .env-tmpl-dropdown-label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.applicationWizard .environment-form .environment-tmpl-description {
+    margin: 20px;
+}
+
+.applicationWizard .environment-form .labelsAndValues-labelCell {
+    text-align: left;
+    font-weight: bold;
+    margin-left: 8px;
+    width: 400px;
+    display: block;
+    line-height: 16px;
+}
+
+.applicationWizard .environment-form .labelsAndValues-row {
+    width: 380px;
+    padding-left: 20px;
+}
+
+.applicationWizard .environment-form .pageAlerts {
+    width: 400px;
+}
+
+.applicationWizard .environment-form .columnForm {
+    width: 400px;
+    padding-bottom: 36px;
+}
+
+.applicationWizard .environment-form .icon-button {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.applicationWizard .environment-form .create-environment-label {
+    text-align:center;
+    font-size:1.5em;
+    padding-top:24px;
+    width:412px;
+    color:#00649d;
+    white-space:nowrap;
+    display: inline-block;
+}
+
+.applicationWizard .create-env-widget {
+    width: 130px;
+    margin-left: 140px;
+    border: 1px solid #979797;
+    background: white;
+}
+
+.applicationWizard .environment-template-option {
+    margin-bottom: 1px;
+}
+
+.applicationWizard .environment-template-option-content {
+    height: 26px;
+    font-size: 1.3em;
+    line-height: 26px;
+}
+
+.applicationWizard .environment-template-option .environment-name-container {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block
+    width: 100%;
+}
+
+.applicationWizard .created-environments-column .modelWidgetList {
+    cursor: pointer;
+}
+
+.applicationWizard .env-prop-label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 35px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.wizard-component-page-tooltip, .wizard-environment-page-tooltip {
+    width:300px;
+    line-height:20px
+}
+
+.wizard-agent-mapping-page-tooltip {
+    width:400px;
+    line-height:20px
+}
+
+.horizontal-spacer {
+    display: inline;
+    margin-right: 5px;
+}
+
+.applicationWizard .containerLabel {
+    font-size: 1.6em;
+    padding-top: 15px;
+    vertical-align: baseline;
+    text-shadow: none;
+}
+
+.applicationWizard .pageAlert {
+    background-color:#f0faff;
+    border-color:#3c9fca;
+    border: 2px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 #aaa;
+    color:#444;
+    margin: 5px 30px;
+    padding: 10px 15px;
+    padding-bottom: 20px;
+}
+
+.applicationWizard .pageAlerts .msgtitle {
+    font-size:1.2em;
+    font-weight:bold;
+}
+
+
+.applicationWizard .pageAlerts .description {
+    font-weight:normal;
+    font-size:1em;
+}
+
+.applicationWizard .pageAlerts .solutionheader {
+    font-size:1em;
+    font-weight:bold;
+}
+
+
+.applicationWizard .pageAlerts .solutionoptions {
+    font-weight:normal;
+    line-height:24px;
+}
+
+
+.applicationWizard .pageAlerts .solutionoptionscontainer {
+    padding-bottom: 16px;
+}
+
+
+.applicationWizard .pageAlerts .listheader  {
+    line-height:24px;
+    font-size:1em;
+    font-weight:normal;
+}
+
+/***********************************
+ * Wizards
+ ***********************************/
+.webext-wizardDialog .dojoxWizard {
+    height: 100%;
+}
+
+.webext-wizardDialog .dojoxWizard .dojoxWizardContainer .columnForm {
+    border-bottom: none;
+}
+
+.webext-wizardDialog .dojoxWizardContainer > .dijitContentPane {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
+}
+
+.webext-wizardDialog .dojoxWizardContainer > .dijitContentPane > div {
+    border-bottom: 1px solid #999999;
+}
+
+.webext-wizardDialog .dijitDialogTitleBar {
+    position: relative;
+}
+
+.wizardProgressImage {
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -20px;
+}
+
+.callToAction .tooltipTitle {
+    font-size: 65%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/***********************************
+ * History Cleanup Progress Bars
+ ***********************************/
+
+.settings-index .progressBar {
+    position: fixed;
+    left: 0px;
+    bottom: -60px;
+    width: 100%;
+}
+
+.labelsAndValues-row .progressBarContainer {
+    width: 60%;
+    margin-left: 40%;
+}
+
+.labelsAndValues-row .progressBarContainer  .progressBar {
+    position: relative;
+    right: -100%;
+    background-color: inherit;
+}
+
+.labelsAndValues-row .webext.progressBar .caption  {
+    margin-top: 7px;
+    color: #fff;
+}
+
+.labelsAndValues-row .progressBar .caption .progressDetailsProgressCount {
+    margin-left: 0px;
+}
+
+.labelsAndValues-row  .webext.progressBar .caption .label {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.labelsAndValues-row .webext.progressBar .progressIndicator {
+    position: relative;
+    margin-left: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: #d9d9d9;
+}

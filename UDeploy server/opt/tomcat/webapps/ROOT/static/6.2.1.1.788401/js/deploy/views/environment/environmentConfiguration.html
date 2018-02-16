@@ -1,0 +1,20 @@
+<!--
+- Licensed Materials - Property of IBM Corp.
+- IBM UrbanCode Deploy
+- (c) Copyright IBM Corporation 2011, 2014. All Rights Reserved.
+-
+- U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+- GSA ADP Schedule Contract with IBM Corp.
+-->
+<div class="masterContainer">
+  <div id="editEnvironment"></div>
+</div>
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    require(["deploy/widgets/environment/EnvironmentEditManager"],
+    function(EnvironmentEditManager) {
+        new EnvironmentEditManager({}, "editEnvironment");
+    });
+    /* ]]> */
+</script>

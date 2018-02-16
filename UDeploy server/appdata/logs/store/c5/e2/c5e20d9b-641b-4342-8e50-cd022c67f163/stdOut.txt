@@ -1,0 +1,24 @@
+================================================================================
+plugin: CloudFoundry, id: com.urbancode.air.plugin.cloudfoundry, version: 17
+plugin command: 'cmd' '/C' '""C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\opt\groovy-1.8.8\bin\groovy" -cp "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.cloudfoundry_17_930d0ef64579b33f7fa72bd73c0d2e5020c1d51346ab1af2278db208384f10d7\classes;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.cloudfoundry_17_930d0ef64579b33f7fa72bd73c0d2e5020c1d51346ab1af2278db208384f10d7\lib\uDeployRestClient.jar" "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.cloudfoundry_17_930d0ef64579b33f7fa72bd73c0d2e5020c1d51346ab1af2278db208384f10d7\discoverCF.groovy" "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs2783557566748332327\input.props" "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs2783557566748332327\output.props""'
+working directory: C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp
+properties:
+  PLUGIN_INPUT_PROPS=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs2783557566748332327\input.props
+  PLUGIN_OUTPUT_PROPS=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs2783557566748332327\output.props
+  apiEndpoint=
+  overrideCommandPath=
+  resourcePath=/deploy_bluemix/localhost.agent
+environment:
+  AGENT_HOME=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent
+  AH_WEB_URL=https://localhost:8443
+  AUTH_TOKEN=****
+  DS_SYSTEM_ENCODING=Cp1252
+  JAVA_OPTS=-Dfile.encoding=Cp1252 -Dconsole.encoding=Cp1252
+  PLUGIN_HOME=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.cloudfoundry_17_930d0ef64579b33f7fa72bd73c0d2e5020c1d51346ab1af2278db208384f10d7
+  UD_DIALOGUE_ID=c5e20d9b-641b-4342-8e50-cd022c67f163
+================================================================================
+Caught: groovy.lang.MissingMethodException: No signature of method: java.lang.String.positive() is applicable for argument types: () values: []
+Possible solutions: notify(), size(), tokenize(), tokenize(), size()
+groovy.lang.MissingMethodException: No signature of method: java.lang.String.positive() is applicable for argument types: () values: []
+Possible solutions: notify(), size(), tokenize(), tokenize(), size()
+	at discoverCF.run(discoverCF.groovy:36)

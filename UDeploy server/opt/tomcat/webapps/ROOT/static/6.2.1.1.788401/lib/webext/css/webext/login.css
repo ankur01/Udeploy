@@ -1,0 +1,87 @@
+/*
+* Licensed Materials - Property of IBM Corp.
+* IBM UrbanCode Build
+* IBM UrbanCode Deploy
+* IBM UrbanCode Release
+* IBM AnthillPro
+* (c) Copyright IBM Corporation 2002, 2014. All Rights Reserved.
+*
+* U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+* GSA ADP Schedule Contract with IBM Corp.
+*/
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+body.loginPage {
+    background-image: url(../../images/webext/login/login_bkgd.png);
+    background-repeat: repeat;
+}
+
+.loginPage .loginFramePositioner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+
+.loginPage .loginFrame {
+    top: -210px;
+    position: relative;
+    width: 270px;
+    margin: 0px auto;
+    
+    background-color: #ffffff;
+    border: 3px solid #999999;
+    padding: 50px;
+    padding-top: 100px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 6px #000000;
+    color: #222222;
+    
+    background-image: url(../../images/webext/login/ibmLogoDark.png);
+    background-position: 50px 50px;
+    background-repeat: no-repeat;
+}
+
+.loginPage .productName {
+  font-size: 16px;
+}
+
+.loginPage .productVersion {
+  font-size: 11px;
+}
+
+.loginPage .formSpacer {
+  height: 10px;
+}
+
+.loginPage .textInput {
+  border: 1px solid #aaaaaa;
+  padding: 5px 10px;
+  width: 250px;
+}
+
+.loginPage .textInput.hinted {
+  color: #aaaaaa;
+}
+
+/***********************************
+ * Icons (High Resolution)
+ ***********************************/
+@media (min-resolution: 144dpi), 
+(-webkit-min-device-pixel-ratio: 1.5), 
+(min--moz-device-pixel-ratio: 1.5), 
+(-o-min-device-pixel-ratio: 3/2), 
+(min-device-pixel-ratio: 1.5), 
+(min-resolution: 1.5dppx) {
+    .loginPage .loginFrame  {
+        background-image: url(../../images/webext/login/ibmLogoDark-retina.png);
+        background-size: 85px 30px !important;
+    }
+}

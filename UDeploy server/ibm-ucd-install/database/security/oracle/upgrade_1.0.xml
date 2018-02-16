@@ -1,0 +1,620 @@
+<?xml version="1.0"?>
+<!--
+- Licensed Materials - Property of IBM Corp.
+- IBM UrbanCode Build
+- IBM UrbanCode Deploy
+- IBM UrbanCode Release
+- IBM AnthillPro
+- (c) Copyright IBM Corporation 2002, 2014. All Rights Reserved.
+-
+- U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+- GSA ADP Schedule Contract with IBM Corp.
+-->
+<change-set release="1.0">
+  <change number="5">
+    <description>Add description column to SEC_TEAM_SPACE.</description>
+    <sql separator=";">
+      alter table sec_team_space add description varchar2(4000);
+    </sql>
+  </change>
+  <change number="6">
+    <description>Removed dynamic roles</description>
+    <sql separator=";">
+      drop table sec_dynamic_role_to_action;
+      drop table sec_dynamic_role_prop;
+      drop table sec_dynamic_role;
+    </sql>
+  </change>
+  <change number="7">
+    <description>Added IM addresses to Security Users</description>
+    <sql separator=";">
+      alter table sec_user add im_id varchar2(256);
+    </sql>
+  </change>
+  <change number="8">
+    <description>Apply new encryption to user passwords</description>
+    <groovy file="all/1.0/upgrade_008_update_password_encryption.groovy"/>
+  </change>
+  <change number="9">
+    <description>Removing association from resource roles to actions</description>
+    <sql separator=";">
+      drop table sec_resource_role_to_action;
+    </sql>
+  </change>
+  <change number="10">
+    <description>Adding login attempt tracking</description>
+    <sql separator=";">
+      alter table sec_user add failed_attempts numeric default 0 not null;
+      update sec_user set failed_attempts = 0;
+      alter table sec_authentication_realm add allowed_attempts numeric default 0 not null;
+      update sec_authentication_realm set allowed_attempts = 0;
+    </sql>
+  </change>
+  <change number="11">
+    <description>Change boolean data types to all be varchar 1</description>
+    <sql separator=";">
+        alter table sec_action add enabledtemp varchar2(1) default 'P';
+        alter table sec_action add cascadingtemp varchar2(1) default 'P';
+        alter table sec_authentication_realm add enabledtemp varchar2(1) default 'P';
+        alter table sec_authentication_realm add read_onlytemp varchar2(1) default 'P';
+        alter table sec_group add enabledtemp varchar2(1) default 'P';
+        alter table sec_resource add enabledtemp varchar2(1) default 'P';
+        alter table sec_resource_role add enabledtemp varchar2(1) default 'P';
+        alter table sec_resource_type add enabledtemp varchar2(1) default 'P';
+        alter table sec_role add enabledtemp varchar2(1) default 'P';
+        alter table sec_team_space add enabledtemp varchar2(1) default 'P';
+        alter table sec_user add enabledtemp varchar2(1) default 'P';
+    </sql>
+    <groovy file="all/1.0/upgrade_011_yes_no_bools.groovy"/>
+    <sql separator=";">
+        alter table sec_action drop column enabled;
+        alter table sec_action drop column cascading;
+        alter table sec_authentication_realm drop column enabled;
+        alter table sec_authentication_realm drop column read_only;
+        alter table sec_group drop column enabled;
+        alter table sec_resource drop column enabled;
+        alter table sec_resource_role drop column enabled;
+        alter table sec_resource_type drop column enabled;
+        alter table sec_role drop column enabled;
+        alter table sec_team_space drop column enabled;
+        alter table sec_user drop column enabled;
+
+        alter table sec_action rename column enabledtemp to enabled;
+        alter table sec_action rename column cascadingtemp to cascading;
+        alter table sec_authentication_realm rename column enabledtemp to enabled;
+        alter table sec_authentication_realm rename column read_onlytemp to read_only;
+        alter table sec_group rename column enabledtemp to enabled;
+        alter table sec_resource rename column enabledtemp to enabled;
+        alter table sec_resource_role rename column enabledtemp to enabled;
+        alter table sec_resource_type rename column enabledtemp to enabled;
+        alter table sec_role rename column enabledtemp to enabled;
+        alter table sec_team_space rename column enabledtemp to enabled;
+        alter table sec_user rename column enabledtemp to enabled;
+
+        alter table sec_action modify enabled varchar2(1) default null;
+        alter table sec_action modify cascading varchar2(1) default null;
+        alter table sec_authentication_realm modify enabled varchar2(1) default null;
+        alter table sec_authentication_realm modify read_only varchar2(1) default null;
+        alter table sec_group modify enabled varchar2(1) default null;
+        alter table sec_resource modify enabled varchar2(1) default null;
+        alter table sec_resource_role modify enabled varchar2(1) default null;
+        alter table sec_resource_type modify enabled varchar2(1) default null;
+        alter table sec_role modify enabled varchar2(1) default null;
+        alter table sec_team_space modify enabled varchar2(1) default null;
+        alter table sec_user modify enabled varchar2(1) default null;
+    </sql>
+  </change>
+  <change number="12">
+    <description>Adding generic user properties</description>
+    <sql separator=";">
+        create table sec_user_property (
+            id varchar2(36) not null,
+            version numeric default 0 not null,
+            name varchar2(255) not null,
+            value varchar2(4000) not null,
+            sec_user_id varchar2(36) not null,
+            primary key (id),
+            constraint sec_user_property_uc unique (name, sec_user_id)
+        );
+
+        alter table sec_user_property add constraint sup_sec_user_fk
+            foreign key (sec_user_id)
+            references sec_user (id)
+        ;
+    </sql>
+  </change>
+  <change number="13">
+    <description> removing uniqueness constraints and adding unique indexes</description>
+    <sql separator=";">
+
+    create table sec_resource_for_team2 (
+        id varchar2(36) not null,
+        version numeric default 0 not null,
+        sec_resource_id varchar2(36) not null,
+        sec_team_space_id varchar2(36) not null,
+        sec_resource_role_id varchar2(36),
+        primary key (id)
+    );
+
+    create table sec_role_action2 (
+        id varchar2(36) not null,
+        version numeric default 0 not null,
+        sec_role_id varchar2(36) not null,
+        sec_action_id varchar2(36) not null,
+        sec_resource_role_id varchar2(36),
+        primary key (id)
+    );
+
+    insert into sec_resource_for_team2 (id, version, sec_resource_id, sec_team_space_id, sec_resource_role_id)
+        select id, version, sec_resource_id, sec_team_space_id, sec_resource_role_id from sec_resource_for_team;
+    insert into sec_role_action2 (id, version, sec_role_id, sec_action_id, sec_resource_role_id)
+        select id, version, sec_role_id, sec_action_id, sec_resource_role_id from sec_role_action;
+
+    drop table sec_resource_for_team;
+    drop table sec_role_action;
+
+    rename sec_resource_for_team2 to sec_resource_for_team;
+    rename sec_role_action2 to sec_role_action;
+
+    create unique index team_resource_role_mapping
+        on sec_resource_for_team(sec_resource_id, sec_team_space_id, sec_resource_role_id);
+
+    create unique index action_resource_role_mapping
+        on sec_role_action(sec_role_id, sec_action_id, sec_resource_role_id);
+
+    </sql>
+  </change>
+  <change number="14">
+    <description> removing uniqueness constraints and adding unique indexes</description>
+    <sql separator=";">
+    create table sec_action2 (
+        id varchar2(36) not null,
+        version numeric default 0 not null,
+        name varchar2(64) not null,
+        description varchar2(1024),
+        enabled varchar2(1) default 'Y' not null,
+        cascading varchar2(1) default 'N' not null,
+        sec_resource_type_id varchar2(36) not null,
+        primary key (id)
+    );
+    insert into sec_action2 (id, version, name, description, enabled, cascading, sec_resource_type_id)
+        (select id, version, name, description, enabled, cascading, sec_resource_type_id from sec_action);
+    drop table sec_action;
+    rename sec_action2 to sec_action;
+    create unique index sec_action_name
+        on sec_action(name);
+    alter table sec_role_action add constraint srar_sec_action_fk
+        foreign key (sec_action_id)
+        references sec_action (id);
+    </sql>
+    <groovy file="oracle/security_014_drop_sec_auth_token_uc_index.groovy"/>
+    <sql separator=";">
+    create unique index sec_auth_token_uc
+        on sec_auth_token(token);
+
+    create table sec_group2 (
+        id varchar2(36) not null,
+        version numeric default 0 not null,
+        name varchar2(255) not null,
+        sec_authorization_realm_id varchar2(36) not null,
+        enabled varchar2(1) default 'Y' not null,
+        primary key (id)
+    );
+    insert into sec_group2 (id, version, name, sec_authorization_realm_id, enabled)
+        select id, version, name, sec_authorization_realm_id, enabled from sec_group;
+    </sql>
+    <groovy file="oracle/security_014_drop_sec_group_role_on_team_constraint.groovy"/>
+    <sql separator=";">
+    alter table sec_user_to_group drop constraint sutg_sec_group_fk;
+    drop table sec_group;
+    rename sec_group2 to sec_group;
+    create unique index sec_name_realm_mapping
+        on sec_group(name, sec_authorization_realm_id);
+    alter table sec_group_role_on_team add constraint sgrot_sec_group_fk
+        foreign key (sec_group_id)
+        references sec_group (id);
+    alter table sec_user_to_group add constraint sutg_sec_group_fk
+        foreign key (sec_group_id)
+        references sec_group (id);
+
+    create table sec_group_role_on_team2 (
+        id varchar2(36) not null,
+        version numeric default 0 not null,
+        sec_group_id varchar2(36) not null,
+        sec_role_id varchar2(36) not null,
+        sec_team_space_id varchar2(36) not null,
+        primary key (id)
+    );
+    insert into sec_group_role_on_team2 (id, version, sec_group_id, sec_role_id, sec_team_space_id)
+        select id, version, sec_group_id, sec_role_id, sec_team_space_id from sec_group_role_on_team;
+    drop table sec_group_role_on_team;
+    rename sec_group_role_on_team2 to sec_group_role_on_team;
+    create unique index sec_group_role_team_mapping
+        on sec_group_role_on_team(sec_group_id, sec_role_id, sec_team_space_id);
+
+    create table sec_resource_role2 (
+        id varchar2(36) not null,
+        version numeric default 0 not null,
+        name varchar2(255) not null,
+        description varchar2(1024),
+        enabled varchar2(1) default 'Y' not null,
+        sec_resource_type_id varchar2(36) not null,
+        primary key (id)
+    );
+    insert into sec_resource_role2 (id, version, name, description, enabled, sec_resource_type_id)
+        select id, version, name, description, enabled, sec_resource_type_id from sec_resource_role;
+    drop table sec_resource_role;
+    rename sec_resource_role2 to sec_resource_role;
+    create unique index sec_resource_role_name
+        on sec_resource_role(name);
+    alter table sec_resource_for_team add constraint srft_sec_resource_role_fk
+        foreign key (sec_resource_role_id)
+        references sec_resource_role (id);
+    alter table sec_role_action add constraint srar_sec_resource_role_fk
+        foreign key (sec_resource_role_id)
+        references sec_resource_role (id);
+
+    create table sec_role2 (
+        id varchar2(36) not null,
+        version numeric default 0 not null,
+        name varchar2(255) not null,
+        description varchar2(1024),
+        enabled varchar2(1) default 'Y' not null,
+        primary key (id)
+    );
+    insert into sec_role2 (id, version, name, description, enabled)
+        select id, version, name, description, enabled from sec_role;
+    alter table sec_user_role_on_team drop constraint surot_sec_role_fk;
+    drop table sec_role;
+    rename sec_role2 to sec_role;
+    create unique index sec_role_name
+        on sec_role(name);
+    alter table sec_role_action add constraint srar_sec_role_fk
+        foreign key (sec_role_id)
+        references sec_role (id);
+    alter table sec_user_role_on_team add constraint surot_sec_role_fk
+        foreign key (sec_role_id)
+        references sec_role (id);
+
+    create table sec_team_space2 (
+        id varchar2(36) not null,
+        version numeric default 0 not null,
+        enabled varchar2(1) default 'Y' not null,
+        name varchar2(255) not null,
+        description varchar2(4000),
+        primary key (id)
+    );
+    insert into sec_team_space2 (id, version, enabled, name, description)
+        select id, version, enabled, name, description from sec_team_space;
+    alter table sec_user_role_on_team drop constraint surot_sec_team_space_fk;
+    drop table sec_team_space;
+    rename sec_team_space2 to sec_team_space;
+    create unique index sec_team_space_name
+        on sec_team_space(name);
+    alter table sec_resource_for_team add constraint srft_sec_team_space_fk
+        foreign key (sec_team_space_id)
+        references sec_team_space (id);
+
+    alter table sec_user_role_on_team add constraint surot_sec_team_space_fk
+        foreign key (sec_team_space_id)
+        references sec_team_space (id);
+    </sql>
+    <groovy file="oracle/security_014_drop_sec_user_uc_index.groovy"/>
+    <sql separator=";">
+    create unique index sec_user_uc
+        on sec_user(name, sec_authentication_realm_id, ghosted_date);
+
+    alter table sec_user_property drop constraint sec_user_property_uc;
+    create unique index sec_user_property_uc
+        on sec_user_property(name, sec_user_id);
+
+    create table sec_user_role_on_team2 (
+        id varchar2(36) not null,
+        version numeric default 0 not null,
+        sec_user_id varchar2(36) not null,
+        sec_role_id varchar2(36) not null,
+        sec_team_space_id varchar2(36) not null,
+        primary key (id)
+    );
+    insert into sec_user_role_on_team2 (id, version, sec_user_id, sec_role_id, sec_team_space_id)
+        select id, version, sec_user_id, sec_role_id, sec_team_space_id from sec_user_role_on_team;
+    drop table sec_user_role_on_team;
+    rename sec_user_role_on_team2 to sec_user_role_on_team;
+    create unique index sec_user_role_on_team_mapping
+        on sec_user_role_on_team(sec_user_id, sec_role_id, sec_team_space_id);
+
+    create table sec_user_to_group2 (
+        sec_user_id varchar2(36) not null,
+        sec_group_id varchar2(36) not null
+    );
+    insert into sec_user_to_group2 (sec_user_id, sec_group_id)
+        select sec_user_id, sec_group_id from sec_user_to_group;
+    drop table sec_user_to_group;
+    rename sec_user_to_group2 to sec_user_to_group;
+    create unique index sec_user_group_mapping
+        on sec_user_to_group(sec_user_id, sec_group_id);
+
+
+    alter table sec_action add constraint sa_sec_resource_type_fk
+        foreign key (sec_resource_type_id)
+        references sec_resource_type (id);
+
+    alter table sec_group add constraint sg_sec_authorization_realm_fk
+        foreign key (sec_authorization_realm_id)
+        references sec_authorization_realm (id);
+
+    alter table sec_group_role_on_team add constraint sgrot_sec_group_fk
+        foreign key (sec_group_id)
+        references sec_group (id);
+
+    alter table sec_group_role_on_team add constraint sgrot_sec_role_fk
+        foreign key (sec_role_id)
+        references sec_role (id);
+
+    alter table sec_group_role_on_team add constraint sgrot_sec_team_space_fk
+        foreign key (sec_team_space_id)
+        references sec_team_space (id);
+
+    alter table sec_resource_role add constraint srr_sec_resource_type_fk
+        foreign key (sec_resource_type_id)
+        references sec_resource_type (id);
+
+    alter table sec_user_role_on_team add constraint surot_sec_user_fk
+        foreign key (sec_user_id)
+        references sec_user (id);
+
+    alter table sec_user_role_on_team add constraint surot_sec_role_fk
+        foreign key (sec_role_id)
+        references sec_role (id);
+
+    alter table sec_user_role_on_team add constraint surot_sec_team_space_fk
+        foreign key (sec_team_space_id)
+        references sec_team_space (id);
+
+    alter table sec_user_to_group add constraint sutg_sec_user_fk
+        foreign key (sec_user_id)
+        references sec_user (id);
+
+    alter table sec_user_to_group add constraint sutg_sec_group_fk
+        foreign key (sec_group_id)
+        references sec_group (id);
+
+    </sql>
+  </change>
+  <change number="15">
+    <description>Adding License Type Table</description>
+    <sql separator=";">
+        create table sec_license_type (
+        id varchar2(36) not null,
+        version integer default 0 not null,
+        feature varchar2(36) not null,
+        is_reservable varchar2(1) default 'N' not null,
+        primary key (id)
+        );
+
+        create table sec_action_to_license_type (
+        action_id varchar2(36) not null,
+        license_type_id varchar2(36) not null
+        );
+
+        alter table sec_user add sec_license_type_id_requested varchar2(36);
+        alter table sec_user add sec_license_type_id_received varchar2(36);
+    </sql>
+  </change>
+  <change number="16">
+    <description>removing the "not null" constraint from sec_user_property</description>
+    <sql separator=";">
+        alter table sec_user_property modify value null;
+    </sql>
+  </change>
+  <change number="17">
+    <description>Adding a LicensedSessionCount that helps to keep track of existing session for
+         a User using the same license</description>
+    <sql separator=";">
+        alter table sec_user add licensed_session_count numeric default 0 not null;
+        update sec_user set licensed_session_count = 0;
+    </sql>
+  </change>
+  <change number="18">
+    <description>Reducing all 256 char characters to 255 char</description>
+    <sql separator=";">
+        alter table sec_group_mapping modify regex varchar2(255);
+        alter table sec_group_mapping modify replacement varchar2(255);
+        alter table sec_resource modify name varchar2(255);
+        alter table sec_resource_type modify name varchar2(255);
+        alter table sec_user modify password varchar2(255);
+        alter table sec_user modify actual_name varchar2(255);
+        alter table sec_user modify email varchar2(255);
+        alter table sec_user modify im_id varchar2(255);
+    </sql>
+  </change>
+  <change number="19">
+    <description>Add category column to actions</description>
+    <sql separator=";">
+        alter table sec_action add category varchar2(64);
+    </sql>
+  </change>
+  <change number="20">
+    <description>remove uniqueness from sec_action name index</description>
+    <sql separator=";">
+        create table sec_action2 (
+            id varchar2(36) not null,
+            version numeric default 0 not null,
+            name varchar2(64) not null,
+            description varchar2(1024),
+            enabled varchar2(1) default 'Y' not null,
+            cascading varchar2(1) default 'N' not null,
+            sec_resource_type_id varchar2(36) not null,
+            category varchar2(64),
+            primary key (id)
+        );
+        insert into sec_action2 (id, version, name, description, enabled, cascading, sec_resource_type_id, category)
+            (select id, version, name, description, enabled, cascading, sec_resource_type_id, category from sec_action);
+        alter table sec_role_action drop constraint srar_sec_action_fk;
+        drop table sec_action;
+        rename sec_action2 to sec_action;
+        create index sec_action_name
+            on sec_action(name);
+        alter table sec_role_action add constraint srar_sec_action_fk
+            foreign key (sec_action_id)
+            references sec_action (id);
+        alter table sec_action add constraint sa_sec_resource_type_fk
+            foreign key (sec_resource_type_id)
+            references sec_resource_type (id);
+    </sql>
+    </change>
+    <change number="21">
+        <description>Add missing indexes for foreign keys</description>
+        <sql separator=";">
+            create index sec_action_res_type
+                on sec_action(sec_resource_type_id);
+
+            create index sec_auth_token_usr
+                on sec_auth_token(sec_user_id);
+
+            create index sec_group_mapping_group_mapper
+                on sec_group_mapping(sec_group_mapper_id);
+
+            create index sec_authn_rlm_authz_rlm
+                on sec_authentication_realm(sec_authorization_realm_id);
+
+            create index sec_authz_rlm_prop_authz_rlm
+                on sec_authorization_realm_prop(sec_authorization_realm_id);
+
+            create index sec_authn_rlm_prop_authn_rlm
+                on sec_authentication_realm_prop(sec_authentication_realm_id);
+
+            create index sec_res_res_type
+                on sec_resource(sec_resource_type_id);
+
+            create index sec_res_role_res_type
+                on sec_resource_role(sec_resource_type_id);
+        </sql>
+    </change>
+  <change number="22">
+    <description>Allow ghosting of authorization realms</description>
+    <sql separator=";">
+      alter table sec_authorization_realm
+      add ghosted_date numeric default 0 not null;
+    </sql>
+  </change>
+  <change number="23">
+    <description>Allow Tracking of user's latest IP address</description>
+    <sql separator=";">
+      alter table sec_user add last_ip_address varchar2(40);
+    </sql>
+  </change>
+  <change number="24">
+    <description>Add an index to auth tokens' expiration date and new created date column</description>
+    <sql separator=";">
+        create index sec_auth_token_exp on sec_auth_token(expiration);
+        alter table sec_auth_token add date_created numeric default 0 not null;
+    </sql>
+  </change>
+  <change number="25">
+    <description>Add missing indices for foreign keys</description>
+    <sql separator=";">
+        create index sec_grot_role
+                on sec_group_role_on_team(sec_role_id);
+
+        create index sec_grot_team_space
+                on sec_group_role_on_team(sec_team_space_id);
+
+        create index sec_group_author_realm
+                on sec_group(sec_authorization_realm_id);
+
+        create index sec_role_action_sec_action
+                on sec_role_action(sec_action_id);
+
+        create index sec_role_action_res_role
+                on sec_role_action(sec_resource_role_id);
+
+        create index sec_rft_res_role
+                on sec_resource_for_team(sec_resource_role_id);
+
+        create index sec_rft_team_space
+                on sec_resource_for_team(sec_team_space_id);
+
+        create index sec_res_hier_child_sec_res
+                on sec_resource_hierarchy(child_sec_resource_id);
+
+        create index sec_user_prop_user_id
+                on sec_user_property(sec_user_id);
+
+        create index sec_urot_role_id
+                on sec_user_role_on_team(sec_role_id);
+
+        create index sec_utg_gid
+                on sec_user_to_group(sec_group_id);
+
+        create index sec_user_auth_realm
+                on sec_user(sec_authentication_realm_id);
+    </sql>
+  </change>
+  <change number="26">
+    <description>Allow ghosting of role</description>
+    <sql separator=";">
+        alter table sec_role
+        add ghosted_date numeric default 0 not null;
+
+        drop index sec_role_name;
+        create unique index sec_role_name
+                on sec_role(name, ghosted_date);
+    </sql>
+  </change>
+  <change number="27">
+    <description>Changes to indices to help with database performance</description>
+    <sql separator=";">
+        create unique index action_resource_role_map
+                on sec_role_action(sec_action_id, sec_resource_role_id, sec_role_id);
+        create unique index sec_user_role_on_team_map
+                on sec_user_role_on_team(sec_team_space_id, sec_role_id, sec_user_id);
+        create unique index sec_user_group_map
+                on sec_user_to_group(sec_group_id, sec_user_id);
+        create unique index team_resource_team_map
+                on sec_resource_for_team(sec_team_space_id, sec_resource_role_id, sec_resource_id);
+    </sql>
+  </change>
+  <change number="28">
+    <description>Add phone number column for users</description>
+    <sql separator=";">
+        alter table sec_user add phone_number varchar2(20);
+    </sql>
+  </change>
+  <change number="29">
+    <description>Allow authentication realms to support multiple authorization realms</description>
+    <sql separator=";">
+        create table sec_realm_mapping (
+            authentication_realm_id varchar2(36) not null,
+            authorization_realm_id varchar2(36) not null
+        );
+
+        alter table sec_realm_mapping add constraint srm_authentication_realm_fk
+            foreign key (authentication_realm_id)
+            references sec_authentication_realm(id)
+        ;
+        alter table sec_realm_mapping add constraint srm_authorization_realm_fk
+            foreign key (authorization_realm_id)
+            references sec_authorization_realm(id)
+        ;
+
+        insert into sec_realm_mapping (authentication_realm_id, authorization_realm_id)
+        (select id, sec_authorization_realm_id from sec_authentication_realm);
+
+        alter table sec_authentication_realm drop constraint sar_sec_authorization_realm_fk;
+        drop index sec_authn_rlm_authz_rlm;
+        alter table sec_authentication_realm drop column sec_authorization_realm_id;
+    </sql>
+  </change>
+  <change number="30">
+    <description>Add unique index for performance</description>
+    <sql separator=";">
+      create unique index team_resource_role_map
+          on sec_resource_for_team(sec_resource_role_id, sec_team_space_id, sec_resource_id);
+    </sql>
+  </change>
+  <change number="31">
+    <description>Encrypting secure Authentication Realm properties</description>
+    <groovy file="all/1.0/upgrade_031_secure_authentication_realm_props.groovy"/>
+  </change>
+</change-set>

@@ -1,0 +1,47 @@
+# Syntax:
+#   # comment
+#   + <regex> : include pattern
+#   - <regex> : exclude pattern
+
+# Semantics:
+#   If at least one include pattern matches and no exclude pattern matches, the
+#   path is accepted for replication. Further checks on other aspects of the
+#   request, such as HTTP method or headers, may still prevent replication.
+
+####################################################################################################
+# Main REST API
+####################################################################################################
+
++ /rest/.*
+
+# snapshot import
+- /rest/deploy/application/importWithArtifacts
+- /rest/deploy/application/upgradeWithArtifacts
+
+# agent logs
+- /rest/logs/.*
+
+# replication services
+- /rest/repl/.*
+
+####################################################################################################
+# Security REST API 
+####################################################################################################
+
++ /security/.*
+
+####################################################################################################
+# Property REST API 
+####################################################################################################
+
++ /property/.*
+
+####################################################################################################
+# CLI REST API
+####################################################################################################
+
++ /cli/.*
+# /cli-internal seems to be all file upload, so not included
+
+# file upload
+- /cli/version/addFiles

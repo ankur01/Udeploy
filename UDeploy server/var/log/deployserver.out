@@ -1,0 +1,937 @@
+2016-09-29 14:16:03,559 INFO  main com.urbancode.ds.persistence.database.DerbyHelper - Starting Derby...
+2016-09-29 14:16:04,414 INFO  main com.urbancode.ds.persistence.database.DerbyHelper - Waiting for Derby to start...
+2016-09-29 14:16:04,537 INFO  main com.urbancode.ds.persistence.database.DerbyHelper - The Derby instance on localhost:11377 is started
+2016-09-29 14:16:12,874 WARN  main net.sf.ehcache.hibernate.AbstractEhcacheProvider - Could not find a specific ehcache configuration for cache named [com.urbancode.air.workflow.DispatchedTask]; using defaults.
+2016-09-29 14:16:13,731 INFO  main com.urbancode.ds.UDeployServer - Starting HA Lock Manager...
+2016-09-29 14:16:13,782 INFO  main com.urbancode.ds.UDeployServer - Configuring Security System...
+2016-09-29 14:16:13,801 INFO  main com.urbancode.ds.UDeployServer - Configured authentication realms in JAAS.
+2016-09-29 14:16:13,856 INFO  main com.urbancode.ds.UDeployServer -  done
+2016-09-29 14:16:13,856 INFO  main com.urbancode.ds.UDeployServer - Starting Versioned Configuration...
+2016-09-29 14:16:14,142 INFO  main com.urbancode.ds.UDeployServer -   done
+2016-09-29 14:16:14,150 INFO  main com.urbancode.ds.UDeployServer - No patches found.
+2016-09-29 14:16:14,550 INFO  RecordMetadataService com.urbancode.air.vc.metadata.RecordMetadataService - Processing metadata for new generator: Process Metadata Generator
+2016-09-29 14:16:14,551 INFO  RecordMetadataService com.urbancode.air.vc.metadata.RecordMetadataService - Processing metadata for new generator: Security Metadata Generator
+2016-09-29 14:16:14,552 INFO  RecordMetadataService com.urbancode.air.vc.metadata.RecordMetadataService - Processing metadata for new generator: Tags Metadata Generator
+2016-09-29 14:16:14,557 INFO  RecordMetadataService com.urbancode.air.vc.metadata.RecordMetadataService - Processing metadata for new generator: Process Role Metadata Generator
+2016-09-29 14:16:14,558 INFO  RecordMetadataService com.urbancode.air.vc.metadata.RecordMetadataService - Processing metadata for new generator: Template Metadata Generator
+2016-09-29 14:16:14,559 INFO  RecordMetadataService com.urbancode.air.vc.metadata.RecordMetadataService - Processing metadata for new generator: Environment Template Metadata Generator
+2016-09-29 14:16:15,107 INFO  main com.urbancode.ds.UDeployServer - Starting Versioned File Storage...
+2016-09-29 14:16:15,141 INFO  main com.urbancode.ds.UDeployServer -   done
+2016-09-29 14:16:15,221 INFO  RecordMetadataService com.urbancode.air.vc.metadata.RecordMetadataService - All versioned metadata generators have been processed.
+2016-09-29 14:16:16,704 ERROR main com.urbancode.ds.rcl.LicenseUtil - Unable to determine server license type
+2016-09-29 14:16:16,705 INFO  main com.urbancode.ds.rcl.LicenseUtil - Found server license type: NONE
+2016-09-29 14:16:16,720 INFO  main com.urbancode.ds.rcl.LicenseUtil - Found server license type: NONE
+2016-09-29 14:16:16,798 INFO  main com.urbancode.ds.UDeployServer - Configuring Event Service...
+2016-09-29 14:16:16,821 INFO  main com.urbancode.ds.UDeployServer -   done
+2016-09-29 14:16:16,822 INFO  main com.urbancode.ds.UDeployServer - Starting calendar event scheduler...
+2016-09-29 14:16:16,828 INFO  main com.urbancode.ds.subsys.calendar.service.CalendarEntryNotificationService - Started
+2016-09-29 14:16:16,829 INFO  main com.urbancode.ds.UDeployServer -   done
+2016-09-29 14:16:16,830 INFO  main com.urbancode.ds.UDeployServer - Configuring Notifications...
+2016-09-29 14:16:17,506 INFO  main com.urbancode.ds.UDeployServer -   done
+2016-09-29 14:16:17,507 INFO  main com.urbancode.ds.UDeployServer - Configuring email spooler...
+2016-09-29 14:16:17,582 INFO  main com.urbancode.ds.UDeployServer -   done
+2016-09-29 14:16:17,662 INFO  main com.urbancode.ds.UDeployServer - Workflow Engine Started
+2016-09-29 14:16:17,668 INFO  main com.urbancode.ds.UDeployServer - Loading 15 staged plugins...
+2016-09-29 14:16:17,673 INFO  main com.urbancode.ds.UDeployServer - Loading FileUtils-46.787588.zip...
+2016-09-29 14:16:20,260 INFO  main com.urbancode.ds.UDeployServer - Loading general-utilities-1.624056.zip...
+2016-09-29 14:16:20,345 INFO  main com.urbancode.ds.UDeployServer - Loading Groovy-7.785238.zip...
+2016-09-29 14:16:20,474 INFO  main com.urbancode.ds.UDeployServer - Loading Shell-6.785165.zip...
+2016-09-29 14:16:20,854 INFO  main com.urbancode.ds.UDeployServer - Loading SystemInformation-3.785121.zip...
+2016-09-29 14:16:21,051 INFO  main com.urbancode.ds.UDeployServer - Loading uDeploy-Application-70.786821.zip...
+2016-09-29 14:16:21,796 INFO  main com.urbancode.ds.UDeployServer - Loading uDeploy-Component-67.786837.zip...
+2016-09-29 14:16:22,486 INFO  main com.urbancode.ds.UDeployServer - Loading uDeploy-Environment-72.786836.zip...
+2016-09-29 14:16:23,107 INFO  main com.urbancode.ds.UDeployServer - Loading uDeploy-Process-2.786822.zip...
+2016-09-29 14:16:23,437 INFO  main com.urbancode.ds.UDeployServer - Loading uDeploy-Resource-69.786827.zip...
+2016-09-29 14:16:24,348 INFO  main com.urbancode.ds.UDeployServer - Loading uDeploy-Version-63.786820.zip...
+2016-09-29 14:16:24,900 INFO  main com.urbancode.ds.UDeployServer - Loading uDeployConfigManagement-8.786838.zip...
+2016-09-29 14:16:25,851 INFO  main com.urbancode.ds.UDeployServer - Loading UrbancodeVFS-26.785274.zip...
+2016-09-29 14:16:26,757 INFO  main com.urbancode.ds.UDeployServer - Loading WinRSAgentInstall-6.786202.zip...
+2016-09-29 14:16:27,380 INFO  main com.urbancode.ds.UDeployServer - Loading zos-deploy-22.787240.zip...
+2016-09-29 14:16:31,742 INFO  main com.urbancode.ds.UDeployServer - Loading 12 staged source plugins...
+2016-09-29 14:16:31,747 INFO  main com.urbancode.ds.UDeployServer - Loading AnthillSourceConfig-3.786805.zip...
+2016-09-29 14:16:32,464 INFO  main com.urbancode.ds.UDeployServer - Loading ClearCaseSourceConfig-5.786799.zip...
+2016-09-29 14:16:32,910 INFO  main com.urbancode.ds.UDeployServer - Loading FileSystemSourceConfig-2.786815.zip...
+2016-09-29 14:16:33,430 INFO  main com.urbancode.ds.UDeployServer - Loading FileSystemVersionedSourceConfig-5.786812.zip...
+2016-09-29 14:16:33,832 INFO  main com.urbancode.ds.UDeployServer - Loading GitSourceConfig-5.786802.zip...
+2016-09-29 14:16:34,328 INFO  main com.urbancode.ds.UDeployServer - Loading MavenSourceConfig-5.786806.zip...
+2016-09-29 14:16:34,806 INFO  main com.urbancode.ds.UDeployServer - Loading RAMSourceConfig-4.787579.zip...
+2016-09-29 14:16:35,585 INFO  main com.urbancode.ds.UDeployServer - Loading SubversionSourceConfig-9.786809.zip...
+2016-09-29 14:16:36,152 INFO  main com.urbancode.ds.UDeployServer - Loading TeamCitySourceConfig-6.786814.zip...
+2016-09-29 14:16:36,540 INFO  main com.urbancode.ds.UDeployServer - Loading TFS-SourceConfig-6.787284.zip...
+2016-09-29 14:16:37,026 INFO  main com.urbancode.ds.UDeployServer - Loading TFS_SCM-SourceConfig-4.786804.zip...
+2016-09-29 14:16:37,516 INFO  main com.urbancode.ds.UDeployServer - Loading uBuildSourceConfig-3.786803.zip...
+2016-09-29 14:16:38,459 INFO  main com.urbancode.ds.UDeployServer - Configuring Replication...
+2016-09-29 14:16:38,460 INFO  main com.urbancode.ds.UDeployServer -  replication disabled
+2016-09-29 14:16:38,461 INFO  main com.urbancode.ds.UDeployServer -  done
+2016-09-29 14:16:38,462 INFO  main com.urbancode.ds.UDeployServer - Configuring Replicated Codestation...
+2016-09-29 14:16:38,877 INFO  main com.urbancode.ds.UDeployServer -  done
+2016-09-29 14:16:38,880 INFO  codestation.upgrader com.urbancode.ds.repl.codestation.upgrade.CodestationUpgrader - Upgrader Running.
+2016-09-29 14:16:39,172 INFO  codestation.upgrader com.urbancode.ds.repl.codestation.upgrade.CodestationUpgrader - Finished upgrading versions.
+2016-09-29 14:16:40,330 INFO  main com.urbancode.ds.UDeployServer - Configuring Agent Network System for single-server setup...
+2016-09-29 14:16:44,897 INFO  main com.urbancode.ds.UDeployServer -  done
+2016-09-29 14:16:44,951 INFO  main com.urbancode.ds.UDeployServer - === Begin Diagnostic Info ===
+2016-09-29 14:16:44,962 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Java Version: 1.8.0_101
+2016-09-29 14:16:44,963 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Java Home: C:\Program Files\Java\jdk1.8.0_101\jre
+2016-09-29 14:16:44,970 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Java Arguments:
+    -Xmx1024m
+    -XX:MaxPermSize=192m
+    -XX:-OmitStackTraceInFastThrow
+    -XX:+HeapDumpOnOutOfMemoryError
+    -Dcatalina.base=C:\Users\Ankur.Kashyap\Documents\UDeploy server\opt\tomcat
+    -Dcatalina.home=C:\Users\Ankur.Kashyap\Documents\UDeploy server\opt\tomcat
+    -Djava.endorsed.dirs=C:\Users\Ankur.Kashyap\Documents\UDeploy server\endorsed
+    -Dfile.encoding=UTF-8
+    -Djava.library.path=C:\Users\Ankur.Kashyap\Documents\UDeploy server\lib\rcl\win\x386_64
+2016-09-29 14:16:44,973 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - JVM memory usage: 56% free -- 157.99 MB out of 279 MB total.
+2016-09-29 14:16:44,974 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - JVM max memory: 910.5 MB
+2016-09-29 14:16:44,975 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Working Directory: C:\Users\Ankur.Kashyap\Documents\UDeploy server\bin
+2016-09-29 14:16:44,977 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - OS: Windows 10 10.0
+2016-09-29 14:16:44,978 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Processors available to JVM: 4
+2016-09-29 14:16:45,420 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Software Loopback Interface 1
+2016-09-29 14:16:45,424 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Software Loopback Interface 1
+2016-09-29 14:16:45,424 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: WAN Miniport (IP)
+2016-09-29 14:16:45,430 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: WAN Miniport (IP)
+2016-09-29 14:16:45,434 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: VirtualBox Host-Only Ethernet Adapter
+2016-09-29 14:16:45,451 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: VirtualBox Host-Only Ethernet Adapter
+2016-09-29 14:16:45,460 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: WAN Miniport (SSTP)
+2016-09-29 14:16:45,470 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: WAN Miniport (SSTP)
+2016-09-29 14:16:45,472 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: WAN Miniport (IPv6)
+2016-09-29 14:16:45,477 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: WAN Miniport (IPv6)
+2016-09-29 14:16:45,479 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: VirtualBox Host-Only Ethernet Adapter #2
+2016-09-29 14:16:45,490 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: VirtualBox Host-Only Ethernet Adapter #2
+2016-09-29 14:16:45,491 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: WAN Miniport (PPPOE)
+2016-09-29 14:16:45,502 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: WAN Miniport (PPPOE)
+2016-09-29 14:16:45,502 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft Wi-Fi Direct Virtual Adapter #2
+2016-09-29 14:16:45,507 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft Wi-Fi Direct Virtual Adapter #2
+2016-09-29 14:16:45,508 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Teredo Tunneling Pseudo-Interface
+2016-09-29 14:16:45,533 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   MAC address: 00:00:00:00:00:00:00:E0
+2016-09-29 14:16:46,482 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   Hostname: IRIS-AnkurKashyap
+2016-09-29 14:16:46,483 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   IP address: 2001:0:5ef5:79fd:1cf7:1a93:976b:2c45
+2016-09-29 14:16:47,346 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   Hostname: IRIS-AnkurKashyap
+2016-09-29 14:16:47,349 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   IP address: fe80:0:0:0:1cf7:1a93:976b:2c45%net1
+2016-09-29 14:16:47,356 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: WAN Miniport (L2TP)
+2016-09-29 14:16:47,363 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: WAN Miniport (L2TP)
+2016-09-29 14:16:47,367 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter
+2016-09-29 14:16:47,378 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   MAC address: DC:85:DE:A3:4D:DC
+2016-09-29 14:16:47,380 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   Hostname: IRIS-AnkurKashyap.home
+2016-09-29 14:16:47,381 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   IP address: 192.168.1.6
+2016-09-29 14:16:47,384 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   Hostname: fe80:0:0:0:1db:1f65:dcb6:6b57%wlan1
+2016-09-29 14:16:47,387 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   IP address: fe80:0:0:0:1db:1f65:dcb6:6b57%wlan1
+2016-09-29 14:16:47,388 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR8161 PCI-E Gigabit Ethernet Controller (NDIS 6.30)
+2016-09-29 14:16:47,394 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   MAC address: 60:A4:4C:D8:84:ED
+2016-09-29 14:16:48,251 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   Hostname: fe80:0:0:0:79bd:b8b:14f5:b7b5%eth4
+2016-09-29 14:16:48,259 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   IP address: fe80:0:0:0:79bd:b8b:14f5:b7b5%eth4
+2016-09-29 14:16:48,263 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft ISATAP Adapter #3
+2016-09-29 14:16:48,292 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft ISATAP Adapter #3
+2016-09-29 14:16:48,296 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: WAN Miniport (PPTP)
+2016-09-29 14:16:48,311 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: WAN Miniport (PPTP)
+2016-09-29 14:16:48,322 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft ISATAP Adapter
+2016-09-29 14:16:48,326 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   MAC address: 00:00:00:00:00:00:00:E0
+2016-09-29 14:16:49,211 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   Hostname: fe80:0:0:0:0:5efe:c0a8:106%net5
+2016-09-29 14:16:49,211 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   IP address: fe80:0:0:0:0:5efe:c0a8:106%net5
+2016-09-29 14:16:49,213 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft Kernel Debug Network Adapter
+2016-09-29 14:16:49,220 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft Kernel Debug Network Adapter
+2016-09-29 14:16:49,221 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft ISATAP Adapter #2
+2016-09-29 14:16:49,226 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft ISATAP Adapter #2
+2016-09-29 14:16:49,229 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: WAN Miniport (Network Monitor)
+2016-09-29 14:16:49,237 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: WAN Miniport (Network Monitor)
+2016-09-29 14:16:49,241 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft ISATAP Adapter #4
+2016-09-29 14:16:49,263 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft ISATAP Adapter #4
+2016-09-29 14:16:49,269 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft Wi-Fi Direct Virtual Adapter
+2016-09-29 14:16:49,274 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   MAC address: 1E:85:DE:A3:4D:DC
+2016-09-29 14:16:50,151 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   Hostname: fe80:0:0:0:142d:c0a5:6aa5:1e22%wlan2
+2016-09-29 14:16:50,156 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil -   IP address: fe80:0:0:0:142d:c0a5:6aa5:1e22%wlan2
+2016-09-29 14:16:50,160 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: WAN Miniport (IKEv2)
+2016-09-29 14:16:50,172 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: WAN Miniport (IKEv2)
+2016-09-29 14:16:50,174 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft ISATAP Adapter #5
+2016-09-29 14:16:50,184 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft ISATAP Adapter #5
+2016-09-29 14:16:50,188 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft Wi-Fi Direct Virtual Adapter #3
+2016-09-29 14:16:50,193 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft Wi-Fi Direct Virtual Adapter #3
+2016-09-29 14:16:50,193 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR8161 PCI-E Gigabit Ethernet Controller (NDIS 6.30)-WFP Native MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,209 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Qualcomm Atheros AR8161 PCI-E Gigabit Ethernet Controller (NDIS 6.30)-WFP Native MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,210 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR8161 PCI-E Gigabit Ethernet Controller (NDIS 6.30)-VirtualBox NDIS Light-Weight Filter-0000
+2016-09-29 14:16:50,230 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Qualcomm Atheros AR8161 PCI-E Gigabit Ethernet Controller (NDIS 6.30)-VirtualBox NDIS Light-Weight Filter-0000
+2016-09-29 14:16:50,230 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR8161 PCI-E Gigabit Ethernet Controller (NDIS 6.30)-QoS Packet Scheduler-0000
+2016-09-29 14:16:50,236 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Qualcomm Atheros AR8161 PCI-E Gigabit Ethernet Controller (NDIS 6.30)-QoS Packet Scheduler-0000
+2016-09-29 14:16:50,236 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR8161 PCI-E Gigabit Ethernet Controller (NDIS 6.30)-WFP 802.3 MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,261 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Qualcomm Atheros AR8161 PCI-E Gigabit Ethernet Controller (NDIS 6.30)-WFP 802.3 MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,276 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP Native MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,298 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP Native MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,319 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Virtual WiFi Filter Driver-0000
+2016-09-29 14:16:50,327 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Virtual WiFi Filter Driver-0000
+2016-09-29 14:16:50,346 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Native WiFi Filter Driver-0000
+2016-09-29 14:16:50,364 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Native WiFi Filter Driver-0000
+2016-09-29 14:16:50,373 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-VirtualBox NDIS Light-Weight Filter-0000
+2016-09-29 14:16:50,386 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-VirtualBox NDIS Light-Weight Filter-0000
+2016-09-29 14:16:50,387 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-QoS Packet Scheduler-0000
+2016-09-29 14:16:50,394 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-QoS Packet Scheduler-0000
+2016-09-29 14:16:50,396 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,406 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,430 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,446 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,462 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000
+2016-09-29 14:16:50,485 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000
+2016-09-29 14:16:50,493 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft Wi-Fi Direct Virtual Adapter-VirtualBox NDIS Light-Weight Filter-0000
+2016-09-29 14:16:50,510 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft Wi-Fi Direct Virtual Adapter-VirtualBox NDIS Light-Weight Filter-0000
+2016-09-29 14:16:50,511 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000
+2016-09-29 14:16:50,524 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000
+2016-09-29 14:16:50,528 INFO  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - NIC: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,541 WARN  main com.urbancode.air.diagnostics.logging.DiagnosticLoggingUtil - Could not get MAC address for NIC: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+2016-09-29 14:16:50,541 INFO  main com.urbancode.ds.UDeployServer - MultiServer? : false
+2016-09-29 14:16:50,613 INFO  main com.urbancode.ds.UDeployServer - External URL: https://localhost:8443
+2016-09-29 14:16:50,672 INFO  main com.urbancode.ds.UDeployServer - External User URL: https://localhost:8443
+2016-09-29 14:16:50,672 INFO  main com.urbancode.ds.UDeployServer - Server Broker ID: server-K3HQzZD63b6l1qFsLWGJ
+2016-09-29 14:16:50,674 INFO  main com.urbancode.ds.UDeployServer - Server Unique ID: acc0514a-6ded-43ed-a94a-7e207c52de3c
+2016-09-29 14:16:50,676 INFO  main com.urbancode.ds.UDeployServer - JDBC URL: jdbc:derby://localhost:11377/data
+2016-09-29 14:16:50,696 INFO  main com.urbancode.ds.UDeployServer - Database User name: ibm_ucd
+2016-09-29 14:16:50,698 INFO  main com.urbancode.ds.UDeployServer - DBMS name: Apache Derby
+2016-09-29 14:16:50,702 INFO  main com.urbancode.ds.UDeployServer - DBMS version: 10.8.3.1 - (1476465)
+2016-09-29 14:16:50,704 INFO  main com.urbancode.ds.UDeployServer - Database Driver name: Apache Derby Network Client JDBC Driver
+2016-09-29 14:16:50,706 INFO  main com.urbancode.ds.UDeployServer - Database Driver version: 10.8.3.1 - (1476465)
+2016-09-29 14:16:50,708 INFO  main com.urbancode.ds.UDeployServer - === End Diagnostic Info ===
+2016-09-29 14:16:50,709 INFO  main com.urbancode.ds.UDeployServer - IBM UrbanCode Deploy server version 6.2.1.1.788401 started.
+2016-09-29 14:32:39,465 ERROR http-0.0.0.0-8443-5 com.urbancode.ds.web.util.UCDExceptionMapper - You need to set an agent or agent tag to use for version imports before running a source configuration integration.
+com.urbancode.air.i18n.TranslatableException: You need to set an agent or agent tag to use for version imports before running a source configuration integration.
+	at com.urbancode.ds.plugin.source.SourceConfigExecutionService.getIntegrationAgent(SourceConfigExecutionService.java:397)
+	at com.urbancode.ds.web.rest.config.ComponentResource.runComponentIntegration(ComponentResource.java:1078)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.urbancode.ds.web.rest.TxResourceMethodDispatchProvider$TxJavaMethodInvoker.invoke(TxResourceMethodDispatchProvider.java:58)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.CharSetFilter.doFilter(CharSetFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.LoggingFilter.doFilter(LoggingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.JSONCacheFilter.doFilter(JSONCacheFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.HibernateSessionRequestFilter.doFilter(HibernateSessionRequestFilter.java:60)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:200)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.AntiCachingFilter.doFilter(AntiCachingFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.ExceptionHandlingFilter.doFilter(ExceptionHandlingFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.FrameOptionsFilter.doFilter(FrameOptionsFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.DisableSessionUrlFilter.doFilter(DisableSessionUrlFilter.java:138)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:612)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:503)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-29 14:36:38,207 ERROR RepoIntegration com.urbancode.ds.subsys.deploy.repo.integration.AutoIntegrationTask - Error running autointegration task on component TJT0_WebApp. Subsequent errors will be logged at debug level until a successful integration attempt.
+com.urbancode.air.i18n.TranslatableException: You need to set an agent or agent tag to use for version imports before running a source configuration integration.
+	at com.urbancode.ds.plugin.source.SourceConfigExecutionService.getIntegrationAgent(SourceConfigExecutionService.java:397)
+	at com.urbancode.ds.subsys.deploy.repo.integration.AutoIntegrationTask.getIntegrationAgent(AutoIntegrationTask.java:124)
+	at com.urbancode.ds.subsys.deploy.repo.integration.AutoIntegrationTask.runAutoIntegration(AutoIntegrationTask.java:86)
+	at com.urbancode.ds.subsys.deploy.repo.integration.AutoIntegrationTask.run(AutoIntegrationTask.java:62)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2016-09-29 15:02:44,294 ERROR http-0.0.0.0-8443-6 com.urbancode.ds.web.rest.config.ComponentResource - Bad JSON format
+com.urbancode.air.i18n.TranslatableException: Bad JSON format
+	at com.urbancode.ds.web.rest.config.ComponentResource.importOrUpgradeComponents(ComponentResource.java:1359)
+	at com.urbancode.ds.web.rest.config.ComponentResource.importComponent(ComponentResource.java:1314)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.urbancode.ds.web.rest.TxResourceMethodDispatchProvider$TxJavaMethodInvoker.invoke(TxResourceMethodDispatchProvider.java:58)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.CharSetFilter.doFilter(CharSetFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.LoggingFilter.doFilter(LoggingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.JSONCacheFilter.doFilter(JSONCacheFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.HibernateSessionRequestFilter.doFilter(HibernateSessionRequestFilter.java:60)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:200)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.AntiCachingFilter.doFilter(AntiCachingFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.ExceptionHandlingFilter.doFilter(ExceptionHandlingFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.FrameOptionsFilter.doFilter(FrameOptionsFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.DisableSessionUrlFilter.doFilter(DisableSessionUrlFilter.java:138)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:612)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:503)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-29 15:02:44,329 ERROR http-0.0.0.0-8443-6 com.urbancode.ds.web.util.UCDExceptionMapper - {"status":"failed","error":"Bad JSON format"}
+com.urbancode.ds.web.util.TextareaWrappedException: {"status":"failed","error":"Bad JSON format"}
+	at com.urbancode.ds.web.rest.config.ComponentResource.handleImportError(ComponentResource.java:1407)
+	at com.urbancode.ds.web.rest.config.ComponentResource.importOrUpgradeComponents(ComponentResource.java:1359)
+	at com.urbancode.ds.web.rest.config.ComponentResource.importComponent(ComponentResource.java:1314)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.urbancode.ds.web.rest.TxResourceMethodDispatchProvider$TxJavaMethodInvoker.invoke(TxResourceMethodDispatchProvider.java:58)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.CharSetFilter.doFilter(CharSetFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.LoggingFilter.doFilter(LoggingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.JSONCacheFilter.doFilter(JSONCacheFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.HibernateSessionRequestFilter.doFilter(HibernateSessionRequestFilter.java:60)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:200)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.AntiCachingFilter.doFilter(AntiCachingFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.ExceptionHandlingFilter.doFilter(ExceptionHandlingFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.FrameOptionsFilter.doFilter(FrameOptionsFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.DisableSessionUrlFilter.doFilter(DisableSessionUrlFilter.java:138)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:612)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:503)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.urbancode.air.i18n.TranslatableException: Bad JSON format
+	... 63 more
+2016-09-29 15:03:30,589 ERROR http-0.0.0.0-8443-5 com.urbancode.ds.web.rest.plugin.PluginResource - Error loading plugin
+com.urbancode.air.i18n.TranslatableException: The file plugin.xml was not found within the root directory of the zip file.
+	at com.urbancode.ds.plugin.PluginLoader.getPluginStream(PluginLoader.java:175)
+	at com.urbancode.ds.plugin.PluginLoader.loadPlugin(PluginLoader.java:705)
+	at com.urbancode.ds.web.rest.plugin.AutomationPluginResource.loadPlugin(AutomationPluginResource.java:185)
+	at com.urbancode.ds.web.rest.plugin.PluginResource.loadPlugin(PluginResource.java:121)
+	at com.urbancode.ds.web.rest.plugin.PluginResource.loadPluginUI(PluginResource.java:134)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.urbancode.ds.web.rest.TxResourceMethodDispatchProvider$TxJavaMethodInvoker.invoke(TxResourceMethodDispatchProvider.java:58)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.CharSetFilter.doFilter(CharSetFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.LoggingFilter.doFilter(LoggingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.JSONCacheFilter.doFilter(JSONCacheFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.HibernateSessionRequestFilter.doFilter(HibernateSessionRequestFilter.java:60)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:200)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.AntiCachingFilter.doFilter(AntiCachingFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.ExceptionHandlingFilter.doFilter(ExceptionHandlingFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.FrameOptionsFilter.doFilter(FrameOptionsFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.DisableSessionUrlFilter.doFilter(DisableSessionUrlFilter.java:138)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:612)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:503)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-29 15:03:30,596 ERROR http-0.0.0.0-8443-5 com.urbancode.ds.web.util.UCDExceptionMapper - {"status":"failed","error":"The file plugin.xml was not found within the root directory of the zip file."}
+com.urbancode.ds.web.util.TextareaWrappedException: {"status":"failed","error":"The file plugin.xml was not found within the root directory of the zip file."}
+	at com.urbancode.ds.web.rest.plugin.PluginResource.loadPluginUI(PluginResource.java:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.urbancode.ds.web.rest.TxResourceMethodDispatchProvider$TxJavaMethodInvoker.invoke(TxResourceMethodDispatchProvider.java:58)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.CharSetFilter.doFilter(CharSetFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.LoggingFilter.doFilter(LoggingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.JSONCacheFilter.doFilter(JSONCacheFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.HibernateSessionRequestFilter.doFilter(HibernateSessionRequestFilter.java:60)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:200)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.AntiCachingFilter.doFilter(AntiCachingFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.ExceptionHandlingFilter.doFilter(ExceptionHandlingFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.FrameOptionsFilter.doFilter(FrameOptionsFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.DisableSessionUrlFilter.doFilter(DisableSessionUrlFilter.java:138)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:612)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:503)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.urbancode.air.i18n.TranslatableException: The file plugin.xml was not found within the root directory of the zip file.
+	at com.urbancode.ds.plugin.PluginLoader.getPluginStream(PluginLoader.java:175)
+	at com.urbancode.ds.plugin.PluginLoader.loadPlugin(PluginLoader.java:705)
+	at com.urbancode.ds.web.rest.plugin.AutomationPluginResource.loadPlugin(AutomationPluginResource.java:185)
+	at com.urbancode.ds.web.rest.plugin.PluginResource.loadPlugin(PluginResource.java:121)
+	at com.urbancode.ds.web.rest.plugin.PluginResource.loadPluginUI(PluginResource.java:134)
+	... 61 more
+2016-09-29 15:08:11,213 ERROR http-0.0.0.0-8443-5 com.urbancode.ds.web.util.UCDExceptionMapper - You need to set an agent or agent tag to use for version imports before running a source configuration integration.
+com.urbancode.air.i18n.TranslatableException: You need to set an agent or agent tag to use for version imports before running a source configuration integration.
+	at com.urbancode.ds.plugin.source.SourceConfigExecutionService.getIntegrationAgent(SourceConfigExecutionService.java:397)
+	at com.urbancode.ds.web.rest.config.ComponentResource.runComponentIntegration(ComponentResource.java:1078)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.urbancode.ds.web.rest.TxResourceMethodDispatchProvider$TxJavaMethodInvoker.invoke(TxResourceMethodDispatchProvider.java:58)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.CharSetFilter.doFilter(CharSetFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.LoggingFilter.doFilter(LoggingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.JSONCacheFilter.doFilter(JSONCacheFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.HibernateSessionRequestFilter.doFilter(HibernateSessionRequestFilter.java:60)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:200)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.AntiCachingFilter.doFilter(AntiCachingFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.ExceptionHandlingFilter.doFilter(ExceptionHandlingFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.FrameOptionsFilter.doFilter(FrameOptionsFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.DisableSessionUrlFilter.doFilter(DisableSessionUrlFilter.java:138)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:612)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:503)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-29 15:15:22,845 ERROR http-0.0.0.0-8443-6 com.urbancode.ds.web.util.UCDExceptionMapper - Comparison value must not be blank
+com.urbancode.air.i18n.TranslatableException: Comparison value must not be blank
+	at com.urbancode.ds.subsys.resource.domain.ResourceCondition.fromJSON(ResourceCondition.java:51)
+	at com.urbancode.ds.subsys.resource.domain.ResourceSyncService.processDynamicGroup(ResourceSyncService.java:383)
+	at com.urbancode.ds.subsys.resource.domain.ResourceSyncService.syncResources(ResourceSyncService.java:278)
+	at com.urbancode.ds.subsys.resource.domain.ResourceSyncService.syncResource(ResourceSyncService.java:363)
+	at com.urbancode.ds.web.rest.resource.ResourceResource.saveResource(ResourceResource.java:1284)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.urbancode.ds.web.rest.TxResourceMethodDispatchProvider$TxJavaMethodInvoker.invoke(TxResourceMethodDispatchProvider.java:58)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.CharSetFilter.doFilter(CharSetFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.LoggingFilter.doFilter(LoggingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.JSONCacheFilter.doFilter(JSONCacheFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.HibernateSessionRequestFilter.doFilter(HibernateSessionRequestFilter.java:60)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:200)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.AntiCachingFilter.doFilter(AntiCachingFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.ExceptionHandlingFilter.doFilter(ExceptionHandlingFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.FrameOptionsFilter.doFilter(FrameOptionsFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.DisableSessionUrlFilter.doFilter(DisableSessionUrlFilter.java:138)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:612)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:503)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-29 15:16:21,559 ERROR SaContainer-1 com.urbancode.air.devilfish.common.SaContainer - jms://iCVlW3TypsPwqKOkYhzy sent a message that did not have a dialogue and one could not be created for app 'com.urbancode.air.devilfish.apps.agentcontrol.AgentControl'.
+2016-09-29 15:19:07,476 INFO  http-0.0.0.0-8443-4 com.urbancode.ds.UDeployServer - Stopping email spooler...
+2016-09-29 15:19:07,480 INFO  http-0.0.0.0-8443-4 com.urbancode.ds.UDeployServer -     email spooler stopped
+2016-09-29 15:19:07,484 INFO  http-0.0.0.0-8443-4 com.urbancode.ds.UDeployServer -     done
+2016-09-29 15:19:07,488 INFO  http-0.0.0.0-8443-4 com.urbancode.ds.UDeployServer - Configuring email spooler...
+2016-09-29 15:19:07,492 INFO  http-0.0.0.0-8443-4 com.urbancode.ds.UDeployServer -   done
+2016-09-29 15:20:27,855 ERROR SaContainer-3 com.urbancode.ds.subsys.deploy.agent.discovery.DiscoveryExecutionListener - Error running discovery on resource 7f1d2b3e-a861-4671-9cd4-68df30d4695afor command CF Discovery. Check the log of the agent for more information.
+2016-09-29 15:20:28,325 ERROR SaContainer-5 com.urbancode.air.devilfish.common.SaContainer - jms://iCVlW3TypsPwqKOkYhzy sent a message that did not have a dialogue and one could not be created for app 'com.urbancode.air.devilfish.apps.plugin.PluginRuntime'.
+2016-09-29 15:53:02,471 WARN  http-0.0.0.0-8443-10 com.urbancode.ds.subsys.deploy.repo.vfs.LocalVersionArtifactService - Returning empty metadata list: No files for artifact set: dbbcfdbb-961a-4e5f-9cdb-aa865c1b307d
+2016-09-29 15:58:57,578 ERROR http-0.0.0.0-8443-1 com.urbancode.ds.web.util.UCDExceptionMapper - Resource with name TJT0_WebApp already exists for parent /deploy_bluemix/localhost.agent
+com.urbancode.air.i18n.TranslatableException: Resource with name TJT0_WebApp already exists for parent /deploy_bluemix/localhost.agent
+	at com.urbancode.ds.subsys.resource.domain.ResourceFactory.createTransientResource(ResourceFactory.java:187)
+	at com.urbancode.ds.subsys.resource.domain.ResourceFactory.createResource(ResourceFactory.java:163)
+	at com.urbancode.ds.web.rest.resource.ResourceResource.createResourceFromJSON(ResourceResource.java:1438)
+	at com.urbancode.ds.web.rest.resource.ResourceResource.saveResource(ResourceResource.java:1273)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.urbancode.ds.web.rest.TxResourceMethodDispatchProvider$TxJavaMethodInvoker.invoke(TxResourceMethodDispatchProvider.java:58)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.CharSetFilter.doFilter(CharSetFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.LoggingFilter.doFilter(LoggingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.JSONCacheFilter.doFilter(JSONCacheFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.HibernateSessionRequestFilter.doFilter(HibernateSessionRequestFilter.java:60)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:200)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.AntiCachingFilter.doFilter(AntiCachingFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.ExceptionHandlingFilter.doFilter(ExceptionHandlingFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.FrameOptionsFilter.doFilter(FrameOptionsFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.DisableSessionUrlFilter.doFilter(DisableSessionUrlFilter.java:138)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:612)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:503)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-29 16:15:16,427 ERROR http-0.0.0.0-8443-7 com.urbancode.ds.web.util.UCDExceptionMapper - Process demo_process has no activity, and cannot be run.
+com.urbancode.air.i18n.TranslatableException: Process demo_process has no activity, and cannot be run.
+	at com.urbancode.ds.web.rest.process.ProcessRequestResource.requestProcess(ProcessRequestResource.java:378)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.urbancode.ds.web.rest.TxResourceMethodDispatchProvider$TxJavaMethodInvoker.invoke(TxResourceMethodDispatchProvider.java:58)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.CharSetFilter.doFilter(CharSetFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.LoggingFilter.doFilter(LoggingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.JSONCacheFilter.doFilter(JSONCacheFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.HibernateSessionRequestFilter.doFilter(HibernateSessionRequestFilter.java:60)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:200)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.AntiCachingFilter.doFilter(AntiCachingFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.ExceptionHandlingFilter.doFilter(ExceptionHandlingFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.FrameOptionsFilter.doFilter(FrameOptionsFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.DisableSessionUrlFilter.doFilter(DisableSessionUrlFilter.java:138)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:612)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:503)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-29 16:15:55,509 ERROR http-0.0.0.0-8443-7 com.urbancode.ds.web.util.UCDExceptionMapper - Process demo_process has no activity, and cannot be run.
+com.urbancode.air.i18n.TranslatableException: Process demo_process has no activity, and cannot be run.
+	at com.urbancode.ds.web.rest.process.ProcessRequestResource.requestProcess(ProcessRequestResource.java:378)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.urbancode.ds.web.rest.TxResourceMethodDispatchProvider$TxJavaMethodInvoker.invoke(TxResourceMethodDispatchProvider.java:58)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.CharSetFilter.doFilter(CharSetFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.LoggingFilter.doFilter(LoggingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.JSONCacheFilter.doFilter(JSONCacheFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.HibernateSessionRequestFilter.doFilter(HibernateSessionRequestFilter.java:60)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:200)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.AntiCachingFilter.doFilter(AntiCachingFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.ExceptionHandlingFilter.doFilter(ExceptionHandlingFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.FrameOptionsFilter.doFilter(FrameOptionsFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.DisableSessionUrlFilter.doFilter(DisableSessionUrlFilter.java:138)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:612)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:503)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-29 16:23:03,770 ERROR http-0.0.0.0-8443-7 com.urbancode.ds.web.util.UCDExceptionMapper - Resource with name TJT0_WebApp already exists for parent /deploy_bluemix/localhost.agent
+com.urbancode.air.i18n.TranslatableException: Resource with name TJT0_WebApp already exists for parent /deploy_bluemix/localhost.agent
+	at com.urbancode.ds.subsys.resource.domain.ResourceFactory.createTransientResource(ResourceFactory.java:187)
+	at com.urbancode.ds.subsys.resource.domain.ResourceFactory.createResource(ResourceFactory.java:163)
+	at com.urbancode.ds.web.rest.resource.ResourceResource.createResourceFromJSON(ResourceResource.java:1438)
+	at com.urbancode.ds.web.rest.resource.ResourceResource.saveResource(ResourceResource.java:1273)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.urbancode.ds.web.rest.TxResourceMethodDispatchProvider$TxJavaMethodInvoker.invoke(TxResourceMethodDispatchProvider.java:58)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.CharSetFilter.doFilter(CharSetFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.LoggingFilter.doFilter(LoggingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.JSONCacheFilter.doFilter(JSONCacheFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.HibernateSessionRequestFilter.doFilter(HibernateSessionRequestFilter.java:60)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.ds.web.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:200)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.AntiCachingFilter.doFilter(AntiCachingFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.ExceptionHandlingFilter.doFilter(ExceptionHandlingFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.FrameOptionsFilter.doFilter(FrameOptionsFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.urbancode.commons.web.filter.DisableSessionUrlFilter.doFilter(DisableSessionUrlFilter.java:138)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:612)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:503)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-29 16:25:14,060 ERROR SaContainer-3 com.urbancode.ds.subsys.deploy.agent.discovery.DiscoveryExecutionListener - Error running discovery on resource 3927168c-4109-4f58-814a-bd594a8c076ffor command CF Discovery. Check the log of the agent for more information.

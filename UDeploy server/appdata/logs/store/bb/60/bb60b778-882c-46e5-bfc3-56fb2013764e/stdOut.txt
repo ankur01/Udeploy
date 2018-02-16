@@ -1,0 +1,76 @@
+================================================================================
+plugin: CloudFoundry, id: com.urbancode.air.plugin.cloudfoundry, version: 17
+plugin command: 'cmd' '/C' '""C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\opt\groovy-1.8.8\bin\groovy" -cp "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.cloudfoundry_17_930d0ef64579b33f7fa72bd73c0d2e5020c1d51346ab1af2278db208384f10d7\classes" "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.cloudfoundry_17_930d0ef64579b33f7fa72bd73c0d2e5020c1d51346ab1af2278db208384f10d7\startApp.groovy" "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs2298837007447356960\input.props" "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs2298837007447356960\output.props""'
+working directory: C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\work\TJT0_WebApp
+properties:
+  PLUGIN_INPUT_PROPS=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs2298837007447356960\input.props
+  PLUGIN_OUTPUT_PROPS=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs2298837007447356960\output.props
+  api=https://api.ng.bluemix.net
+  application=JavaTstAnkur
+  cfHome=
+  org=DevOps.Training
+  password=****
+  selfSigned=false
+  space=dev
+  user=bluemix.ankur@gmail.com
+environment:
+  AGENT_HOME=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent
+  AH_AUTH_TOKEN=****
+  AH_WEB_URL=https://localhost:8443
+  AUTH_TOKEN=****
+  DS_AUTH_TOKEN=****
+  DS_SYSTEM_ENCODING=Cp1252
+  JAVA_OPTS=-Dfile.encoding=Cp1252 -Dconsole.encoding=Cp1252
+  PLUGIN_HOME=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.cloudfoundry_17_930d0ef64579b33f7fa72bd73c0d2e5020c1d51346ab1af2278db208384f10d7
+  UD_DIALOGUE_ID=bb60b778-882c-46e5-bfc3-56fb2013764e
+  WE_ACTIVITY_ID=7e468174-1718-40b4-a796-7d251e9098f4
+================================================================================
+[Action] Setup of path using plugin home: C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.cloudfoundry_17_930d0ef64579b33f7fa72bd73c0d2e5020c1d51346ab1af2278db208384f10d7
+Setting CF_HOME to 'C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs2298837007447356960'
+
+[Action] Setting cf target api
+command: cf api https://api.ng.bluemix.net
+Setting api endpoint to https://api.ng.bluemix.net...
+OK
+
+
+API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)
+Not logged in. Use 'cf login' to log in.
+
+[Action] Authenticating with CloudFoundry
+command: cf auth bluemix.ankur@gmail.com ****
+API endpoint: https://api.ng.bluemix.net
+Authenticating...
+OK
+Use 'cf target' to view or set your target org and space
+
+[Action] Setting CloudFoundry target organization
+command: cf target -o DevOps.Training
+
+API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)
+User:           bluemix.ankur@gmail.com
+Org:            Devops.Training
+Space:          No space targeted, use 'cf target -s SPACE'
+
+[Action] Creating CloudFoundry space
+command: cf create-space dev
+Creating space dev in org Devops.Training as bluemix.ankur@gmail.com...
+OK
+Space dev already exists
+
+[Action] Setting CloudFoundry target space
+command: cf target -s dev
+
+API endpoint:   https://api.ng.bluemix.net (API version: 2.54.0)
+User:           bluemix.ankur@gmail.com
+Org:            Devops.Training
+Space:          dev
+
+[Action] Executing CF start APP
+command: cf start JavaTstAnkur
+App JavaTstAnkur is already started
+
+[Action] Logout from CloudFoundry system
+command: cf logout
+Logging out...
+OK

@@ -1,0 +1,13 @@
+dir @SERVER_HOME@\patches
+set @SERVER_HOME@\patches
+dir @SERVER_HOME@\conf
+dir @SERVER_HOME@\conf\server
+file @JAVA_HOME@\lib\tools.jar
+set @SERVER_HOME@\lib\thirdparty
+set @SERVER_HOME@\lib\ext
+set @SERVER_HOME@\lib
+set @SERVER_HOME@\lib\smartcloud
+set @SERVER_HOME@\opt\tomcat\bin
+set @SERVER_HOME@\opt\tomcat\lib
+set @SERVER_HOME@\extensions
+nativedir @SERVER_HOME@\native\@ARCH@

@@ -1,0 +1,96 @@
+================================================================================
+plugin: IBM UrbanCode Deploy Versioned File Storage, id: com.urbancode.plugin.VFS, version: 26
+plugin command: 'cmd' '/C' '""C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\opt\groovy-1.8.8\bin\groovy" -cp "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\classes;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\codestation-aggregate.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\commons-codec.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\CommonsFileUtils.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\commons-lang3.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\commons-logging.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\CommonsUtil.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\httpclient-cache.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\httpclient.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\HttpComponents-Util.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\httpcore.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\httpmime.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\jettison-1.1.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\log4j.jar;C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\lib\replicated-codestation.jar" "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1\downloadByLabel.groovy" "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs5524855870649136270\input.props" "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs5524855870649136270\output.props""'
+working directory: C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\work\TJT0_WebApp
+properties:
+  PLUGIN_INPUT_PROPS=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs5524855870649136270\input.props
+  PLUGIN_OUTPUT_PROPS=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs5524855870649136270\output.props
+  artifactSetBaseDir=
+  charset=
+  compId=879ca2d5-661c-434b-9e15-d246dc448c37
+  directoryOffset=.
+  fileExcludePatterns=
+  fileIncludePatterns=**/*
+  fullVerification=true
+  label=
+  resId=b82ad7f9-e5c5-4a29-9758-27ffe607494c
+  serverUrl=https://localhost:8443
+  setFileExecuteBits=false
+  syncMode=true
+  verifyFileIntegrity=false
+  versionId=dbbcfdbb-961a-4e5f-9cdb-aa865c1b307d
+environment:
+  AGENT_HOME=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent
+  AH_AUTH_TOKEN=****
+  AH_WEB_URL=https://localhost:8443
+  AUTH_TOKEN=****
+  DS_AUTH_TOKEN=****
+  DS_SYSTEM_ENCODING=Cp1252
+  JAVA_OPTS=-Dfile.encoding=Cp1252 -Dconsole.encoding=Cp1252
+  PLUGIN_HOME=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.plugin.VFS_26_bf4a8a7059be9c1f64237b6ba1f738be23482b02f040ef8b33d9ff0c53ede5f1
+  UD_DIALOGUE_ID=f249d7c9-1c06-4339-b4d0-9000d7655668
+  WE_ACTIVITY_ID=218dffb5-c97e-428d-b9e7-e9b1d25265f2
+================================================================================
+Artifact source: https://localhost:8443
+Working directory: C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\work\TJT0_WebApp
+Including **/*
+Excluding 
+Offset .
+Artifact base directory 
+Set file bits are false
+
+Downloading metadata for artifact set dbbcfdbb-961a-4e5f-9cdb-aa865c1b307d.
+Download complete.
+Skipping cleanup of target directory: no previous version found for delta cleanup and full cleanup not enabled
+Scanning for out-of-date files.
+Out-of-date: Path missing: classes
+Out-of-date: Path missing: hello-java-1.0
+Out-of-date: Path missing: maven-archiver
+Out-of-date: Path missing: maven-status
+Out-of-date: Path missing: maven-status/maven-compiler-plugin
+Out-of-date: Path missing: maven-status/maven-compiler-plugin/compile
+Out-of-date: Path missing: maven-status/maven-compiler-plugin/compile/default-compile
+Out-of-date: Path missing: hello-java-1.0/META-INF
+Out-of-date: Path missing: hello-java-1.0/WEB-INF
+Out-of-date: Path missing: hello-java-1.0/WEB-INF/classes
+Out-of-date: Path missing: hello-java-1.0/WEB-INF/classes/org
+Out-of-date: Path missing: hello-java-1.0/WEB-INF/classes/org/cloudfoundry
+Out-of-date: Path missing: hello-java-1.0/WEB-INF/classes/org/cloudfoundry/samples
+Out-of-date: Path missing: classes/org
+Out-of-date: Path missing: classes/org/cloudfoundry
+Out-of-date: Path missing: classes/org/cloudfoundry/samples
+Out-of-date: Path missing: hello-java-1.0.war
+Out-of-date: Path missing: manifest.yml
+Out-of-date: Path missing: maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+Out-of-date: Path missing: maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+Out-of-date: Path missing: maven-archiver/pom.properties
+Out-of-date: Path missing: hello-java-1.0/WEB-INF/web.xml
+Out-of-date: Path missing: hello-java-1.0/WEB-INF/classes/org/cloudfoundry/samples/HelloServlet.class
+Out-of-date: Path missing: classes/org/cloudfoundry/samples/HelloServlet.class
+Scan for 24 files complete in 0 seconds.
+Downloading files to C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\work\TJT0_WebApp.
+Downloading: classes
+Downloading: hello-java-1.0
+Downloading: maven-archiver
+Downloading: maven-status
+Downloading: maven-status/maven-compiler-plugin
+Downloading: maven-status/maven-compiler-plugin/compile
+Downloading: maven-status/maven-compiler-plugin/compile/default-compile
+Downloading: hello-java-1.0/META-INF
+Downloading: hello-java-1.0/WEB-INF
+Downloading: hello-java-1.0/WEB-INF/classes
+Downloading: hello-java-1.0/WEB-INF/classes/org
+Downloading: hello-java-1.0/WEB-INF/classes/org/cloudfoundry
+Downloading: hello-java-1.0/WEB-INF/classes/org/cloudfoundry/samples
+Downloading: classes/org
+Downloading: classes/org/cloudfoundry
+Downloading: classes/org/cloudfoundry/samples
+Downloading: hello-java-1.0.war
+Downloading: manifest.yml
+Downloading: maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+Downloading: maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+Downloading: maven-archiver/pom.properties
+Downloading: hello-java-1.0/WEB-INF/web.xml
+Downloading: hello-java-1.0/WEB-INF/classes/org/cloudfoundry/samples/HelloServlet.class
+Downloading: classes/org/cloudfoundry/samples/HelloServlet.class
+Download complete.

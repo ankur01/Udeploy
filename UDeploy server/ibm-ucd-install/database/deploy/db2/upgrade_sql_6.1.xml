@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!--
+- Licensed Materials - Property of IBM Corp.
+- IBM UrbanCode Deploy
+- (c) Copyright IBM Corporation 2011, 2014. All Rights Reserved.
+-
+- U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+- GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<!--
+- Upgrades for product version 6.0.1.x.
+-->
+
+<change-set release="6.1">
+  <library name="workflow"
+      release="1.0"
+      base-dir="../workflow"
+      file="../workflow/db2/upgrade_sql_1.0.xml"
+      version-table="wf_db_version"
+      release-column="release_name"
+      version-column="ver"/>
+  <library name="security"
+      release="1.0"
+      base-dir="../security"
+      file="../security/db2/upgrade_1.0.xml"
+      version-table="sec_db_version"
+      release-column="release_name"
+      version-column="ver"/>
+  <library name="vc"
+      release="1.0"
+      base-dir="../vc"
+      file="../vc/db2/upgrade_sql_1.0.xml"
+      version-table="vc_db_version"
+      release-column="release_name"
+      version-column="ver"/>
+  <library name="property-sheets"
+      release="1.0"
+      base-dir="../property-sheets"
+      file="../property-sheets/db2/upgrade_sql_1.0.xml"
+      version-table="ps_db_version"
+      release-column="release_name"
+      version-column="ver"/>
+  <library name="inventory"
+      release="1.0"
+      base-dir="../inventory"
+      file="../inventory/db2/upgrade_1.0.xml"
+      version-table="inv_db_version"
+      release-column="release_name"
+      version-column="ver"/>
+  <change number="19">
+    <description>Add category column to sec_action</description>
+    <changeref library="security" change="19"/>
+  </change>
+  <change number="20">
+    <description>Adding a sync row for getting resource config entries</description>
+    <sql separator=";">
+        delete from ds_sync where name = 'getResourceConfigEntries';
+        insert into ds_sync (name, locked)
+        values ('getResourceConfigEntries', 'N');
+    </sql>
+  </change>
+  <change number="21">
+    <description>pl_plugin_command backwards compatibility</description>
+  </change>
+  <change number="22">
+    <description>Make sec_action name index non-unique</description>
+    <changeref library="security" change="20"/>
+  </change>
+  <change number="23">
+    <description>Add missing indexed to foreign keys</description>
+    <changeref library="security" change="21"/>
+    <sql separator=";">
+        create index ds_evc_id
+            on ds_env_ver_condition(environment_id);
+
+        create index rt_apr_dr_id
+            on rt_app_process_request(deployment_request_id);
+
+        create index rt_apr2ver_sel_cmp_id
+            on rt_version_selector(component_id);
+
+        create index rt_apr2ver_sel_env_id
+            on rt_version_selector(environment_id);
+    </sql>
+  </change>
+  <change number="24">
+    <description>Allow Desired Inventory without a request</description>
+    <changeref library="inventory" change="6"/>
+  </change>
+  <change number="25">
+    <description>Add artifact list permission</description>
+    <sql separator=";">
+      insert into sec_action (id, version, name, description, enabled, cascading, sec_resource_type_id, category)
+      values ('200000000000000000000000001b0005', 0, 'Read Artifact Set List', 'Read list of all artifact sets.', 'Y', 'Y', '20000000000000000000000000000201', null);
+    </sql>
+  </change>
+  <change number="26">
+    <description>Add property context mapping index counter</description>
+    <sql separator=";">
+      alter table rt_property_context add column next_mapping_index integer default 100000 not null;
+      alter table rt_property_context alter column next_mapping_index set default 0;
+    </sql>
+  </change>
+
+<!--
+- REMINDER: Upgrades for product version 6.0.1.x. Place additions above this comment.
+-->
+</change-set>

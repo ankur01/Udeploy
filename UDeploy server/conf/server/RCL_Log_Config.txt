@@ -1,0 +1,9 @@
+Location =
+Product = IBM UrbanCode Deploy
+Version =
+Size =
+LogLevel =
+TraceLevel =
+MaxFiles =
+EnableLogging = 0
+EnableTracing = 0

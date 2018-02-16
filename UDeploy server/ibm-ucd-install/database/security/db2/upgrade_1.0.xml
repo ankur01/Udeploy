@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<!--
+- Licensed Materials - Property of IBM Corp.
+- IBM UrbanCode Build
+- IBM UrbanCode Deploy
+- IBM UrbanCode Release
+- IBM AnthillPro
+- (c) Copyright IBM Corporation 2002, 2014. All Rights Reserved.
+-
+- U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+- GSA ADP Schedule Contract with IBM Corp.
+-->
+<change-set release="1.0">
+  <change number="19">
+    <description>Add category column to actions</description>
+    <sql separator=";">
+        alter table sec_action add column category varchar(64);
+    </sql>
+  </change>
+  <change number="20">
+    <description>remove uniqueness from sec_action name index</description>
+    <sql separator=";">
+        create table sec_action2 (
+            id varchar(36) not null,
+            version integer default 0 not null,
+            name varchar(64) not null,
+            description varchar(1024),
+            enabled varchar(1) default 'Y' not null,
+            cascading varchar(1) default 'N' not null,
+            sec_resource_type_id varchar(36) not null,
+            category varchar(64),
+            primary key (id)
+        );
+
+        insert into sec_action2 (id, version, name, description, enabled, cascading, sec_resource_type_id, category)
+            (select id, version, name, description, enabled, cascading, sec_resource_type_id, category from sec_action);
+        drop table sec_action;
+        rename table sec_action2 to sec_action;
+        create index sec_action_name
+            on sec_action(name);
+        alter table sec_role_action add constraint srar_sec_action_fk
+        foreign key (sec_action_id)
+        references sec_action (id);
+        alter table sec_action add constraint sa_sec_resource_type_fk
+            foreign key (sec_resource_type_id)
+            references sec_resource_type (id);
+    </sql>
+  </change>
+  <change number="21">
+    <description>Add missing indexes for foreign keys</description>
+    <sql separator=";">
+        create index sec_action_res_type
+            on sec_action(sec_resource_type_id);
+
+        create index sec_auth_token_usr
+            on sec_auth_token(sec_user_id);
+
+        create index sec_group_mapping_group_mapper
+            on sec_group_mapping(sec_group_mapper_id);
+
+        create index sec_authn_rlm_authz_rlm
+            on sec_authentication_realm(sec_authorization_realm_id);
+
+        create index sec_authz_rlm_prop_authz_rlm
+            on sec_authorization_realm_prop(sec_authorization_realm_id);
+
+        create index sec_authn_rlm_prop_authn_rlm
+            on sec_authentication_realm_prop(sec_authentication_realm_id);
+
+        create index sec_res_res_type
+            on sec_resource(sec_resource_type_id);
+
+        create index sec_res_role_res_type
+            on sec_resource_role(sec_resource_type_id);
+    </sql>
+  </change>
+  <change number="22">
+    <description>Allow ghosting of authorization realms</description>
+    <sql separator=";">
+      alter table sec_authorization_realm
+      add column ghosted_date bigint default 0 not null;
+
+      call sysproc.admin_cmd ('reorg table sec_authorization_realm');
+    </sql>
+  </change>
+  <change number="23">
+    <description>Allow Tracking of user's latest IP address</description>
+    <sql separator=";">
+        alter table sec_user add column last_ip_address varchar(40);
+    </sql>
+  </change>
+  <change number="24">
+    <description>Add an index to auth tokens' expiration date and new created date column</description>
+    <sql separator=";">
+        create index sec_auth_token_exp on sec_auth_token(expiration);
+        alter table sec_auth_token add column date_created bigint default 0 not null;
+        call sysproc.admin_cmd ('reorg table sec_auth_token');
+    </sql>
+  </change>
+  <change number="25">
+    <description>Add missing indices for foreign keys</description>
+    <sql separator=";">
+        create index sec_grot_role
+                on sec_group_role_on_team(sec_role_id);
+
+        create index sec_grot_team_space
+                on sec_group_role_on_team(sec_team_space_id);
+
+        create index sec_group_author_realm
+                on sec_group(sec_authorization_realm_id);
+
+        create index sec_role_action_sec_action
+                on sec_role_action(sec_action_id);
+
+        create index sec_role_action_res_role
+                on sec_role_action(sec_resource_role_id);
+
+        create index sec_rft_res_role
+                on sec_resource_for_team(sec_resource_role_id);
+
+        create index sec_rft_team_space
+                on sec_resource_for_team(sec_team_space_id);
+
+        create index sec_res_hier_child_sec_res
+                on sec_resource_hierarchy(child_sec_resource_id);
+
+        create index sec_user_prop_user_id
+                on sec_user_property(sec_user_id);
+
+        create index sec_urot_role_id
+                on sec_user_role_on_team(sec_role_id);
+
+        create index sec_utg_gid
+                on sec_user_to_group(sec_group_id);
+
+        create index sec_user_auth_realm
+                on sec_user(sec_authentication_realm_id);
+    </sql>
+  </change>
+  <change number="26">
+    <description>Allow ghosting of role</description>
+    <sql separator=";">
+        alter table sec_role
+        add column ghosted_date bigint default 0 not null;
+
+        drop index sec_role_name;
+        create unique index sec_role_name
+                on sec_role(name, ghosted_date);
+
+        call sysproc.admin_cmd ('reorg table sec_role');
+    </sql>
+  </change>
+  <change number="27">
+    <description>Changes to indices to help with database performance</description>
+    <sql separator=";">
+        create unique index action_resource_role_map
+                on sec_role_action(sec_action_id, sec_resource_role_id, sec_role_id);
+        create unique index sec_user_role_on_team_map
+                on sec_user_role_on_team(sec_team_space_id, sec_role_id, sec_user_id);
+        create unique index sec_user_group_map
+                on sec_user_to_group(sec_group_id, sec_user_id);
+        create unique index team_resource_team_map
+                on sec_resource_for_team(sec_team_space_id, sec_resource_role_id, sec_resource_id);
+    </sql>
+  </change>
+  <change number="28">
+    <description>Add phone number column for users</description>
+    <sql separator=";">
+        alter table sec_user add column phone_number varchar(20);
+        call sysproc.admin_cmd ('reorg table sec_user');
+    </sql>
+  </change>
+  <change number="29">
+    <description>Allow authentication realms to support multiple authorization realms</description>
+    <sql separator=";">
+        create table sec_realm_mapping (
+            authentication_realm_id varchar(36) not null,
+            authorization_realm_id varchar(36) not null
+        );
+
+        alter table sec_realm_mapping add constraint srm_authentication_realm_fk
+            foreign key (authentication_realm_id)
+            references sec_authentication_realm(id)
+        ;
+        alter table sec_realm_mapping add constraint srm_authorization_realm_fk
+            foreign key (authorization_realm_id)
+            references sec_authorization_realm(id)
+        ;
+
+        insert into sec_realm_mapping (authentication_realm_id, authorization_realm_id)
+        (select id, sec_authorization_realm_id from sec_authentication_realm);
+
+        alter table sec_authentication_realm drop constraint sar_sec_authorization_realm_fk;
+        drop index sec_authn_rlm_authz_rlm;
+        alter table sec_authentication_realm drop column sec_authorization_realm_id;
+        call sysproc.admin_cmd('reorg table sec_authentication_realm');
+    </sql>
+  </change>
+  <change number="30">
+    <description>Add unique index for performance</description>
+    <sql separator=";">
+      create unique index team_resource_role_map
+          on sec_resource_for_team(sec_resource_role_id, sec_team_space_id, sec_resource_id);
+    </sql>
+  </change>
+  <change number="31">
+    <description>Encrypting secure Authentication Realm properties</description>
+    <groovy file="all/1.0/upgrade_031_secure_authentication_realm_props.groovy"/>
+  </change>
+</change-set>

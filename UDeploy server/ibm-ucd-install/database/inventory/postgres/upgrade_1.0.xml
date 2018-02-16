@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+- Licensed Materials - Property of IBM Corp.
+- IBM UrbanCode Build
+- IBM UrbanCode Deploy
+- IBM UrbanCode Release
+- IBM AnthillPro
+- (c) Copyright IBM Corporation 2002, 2014. All Rights Reserved.
+-
+- U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+- GSA ADP Schedule Contract with IBM Corp.
+-->
+<change-set release="1.0">
+  <change number="3">
+    <description>Added ghosted dates to inventory entries</description>
+    <sql separator=";">
+      alter table inv_desired_inventory add ghosted_date bigint default 0 not null;
+      alter table inv_env_prop_inventory add ghosted_date bigint default 0 not null;
+      alter table inv_resource_config_inventory add ghosted_date bigint default 0 not null;
+      alter table inv_resource_inventory add ghosted_date bigint default 0 not null;
+
+      create unique index inv_desired_inventory_ghost on inv_desired_inventory(id, ghosted_date);
+      create unique index inv_env_prop_inventory_ghost on inv_env_prop_inventory(id, ghosted_date);
+      create unique index inv_resource_config_ghost on inv_resource_config_inventory(id, ghosted_date);
+      create unique index inv_resource_inventory_ghost on inv_resource_inventory(id, ghosted_date);
+    </sql>
+  </change>
+  <change number="4">
+  <description>Reduce 256 char columns to 255 char</description>
+    <sql separator=";">
+      alter table inv_resource_inventory alter column status type varchar(255) not null;
+      alter table inv_desired_inventory alter column status type varchar(255) not null;
+    </sql>
+  </change>
+  <change number="5">
+    <description>No changes for this database server.</description>
+  </change>
+  <change number="6">
+    <description>Allow Desired Inventory without a request</description>
+    <sql separator=";">
+      alter table inv_desired_inventory alter column deployment_request_id drop not null;
+    </sql>
+  </change>
+  <change number="7">
+    <description>Changes to indices to help with database performance</description>
+    <sql separator=";">
+        drop index inv_des_inv_environment_id;
+        create index inv_des_inv_environment_id on inv_desired_inventory(environment_id, ghosted_date, date_created desc);
+    </sql>
+  </change>
+  <change number="8">
+    <description>Add index to resource config inventory</description>
+    <sql separator=";">
+      create index inv_res_conf_resprop on inv_resource_config_inventory(ghosted_date, resource_id, prop_sheet_path);
+    </sql>
+  </change>
+</change-set>

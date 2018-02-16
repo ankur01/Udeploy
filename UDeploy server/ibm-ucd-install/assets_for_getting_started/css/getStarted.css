@@ -1,0 +1,143 @@
+body {
+    font-family:Helvetica Neue;
+    background-color:#10222b;
+    color:#d5d5d5;
+    font-weight:300;
+}
+
+.main-content {
+    text-align: center;
+}
+
+.title {
+    text-align:center;
+    font-weight:300;
+    line-height:1em;
+    font-size:2.5em;
+}
+
+.toprow {
+    padding-top:100px;
+}
+
+.bottomrow {
+    padding-top:40px;
+    margin:auto;
+    text-align:center;
+}
+
+.maintaskbadge {
+    font-weight: 300;
+    border:5px solid #1d3649;
+    border-radius:50%;
+    background:url(../images/Installation.png) no-repeat center #fff;
+    width:90px;
+    height:90px;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+}
+
+.maintaskbadge:hover {
+    border: 5px solid #144d14;
+    background:url(../images/Installation.hover.png) no-repeat center #fff;
+    cursor:pointer;
+}
+
+.maintask {
+    line-height:2em;
+    font-weight:300;
+    font-size:1.2em;
+    letter-spacing:1.5px;
+    text-align:center;
+    padding-top:7px;
+    cursor:pointer;
+}
+
+.dividerline {
+    border-top:1px solid #d5d5d5;
+    padding-bottom:20px;
+    width:35%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.badgecontainer {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: auto;
+    vertical-align: top;
+}
+
+
+.secondarytaskbadges {
+    border:5px solid #1d3649;
+    border-radius:50%;
+    background:#f3f3f3;
+    width:75px;
+    height:75px;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+}
+
+.tutorial {
+    background:url(../images/Tutorial.png) no-repeat center #fff;
+}
+
+.videos {
+    background:url(../images/Videos.png) no-repeat center #fff;
+
+}
+
+.questions {
+    background:url(../images/Questions.png) no-repeat center #fff;
+
+}
+
+.documentation {
+    background:url(../images/Documentation.png) no-repeat center #fff;
+
+}
+
+.tutorial:hover {
+    background:url(../images/Tutorial.hover.png) no-repeat center #fff;
+    cursor:pointer;
+
+}
+
+.videos:hover {
+    background:url(../images/Videos.hover.png) no-repeat center #fff;
+    cursor:pointer;
+
+}
+
+.questions:hover {
+    background:url(../images/Questions.hover.png) no-repeat center #fff;
+    cursor:pointer;
+
+}
+
+.documentation:hover {
+    background:url(../images/Documentation.hover.png) no-repeat center #fff;
+    cursor:pointer;
+
+}
+
+.secondarytaskbadges:hover {
+    border:5px solid #144d14;
+    cursor:pointer;
+}
+
+.secondarytasklbl{
+    text-align:center;
+    padding-top:7px;
+    font-weight:300;
+    letter-spacing:1px;
+    padding-bottom:20px;
+    padding-top:1.2em;
+    font-size:.875em;
+    cursor:pointer;
+}

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+- Licensed Materials - Property of IBM Corp.
+- IBM UrbanCode Deploy
+- (c) Copyright IBM Corporation 2011, 2015. All Rights Reserved.
+-
+- U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+- GSA ADP Schedule Contract with IBM Corp.
+-->
+<template>
+    <name>ApprovalCreated</name>
+    <body>
+      <![CDATA[
+      ## BEGIN SECTION Subject
+      An approval is pending for the $application.getName() application on the $environment.getName() environment
+      #if ($snapshot)
+        , "$snapshot.getName()" snapshot
+      #end
+      ## END SECTION Subject
+## BEGIN SECTION Body
+## PROPERTY Content-Type: text/html
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<body>
+<h2>
+  An approval is pending for the "$application.getName()" application on the "$environment.getName()" environment
+    #if ($snapshot)
+    , "$snapshot.getName()" snapshot
+    #end
+</h2>
+
+<p>
+<table>
+  #if ($roles)
+    <tr><td>Roles:</td>
+        <td>
+          #foreach ($role in $roles)
+            $role.getName()
+            <br />
+          #end
+        </td>
+    </tr>
+    <tr><td> </td><td><br /></td></tr>
+  #end
+  <tr><td>Application:</td>
+      <td>$application.getName()</td>
+  </tr>
+  <tr><td>Environment:</td>
+      <td>$environment.getName()</td>
+  </tr>
+  #if ($snapshot)
+    <tr>
+        <td>Snapshot:</td>
+        <td>$snapshot.getName()</td>
+    </tr>
+  #end
+  <tr><td>Process:</td>
+      <td>$processName</td>
+  </tr>
+  <tr><td>Requested by:</td>
+      <td>$user.getName()</td>
+  </tr>
+  <tr><td>Scheduled for:</td>
+      <td>$scheduledDate</td>
+  </tr>
+  #if ($component)
+    <tr><td>Component:</td>
+        <td>$component.getName()</td>
+    </tr>
+  #end
+  #if ($appRequest)
+    <tr><td>Request description:</td>
+        <td>
+          #if ($appRequest.getDescription())
+            $appRequest.getDescription()
+          #end
+        </td>
+    </tr>
+  #end
+</table>
+</p>
+
+<br/>
+More information about this approval is available at <a href="$externalUrl/#$requestType/$processId">$externalUrl/#$requestType/$processId</a>.
+
+<a href="$externalUrl">IBM UrbanCode Deploy</a>
+
+<br/>
+
+</body>
+</html>
+
+## END SECTION Body
+      ]]>
+    </body>
+    <description></description>
+    <content-type>text/html</content-type>
+</template>

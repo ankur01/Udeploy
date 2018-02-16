@@ -1,0 +1,67 @@
+2016-09-29 14:16:38,146 INFO  main com.urbancode.ds.cleanup.CleanupScheduledEvent - Scheduling next artifact cleanup for Fri Sep 30 00:00:00 EDT 2016
+2016-09-29 14:16:38,322 INFO  main com.urbancode.ds.cleanup.CleanupRestCallLogScheduledEvent - Scheduling next REST call log cleanup for Fri Sep 30 00:00:00 EDT 2016
+2016-09-29 14:16:38,344 INFO  main com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupScheduledEvent - Scheduling next version import record cleanup for Fri Sep 30 05:00:00 EDT 2016
+2016-09-29 14:16:38,451 INFO  main com.urbancode.ds.cleanup.HistoryCleanupScheduledEvent - Scheduling next history cleanup for Fri Sep 30 00:00:00 EDT 2016
+2016-09-29 15:19:07,638 INFO  http-0.0.0.0-8443-4 com.urbancode.ds.cleanup.CleanupScheduledEvent - Scheduling next artifact cleanup for Fri Sep 30 00:00:00 EDT 2016
+2016-09-29 15:19:07,950 INFO  http-0.0.0.0-8443-4 com.urbancode.ds.cleanup.HistoryCleanupScheduledEvent - Scheduling next history cleanup for Fri Sep 30 00:00:00 EDT 2016
+2016-09-30 00:00:00,347 INFO  AsynEventService-3 com.urbancode.ds.cleanup.CleanupEventListener - Handling Cleanup event
+2016-09-30 00:00:00,347 INFO  AsynEventService-7 com.urbancode.ds.cleanup.CleanupRestCallLogEventListener - Handling Cleanup Rest Call Log event
+2016-09-30 00:00:00,494 INFO  AsynEventService-8 com.urbancode.ds.cleanup.HistoryCleanupScheduledEvent - Scheduling next history cleanup for Sat Oct 01 00:00:00 EDT 2016
+2016-09-30 00:00:00,498 INFO  AsynEventService-3 com.urbancode.ds.cleanup.CleanupScheduledEvent - Scheduling next artifact cleanup for Sat Oct 01 00:00:00 EDT 2016
+2016-09-30 00:00:01,102 INFO  AsynEventService-7 com.urbancode.ds.cleanup.CleanupRestCallLogScheduledEvent - Scheduling next REST call log cleanup for Sat Oct 01 00:00:00 EDT 2016
+2016-09-30 00:00:01,337 INFO  AsynEventService-8 com.urbancode.ds.cleanup.HistoryCleanup - Cleanup is disabled and will not run.
+2016-09-30 00:00:01,447 INFO  AsynEventService-3 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Running cleanup...
+2016-09-30 00:00:01,537 INFO  AsynEventService-3 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Cleaning up versions []...
+2016-09-30 00:00:01,537 INFO  AsynEventService-3 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Done.
+2016-09-30 05:00:00,070 INFO  AsynEventService-6 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupEventListener - Handling Cleanup event
+2016-09-30 05:00:00,137 INFO  AsynEventService-6 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupScheduledEvent - Scheduling next version import record cleanup for Sat Oct 01 05:00:00 EDT 2016
+2016-09-30 05:00:00,335 INFO  AsynEventService-6 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanup - Starting cleanup of version import records...
+2016-09-30 05:00:00,769 INFO  AsynEventService-6 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupScheduledEvent - Version Import Record Cleanup is complete.
+2016-10-01 11:24:30,536 INFO  AsynEventService-0 com.urbancode.ds.cleanup.CleanupEventListener - Handling Cleanup event
+2016-10-01 11:24:31,861 INFO  AsynEventService-2 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupEventListener - Handling Cleanup event
+2016-10-01 11:24:31,889 INFO  AsynEventService-4 com.urbancode.ds.cleanup.CleanupRestCallLogEventListener - Handling Cleanup Rest Call Log event
+2016-10-01 11:24:31,973 INFO  AsynEventService-5 com.urbancode.ds.cleanup.HistoryCleanupScheduledEvent - Scheduling next history cleanup for Sun Oct 02 00:00:00 EDT 2016
+2016-10-01 11:24:32,006 INFO  AsynEventService-2 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupScheduledEvent - Scheduling next version import record cleanup for Sun Oct 02 05:00:00 EDT 2016
+2016-10-01 11:24:32,009 INFO  AsynEventService-0 com.urbancode.ds.cleanup.CleanupScheduledEvent - Scheduling next artifact cleanup for Sun Oct 02 00:00:00 EDT 2016
+2016-10-01 11:24:33,215 INFO  AsynEventService-2 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanup - Starting cleanup of version import records...
+2016-10-01 11:24:33,257 INFO  AsynEventService-5 com.urbancode.ds.cleanup.HistoryCleanup - Cleanup is disabled and will not run.
+2016-10-01 11:24:33,309 INFO  AsynEventService-0 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Running cleanup...
+2016-10-01 11:24:34,388 INFO  AsynEventService-0 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Cleaning up versions []...
+2016-10-01 11:24:34,392 INFO  AsynEventService-0 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Done.
+2016-10-01 11:24:34,418 INFO  AsynEventService-4 com.urbancode.ds.cleanup.CleanupRestCallLogScheduledEvent - Scheduling next REST call log cleanup for Sun Oct 02 00:00:00 EDT 2016
+2016-10-01 11:24:34,823 INFO  AsynEventService-2 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupScheduledEvent - Version Import Record Cleanup is complete.
+2016-10-02 11:09:29,769 INFO  AsynEventService-9 com.urbancode.ds.cleanup.CleanupEventListener - Handling Cleanup event
+2016-10-02 11:09:29,769 INFO  AsynEventService-7 com.urbancode.ds.cleanup.CleanupRestCallLogEventListener - Handling Cleanup Rest Call Log event
+2016-10-02 11:09:29,769 INFO  AsynEventService-1 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupEventListener - Handling Cleanup event
+2016-10-02 11:09:29,776 INFO  AsynEventService-1 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupScheduledEvent - Scheduling next version import record cleanup for Mon Oct 03 05:00:00 EDT 2016
+2016-10-02 11:09:29,787 INFO  AsynEventService-8 com.urbancode.ds.cleanup.HistoryCleanupScheduledEvent - Scheduling next history cleanup for Mon Oct 03 00:00:00 EDT 2016
+2016-10-02 11:09:29,789 INFO  AsynEventService-9 com.urbancode.ds.cleanup.CleanupScheduledEvent - Scheduling next artifact cleanup for Mon Oct 03 00:00:00 EDT 2016
+2016-10-02 11:09:32,585 INFO  AsynEventService-1 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanup - Starting cleanup of version import records...
+2016-10-02 11:09:32,633 INFO  AsynEventService-8 com.urbancode.ds.cleanup.HistoryCleanup - Cleanup is disabled and will not run.
+2016-10-02 11:09:32,687 INFO  AsynEventService-9 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Running cleanup...
+2016-10-02 11:09:33,157 INFO  AsynEventService-9 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Cleaning up versions []...
+2016-10-02 11:09:33,157 INFO  AsynEventService-9 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Done.
+2016-10-02 11:09:34,502 INFO  AsynEventService-1 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupScheduledEvent - Version Import Record Cleanup is complete.
+2016-10-02 11:09:36,741 INFO  AsynEventService-7 com.urbancode.ds.cleanup.CleanupRestCallLogScheduledEvent - Scheduling next REST call log cleanup for Mon Oct 03 00:00:00 EDT 2016
+2016-10-03 00:00:02,502 INFO  AsynEventService-5 com.urbancode.ds.cleanup.CleanupRestCallLogEventListener - Handling Cleanup Rest Call Log event
+2016-10-03 00:00:02,536 INFO  AsynEventService-6 com.urbancode.ds.cleanup.CleanupEventListener - Handling Cleanup event
+2016-10-03 00:00:03,993 INFO  AsynEventService-3 com.urbancode.ds.cleanup.HistoryCleanupScheduledEvent - Scheduling next history cleanup for Tue Oct 04 00:00:00 EDT 2016
+2016-10-03 00:00:04,016 INFO  AsynEventService-6 com.urbancode.ds.cleanup.CleanupScheduledEvent - Scheduling next artifact cleanup for Tue Oct 04 00:00:00 EDT 2016
+2016-10-03 00:00:04,791 INFO  AsynEventService-5 com.urbancode.ds.cleanup.CleanupRestCallLogScheduledEvent - Scheduling next REST call log cleanup for Tue Oct 04 00:00:00 EDT 2016
+2016-10-03 00:00:05,983 INFO  AsynEventService-6 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Running cleanup...
+2016-10-03 00:00:05,995 INFO  AsynEventService-3 com.urbancode.ds.cleanup.HistoryCleanup - Cleanup is disabled and will not run.
+2016-10-03 00:00:06,280 INFO  AsynEventService-6 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Cleaning up versions []...
+2016-10-03 00:00:06,281 INFO  AsynEventService-6 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Done.
+2016-10-03 14:06:34,449 INFO  AsynEventService-0 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupEventListener - Handling Cleanup event
+2016-10-03 14:06:34,496 INFO  AsynEventService-0 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupScheduledEvent - Scheduling next version import record cleanup for Tue Oct 04 05:00:00 EDT 2016
+2016-10-03 14:06:34,609 INFO  AsynEventService-0 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanup - Starting cleanup of version import records...
+2016-10-03 14:06:47,962 INFO  AsynEventService-0 com.urbancode.ds.cleanup.SourceConfigExecutionRecordCleanupScheduledEvent - Version Import Record Cleanup is complete.
+2016-10-04 00:00:00,089 INFO  AsynEventService-2 com.urbancode.ds.cleanup.CleanupRestCallLogEventListener - Handling Cleanup Rest Call Log event
+2016-10-04 00:00:00,104 INFO  AsynEventService-8 com.urbancode.ds.cleanup.CleanupEventListener - Handling Cleanup event
+2016-10-04 00:00:00,188 INFO  AsynEventService-4 com.urbancode.ds.cleanup.HistoryCleanupScheduledEvent - Scheduling next history cleanup for Wed Oct 05 00:00:00 EDT 2016
+2016-10-04 00:00:00,188 INFO  AsynEventService-8 com.urbancode.ds.cleanup.CleanupScheduledEvent - Scheduling next artifact cleanup for Wed Oct 05 00:00:00 EDT 2016
+2016-10-04 00:00:00,359 INFO  AsynEventService-2 com.urbancode.ds.cleanup.CleanupRestCallLogScheduledEvent - Scheduling next REST call log cleanup for Wed Oct 05 00:00:00 EDT 2016
+2016-10-04 00:00:00,559 INFO  AsynEventService-4 com.urbancode.ds.cleanup.HistoryCleanup - Cleanup is disabled and will not run.
+2016-10-04 00:00:00,565 INFO  AsynEventService-8 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Running cleanup...
+2016-10-04 00:00:00,681 INFO  AsynEventService-8 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Cleaning up versions []...
+2016-10-04 00:00:00,681 INFO  AsynEventService-8 com.urbancode.ds.cleanup.Cleanup - TJT0_WebApp: Done.

@@ -1,0 +1,54 @@
+================================================================================
+plugin: File System, id: com.urbancode.air.plugin.source.fileSystemBasic, version: 2
+plugin command: 'cmd' '/C' '""C:\Program Files\Java\jdk1.8.0_101\bin\java" "-Dfile.encoding=Cp1252" "-Dconsole.encoding=Cp1252" -jar "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.source.fileSystemBasic_2_12462e91f00b1ac074ec45b6a14bfe68eab3b7e9426be5fc129e4e4e316f1d49\FileSystemSourceConfig.jar" ImportVersion "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs403564221855258750\input.props" "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs403564221855258750\output.props""'
+working directory: C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\work\SourceConfig
+properties:
+  PLUGIN_INPUT_PROPS=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs403564221855258750\input.props
+  PLUGIN_OUTPUT_PROPS=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs403564221855258750\output.props
+  authToken=****
+  basePath=C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target
+  componentName=TJT0_WebApp
+  description=
+  extensions=
+  isAutoIntegration=false
+  isUseVFS=true
+  name=1
+  namePattern=${version}
+  nextNumber=
+  useNamePattern=false
+environment:
+  AGENT_HOME=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent
+  AH_AUTH_TOKEN=****
+  AH_WEB_URL=https://localhost:8443
+  AUTH_TOKEN=****
+  DS_SYSTEM_ENCODING=Cp1252
+  JAVA_OPTS=-Dfile.encoding=Cp1252 -Dconsole.encoding=Cp1252
+  PLUGIN_HOME=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.source.fileSystemBasic_2_12462e91f00b1ac074ec45b6a14bfe68eab3b7e9426be5fc129e4e4e316f1d49
+  UD_DIALOGUE_ID=140a2dbc-1d37-4cec-b88c-34d37ce45de2
+================================================================================
+Creating new version: 1
+Uploading artifact files.
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\classes
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\hello-java-1.0
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\hello-java-1.0.war
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\manifest.yml
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\maven-archiver
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\maven-status
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\maven-status\maven-compiler-plugin
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\maven-status\maven-compiler-plugin\compile
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\maven-status\maven-compiler-plugin\compile\default-compile
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\maven-status\maven-compiler-plugin\compile\default-compile\createdFiles.lst
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\maven-status\maven-compiler-plugin\compile\default-compile\inputFiles.lst
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\maven-archiver\pom.properties
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\hello-java-1.0\META-INF
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\hello-java-1.0\WEB-INF
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\hello-java-1.0\WEB-INF\classes
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\hello-java-1.0\WEB-INF\web.xml
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\hello-java-1.0\WEB-INF\classes\org
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\hello-java-1.0\WEB-INF\classes\org\cloudfoundry
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\hello-java-1.0\WEB-INF\classes\org\cloudfoundry\samples
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\hello-java-1.0\WEB-INF\classes\org\cloudfoundry\samples\HelloServlet.class
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\classes\org
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\classes\org\cloudfoundry
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\classes\org\cloudfoundry\samples
+Uploading file C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target\classes\org\cloudfoundry\samples\HelloServlet.class

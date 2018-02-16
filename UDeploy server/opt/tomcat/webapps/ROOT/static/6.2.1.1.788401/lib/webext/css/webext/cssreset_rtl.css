@@ -1,0 +1,17 @@
+/*
+* Licensed Materials - Property of IBM Corp.
+* IBM UrbanCode Build
+* IBM UrbanCode Deploy
+* IBM UrbanCode Release
+* IBM AnthillPro
+* (c) Copyright IBM Corporation 2002, 2014. All Rights Reserved.
+*
+* U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+* GSA ADP Schedule Contract with IBM Corp.
+*/
+/* HTML reset */
+.rtl-ui html, .rtl-ui body, .rtl-ui div, .rtl-ui span, .rtl-ui applet, .rtl-ui object, .rtl-ui iframe, .rtl-ui h1, .rtl-ui h2, .rtl-ui h3, .rtl-ui h4, .rtl-ui h5, .rtl-ui h6, .rtl-ui p, .rtl-ui blockquote, .rtl-ui pre, .rtl-ui a, .rtl-ui abbr, .rtl-ui acronym, .rtl-ui address, .rtl-ui big, .rtl-ui cite, .rtl-ui code, .rtl-ui del, .rtl-ui dfn, .rtl-ui em, .rtl-ui img, .rtl-ui ins, .rtl-ui kbd, .rtl-ui q, .rtl-ui s, .rtl-ui samp, .rtl-ui small, .rtl-ui strike, .rtl-ui strong, .rtl-ui sub, .rtl-ui sup, .rtl-ui tt, .rtl-ui var, .rtl-ui b, .rtl-ui u, .rtl-ui i, .rtl-ui center, .rtl-ui dl, .rtl-ui dt, .rtl-ui dd, .rtl-ui ol, .rtl-ui ul, .rtl-ui li, .rtl-ui fieldset, .rtl-ui form, .rtl-ui label, .rtl-ui legend, .rtl-ui table, .rtl-ui caption, .rtl-ui tbody, .rtl-ui tfoot, .rtl-ui thead, .rtl-ui tr, .rtl-ui th, .rtl-ui td, .rtl-ui article, .rtl-ui aside, .rtl-ui canvas, .rtl-ui details, .rtl-ui embed, .rtl-ui figure, .rtl-ui figcaption, .rtl-ui footer, .rtl-ui header, .rtl-ui hgroup, .rtl-ui menu, .rtl-ui nav, .rtl-ui output, .rtl-ui ruby, .rtl-ui section, .rtl-ui summary, .rtl-ui time, .rtl-ui mark, .rtl-ui audio, .rtl-ui video {
+	margin: 0;
+	padding: 0;
+}
+

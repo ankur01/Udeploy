@@ -1,0 +1,14 @@
+Thu Sep 29 14:16:04 EDT 2016 : Apache Derby Network Server - 10.8.3.1 - (1476465) started and ready to accept connections on port 11377
+----------------------------------------------------------------
+Thu Sep 29 14:16:08 EDT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.1 - (1476465): instance a816c00e-0157-7729-179d-ffff8f7d0505 
+on database directory C:\Users\Ankur.Kashyap\Documents\UDeploy server\appdata\var\db\data  with class loader com.urbancode.launcher.LauncherClassLoader@799f7e29 
+Loaded from file:/C:/Users/Ankur.Kashyap/Documents/UDeploy server/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_101-b13
+user.dir=C:\Users\Ankur.Kashyap\Documents\UDeploy server\bin
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\Ankur.Kashyap\Documents\UDeploy server\bin\..\appdata\var\db
+Database Class Loader started - derby.database.classpath=''

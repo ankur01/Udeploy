@@ -1,0 +1,27 @@
+================================================================================
+plugin: File System, id: com.urbancode.air.plugin.source.fileSystemBasic, version: 2
+plugin command: 'cmd' '/C' '""C:\Program Files\Java\jdk1.8.0_101\bin\java" "-Dfile.encoding=Cp1252" "-Dconsole.encoding=Cp1252" -jar "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.source.fileSystemBasic_2_12462e91f00b1ac074ec45b6a14bfe68eab3b7e9426be5fc129e4e4e316f1d49\FileSystemSourceConfig.jar" ImportVersion "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs6385563897562200965\input.props" "C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs6385563897562200965\output.props""'
+working directory: C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\work\SourceConfig
+properties:
+  PLUGIN_INPUT_PROPS=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs6385563897562200965\input.props
+  PLUGIN_OUTPUT_PROPS=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\temp\logs6385563897562200965\output.props
+  authToken=****
+  basePath=C:\Users\Ankur.Kashyap\Documents\java sample project\hello-java\target
+  componentName=TJT0_WebApp
+  extensions=
+  isAutoIntegration=true
+  isUseVFS=true
+  namePattern=${version}
+  nextNumber=1
+  useNamePattern=false
+environment:
+  AGENT_HOME=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent
+  AH_AUTH_TOKEN=****
+  AH_WEB_URL=https://localhost:8443
+  AUTH_TOKEN=****
+  DS_SYSTEM_ENCODING=Cp1252
+  JAVA_OPTS=-Dfile.encoding=Cp1252 -Dconsole.encoding=Cp1252
+  PLUGIN_HOME=C:\Users\Ankur.Kashyap\Documents\UDeploy Agent\var\plugins\com.urbancode.air.plugin.source.fileSystemBasic_2_12462e91f00b1ac074ec45b6a14bfe68eab3b7e9426be5fc129e4e4e316f1d49
+  UD_DIALOGUE_ID=81eb18ef-13f3-4e06-a0b2-6f70768d12e2
+================================================================================
+Error Creating New Version: Automatic Integration is not supported for this Source Configuration.

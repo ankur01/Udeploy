@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+- Licensed Materials - Property of IBM Corp.
+- IBM UrbanCode Deploy
+- (c) Copyright IBM Corporation 2011, 2015. All Rights Reserved.
+-
+- U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+- GSA ADP Schedule Contract with IBM Corp.
+-->
+<template>
+    <name>ProcessRequestStarted</name>
+    <body>
+      <![CDATA[
+## BEGIN SECTION Subject
+A process on $application.getName() started
+## END SECTION Subject
+## BEGIN SECTION Body
+## PROPERTY Content-Type: text/html
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+<title></title>
+<STYLE TYPE="text/css">
+table.data-table td {
+    vertical-align: top;
+}
+
+table.data-table
+{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    background-color: #567596;
+}
+
+table.data-table caption
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+table.data-table th
+{
+    background-color: #cfdbef;
+    height: 25px;
+}
+
+table.data-table td
+{
+    vertical-align: top;
+}
+
+table.data-table tr.odd
+{
+    background-color: #ffffff;
+}
+
+table.data-table tr.even
+{
+    background-color: #f6f6f6;
+}
+
+.data-table-button-bar
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.data-table-container
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+</STYLE>
+</head>
+<body>
+
+<h2>A process on $application.getName() started</h2>
+<table>
+  <tr><td>Application:</td>
+      <td>$application.getName()</td>
+  </tr>
+  <tr><td>Process:</td>
+      <td>$applicationProcess.getName()</td>
+  </tr>
+  #if ($snapshot)
+    <tr><td>Snapshot:</td>
+        <td>$snapshot.getName()</td>
+   </tr>
+  #end
+  <tr><td>Environment:</td>
+      <td>$environment.getName()</td>
+  </tr>
+  <tr><td>Requested by:</td>
+      <td>$user.getName()</td>
+  </tr>
+  <tr><td>Requested on:</td>
+      <td>$fn.formatDate($request.getSubmittedDate())</td>
+  </tr>
+  <tr><td>Description:</td>
+      <td>
+        #if ($request.getDescription())
+          $request.getDescription()
+        #end
+      </td>
+  </tr>
+</table>
+
+<div class="data-table-container">
+#if ($versions.size() > 0)
+  <h3>Included versions</h3>
+  <table class="data-table" cellpadding="4" cellspacing="1" width="100%">
+   <thead class="data-table-head">
+      <th style="text-align:left;" scope="col" valign="middle">Component</th>
+      <th style="text-align:left;" scope="col" valign="middle">Version</th>
+      <th style="text-align:left;" scope="col" valign="middle">Description</th>
+   </thead>
+   <tbody>
+    #foreach ($version in $versions)
+      #if ($velocityCount % 2 == 1)
+          #set ($rowClass = "odd")
+      #else
+          #set ($rowClass = "even")
+      #end
+      <tr class="$rowClass">
+       <td>$version.getComponent().getName()</td>
+       <td>$version.getName()</td>
+       <td>
+         #if ($version.getDescription())
+           $version.getDescription()
+         #end
+       </td>
+     </tr>
+    #end
+   </tbody>
+  </table>
+#else
+  <h3>No versions included</h3>
+#end
+</div>
+
+<div class="data-table-container">
+#if ($uniqueComponentNames.size() > 0)
+  <h3>Pending changes</h3>
+  <table class="data-table" cellpadding="4" cellspacing="1" width="100%">
+   <thead class="data-table-head">
+      <th style="text-align:left;" scope="col" valign="middle">Component / Resource</th>
+      <th style="text-align:left;" scope="col" valign="middle">Version</th>
+      <th style="text-align:left;" scope="col" valign="middle">Type</th>
+      <th style="text-align:left;" scope="col" valign="middle"></th>
+   </thead>
+   <tbody>
+    #foreach ($componentName in $uniqueComponentNames)
+      #if ($velocityCount % 2 == 1)
+          #set ($rowClass = "odd")
+      #else
+          #set ($rowClass = "even")
+      #end
+      <tr class="$rowClass">
+          <td>$componentName</td>
+          <td></td><td></td><td></td>
+      </tr>
+       #set ($resourceChanges = $changesByComponent.get($componentName))
+       #foreach ($change in $resourceChanges)
+         <tr class="$rowClass">
+          <td style="padding-left:20px;">$change.getResource().getName()</td>
+          <td style="padding-left:20px;">$change.getVersion().getName()</td>
+          <td style="padding-left:20px; background-color:$fn.getChangeTypeColor($change)">
+            $fn.getChangeTypeDisplayName($change)
+          </td>
+          <td style="padding-left:20px;">
+            <a href="$externalUrl#resource/$change.getResource().getId().toString()">
+              Details
+            </a>
+          </td>
+         </tr>
+       #end
+    #end
+   </tbody>
+  </table>
+#else
+  <h3>No pending inventory changes</h3>
+#end
+</div>
+
+More information about this process request is available at <a href="$externalUrl#applicationProcessRequest/$request.getId().toString()">$externalUrl#applicationProcessRequest/$request.getId().toString()</a>.
+
+<a href="$externalUrl">IBM UrbanCode Deploy</a>
+
+</body>
+</html>
+
+## END SECTION Body
+      ]]>
+    </body>
+    <description></description>
+    <content-type>text/html</content-type>
+</template>

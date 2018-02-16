@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<!--
+- Licensed Materials - Property of IBM Corp.
+- IBM UrbanCode Deploy
+- (c) Copyright IBM Corporation 2011, 2014. All Rights Reserved.
+-
+- U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+- GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<!--
+- Upgrades for product version 6.0.1.x.
+-->
+
+<change-set release="6.1">
+  <library name="workflow"
+      release="1.0"
+      base-dir="../workflow"
+      file="../workflow/postgres/upgrade_sql_1.0.xml"
+      version-table="wf_db_version"
+      release-column="release_name"
+      version-column="ver"/>
+  <library name="security"
+      release="1.0"
+      base-dir="../security"
+      file="../security/postgres/upgrade_1.0.xml"
+      version-table="sec_db_version"
+      release-column="release_name"
+      version-column="ver"/>
+  <library name="vc"
+      release="1.0"
+      base-dir="../vc"
+      file="../vc/postgres/upgrade_sql_1.0.xml"
+      version-table="vc_db_version"
+      release-column="release_name"
+      version-column="ver"/>
+  <library name="property-sheets"
+      release="1.0"
+      base-dir="../property-sheets"
+      file="../property-sheets/postgres/upgrade_sql_1.0.xml"
+      version-table="ps_db_version"
+      release-column="release_name"
+      version-column="ver"/>
+  <library name="inventory"
+      release="1.0"
+      base-dir="../inventory"
+      file="../inventory/postgres/upgrade_1.0.xml"
+      version-table="inv_db_version"
+      release-column="release_name"
+      version-column="ver"/>
+  <change number="1">
+    <description>Add join table for Component tagging</description>
+    <sql separator=";">
+        create table ds_component_to_tag (
+            component_id varchar(36) not null,
+            tag_id varchar(36) not null
+        );
+    </sql>
+  </change>
+  <change number="2">
+    <description>Add join table for Agent tagging</description>
+    <sql separator=";">
+        create table ds_agent_to_tag (
+            agent_id varchar(36) not null,
+            tag_id varchar(36) not null
+        );
+    </sql>
+  </change>
+  <change number="3">
+    <description>Add join table for Application tagging</description>
+    <sql separator=";">
+        create table ds_application_to_tag (
+            application_id varchar(36) not null,
+            tag_id varchar(36) not null
+        );
+    </sql>
+  </change>
+  <change number="4">
+    <description>Add ghosting for inventory entries</description>
+      <changeref library="inventory" change="1"/>
+  </change>
+  <change number="5">
+   <description>Add table for cross process synchronization</description>
+    <sql separator=";">
+        create table ds_sync (
+            name varchar(255) not null primary key,
+            locked varchar(1) not null
+        );
+    </sql>
+  </change>
+  <change number="6">
+    <description>Disable Deleted Security Resources</description>
+      <sql separator=";">
+        update sec_resource SET enabled = 'N' where id in
+                (select sec_resource_id from ds_component where active = 'N');
+
+        update sec_resource SET enabled = 'N' where id in
+                (select sec_resource_id from ds_application where active = 'N');
+
+        update sec_resource SET enabled = 'N' where id in
+                (select sec_resource_id from ds_agent where active = 'N');
+
+        update sec_resource SET enabled = 'N' where id in
+                (select sec_resource_id from ds_agent_pool where active = 'N');
+
+        update sec_resource SET enabled = 'N' where id in
+                (select sec_resource_id from ds_environment where active = 'N');
+
+        update sec_resource SET enabled = 'N' where id in
+                (select sec_resource_id from ds_resource where active = 'N');
+
+        update sec_resource SET enabled = 'N' where id in
+                (select sec_resource_id from ds_resource_template where ghosted_date > 0);
+      </sql>
+      <groovy file="all/upgrade-scripts-61/upgrade_005_disable_deleted_processes.groovy" />
+  </change>
+  <change number="7">
+    <description>Adding property definitions to tasks</description>
+    <sql separator=";">
+        alter table tsk_task add column prop_sheet_def_id varchar(36);
+        insert into ps_prop_sheet_def (id, version)
+            select id, version from tsk_task;
+        update tsk_task set prop_sheet_def_id = id;
+        alter table tsk_task alter column prop_sheet_def_id set not null;
+    </sql>
+  </change>
+  <change number="8">
+    <description> Add Source Config Plugin Table</description>
+    <sql separator=";">
+        create table pl_source_config_plugin (
+            id varchar(36) not null primary key,
+            version numeric default 0 not null,
+            name varchar(255),
+            tag varchar(256),
+            description varchar(4000),
+            plugin_id varchar(255) not null,
+            plugin_version numeric not null,
+            ghosted_date bigint default 0 not null,
+            plugin_hash varchar(256),
+            release_version varchar(256),
+            comp_prop_sheet_id varchar(36),
+            import_prop_sheet_id varchar(36)
+        );
+
+        create table pl_source_config_execution (
+            id varchar(36) not null primary key,
+            task_info varchar(255),
+            component_id varchar(36),
+            agent_id varchar(36),
+            start_time bigint,
+            end_time bigint,
+            status varchar(16),
+            dialogue_id varchar(36),
+            log_id varchar(36),
+            input_properties text
+        );
+
+        create unique index pl_source_config_plugin_uci on pl_source_config_plugin(plugin_id, plugin_version, ghosted_date);
+        create index pl_source_config_plugin_id on pl_source_config_plugin(plugin_id);
+
+        create index pl_src_config_exe_comp_id on pl_source_config_execution(component_id);
+        create index pl_src_config_exe_dialogue_id on pl_source_config_execution(dialogue_id);
+
+        update ds_component set source_config_plugin = 'File System' where source_config_plugin = 'File System (Basic)';
+    </sql>
+  </change>
+  <change number="9">
+    <description>Add support to specify integration agent on component</description>
+    <sql separator=";">
+      alter table ds_component add column integration_agent_id varchar(36);
+      alter table ds_component add column integration_tag_id varchar(36);
+    </sql>
+  </change>
+  <change number="10">
+    <description>Add lock for auto integration</description>
+    <sql separator=";">
+        alter table ds_sync add column value varchar(255);
+        insert into ds_sync(name, locked, value) values ('HA-AUTO-INTEGRATION-LOCK', 'N', '0');
+    </sql>
+  </change>
+  <change number="11">
+    <description>Add licensing info to Agent</description>
+    <sql separator=";">
+      alter table ds_agent add column license_type varchar(16) default 'NONE' not null;
+
+      alter table ds_plugin_task_request add column agent_id varchar(36);
+
+      insert into ps_prop_value (id,version,name,value,long_value,description,secure,prop_sheet_id)
+      values ('00000000-0000-0000-0000-100000000000',0,'license.server.url','',null,null,'N','00000000-0000-0000-0000-000000000001');
+
+      insert into ps_prop_value (id,version,name,value,long_value,description,secure,prop_sheet_id)
+      values ('00000000-0000-0000-0000-100000000001',0,'license.server.type','DEV',null,null,'N','00000000-0000-0000-0000-000000000001');
+
+      create table ds_license_log_entry (
+         id varchar(36) not null primary key,
+         version numeric default 0 not null,
+         message varchar(4000) not null,
+         violation_time bigint not null
+      );
+
+      create table ds_agent_request_record (
+        id varchar(36) not null primary key,
+        version numeric default 0 not null,
+        agent_id varchar(36) not null,
+        request_id varchar(36) not null
+      );
+    </sql>
+  </change>
+  <change number="12">
+    <description>Updating default inventory status colors</description>
+    <sql separator=";">
+      update ds_status set color = '#B3D66D' where color = '#8DD889';
+    </sql>
+  </change>
+  <change number="13">
+    <description>Remove old license table</description>
+    <sql separator=";">
+      drop table ds_license;
+    </sql>
+  </change>
+  <change number="14">
+    <description>Adding auth token tracking to source config execution</description>
+    <sql separator=";">
+        alter table pl_source_config_execution add column auth_token varchar(255);
+    </sql>
+  </change>
+  <change number="15">
+    <description>Reduce all 256 byte columns to 255 bytes</description>
+    <sql separator=";">
+      alter table cal_recurring_entry alter column recurrence_pattern type varchar(255);
+      alter table ds_db_version alter column release_name type varchar(255) not null;
+      alter table ds_tag alter column description type varchar(255);
+      alter table ds_agent alter column description type varchar(255);
+      alter table ds_agent alter column working_directory type varchar(255);
+      alter table ds_agent alter column impersonation_user type varchar(255);
+      alter table ds_agent alter column impersonation_group type varchar(255);
+      alter table ds_agent alter column impersonation_password type varchar(255);
+      alter table ds_agent_pool alter column description type varchar(255);
+      alter table ds_resource alter column description type varchar(255);
+      alter table ds_resource alter column impersonation_user type varchar(255);
+      alter table ds_resource alter column impersonation_group type varchar(255);
+      alter table ds_resource alter column impersonation_password type varchar(255);
+      alter table ds_resource_role alter column description type varchar(255);
+      alter table ds_component alter column description type varchar(255);
+      alter table ds_version alter column description type varchar(255);
+      alter table ds_notification_scheme alter column description type varchar(255);
+      alter table ds_notification_entry alter column template_name type varchar(255);
+      alter table ds_application alter column description type varchar(255);
+      alter table ds_environment alter column description type varchar(255);
+      alter table ds_env_ver_condition alter column value type varchar(255) not null;
+      alter table ds_snapshot alter column description type varchar(255);
+      alter table rt_property_context_group_map alter column prop_sheet_handle type varchar(255);
+      alter table rt_app_process_request alter column description type varchar(255);
+      alter table rt_version_selector alter column value type varchar(255) not null;
+      alter table tsk_task alter column classname type varchar(255) not null;
+      alter table pl_plugin alter column tag type varchar(255);
+      alter table pl_plugin alter column plugin_hash type varchar(255);
+      alter table pl_plugin alter column release_version type varchar(255);
+      alter table ds_plugin_task_request alter column activity_name type varchar(255) not null;
+      alter table pl_source_config_plugin alter column tag type varchar(255);
+      alter table pl_source_config_plugin alter column plugin_hash type varchar(255);
+      alter table pl_source_config_plugin alter column release_version type varchar(255);
+      alter table ds_agent_data alter column agent_data type varchar(255) not null;
+      alter table ds_network_relay alter column host type varchar(255) not null;
+      alter table ds_recent_report alter column report_type type varchar(255) not null;
+      alter table ds_recent_report alter column report_name type varchar(255) not null;
+    </sql>
+  </change>
+  <change number="16">
+    <description>Reduce all 256 byte columns to 255 bytes in dependencies</description>
+    <changeref library="inventory" change="4"/>
+    <changeref library="security" change="18"/>
+    <changeref library="workflow" change="10"/>
+  </change>
+  <change number="17">
+    <description>Adding a sync row for creating security resources</description>
+    <sql separator=";">
+      delete from ds_sync where name = 'createSecurityResource';
+      insert into ds_sync (name, locked)
+          values ('createSecurityResource', 'N');
+    </sql>
+  </change>
+  <change number="18">
+    <description>Update sec_resource names</description>
+    <sql separator=";">
+        update sec_resource S
+        set name=(select name from ds_agent A where A.sec_resource_id=S.id)
+        where exists (select name from ds_agent A where A.sec_resource_id=S.id);
+
+        update sec_resource S
+        set name=(select name from ds_agent_pool A where A.sec_resource_id=S.id)
+        where exists (select name from ds_agent_pool A where A.sec_resource_id=S.id);
+
+        update sec_resource S
+        set name=(select name from ds_application A where A.sec_resource_id=S.id)
+        where exists (select name from ds_application A where A.sec_resource_id=S.id);
+
+        update sec_resource S
+        set name=(select name from ds_component C where C.sec_resource_id=S.id)
+        where exists (select name from ds_component C where C.sec_resource_id=S.id);
+
+        update sec_resource S
+        set name=(select name from ds_environment E where E.sec_resource_id=S.id)
+        where exists (select name from ds_environment E where E.sec_resource_id=S.id);
+
+        update sec_resource S
+        set name=(select name from ds_resource R where R.sec_resource_id=S.id)
+        where exists (select name from ds_resource R where R.sec_resource_id=S.id);
+    </sql>
+    <groovy file="all/upgrade-scripts-61/upgrade_018_update_sec_resource_names.groovy" />
+  </change>
+  <change number="19">
+      <description>Add category column to sec_action</description>
+      <changeref library="security" change="19"/>
+  </change>
+  <change number="20">
+      <description>Adding a sync row for getting resource config entries</description>
+      <sql separator=";">
+          delete from ds_sync where name = 'getResourceConfigEntries';
+          insert into ds_sync (name, locked)
+          values ('getResourceConfigEntries', 'N');
+      </sql>
+  </change>
+  <change number="21">
+    <description>pl_plugin_command backwards compatibility</description>
+  </change>
+  <change number="22">
+    <description>Make sec_action name index non-unique</description>
+    <changeref library="security" change="20"/>
+  </change>
+  <change number="23">
+      <description>Add missing indexed to foreign keys</description>
+      <changeref library="security" change="21"/>
+      <sql separator=";">
+          create index ds_evc_id
+              on ds_env_ver_condition(environment_id);
+
+          create index rt_apr_dr_id
+              on rt_app_process_request(deployment_request_id);
+
+          create index rt_apr2ver_sel_cmp_id
+              on rt_version_selector(component_id);
+
+          create index rt_apr2ver_sel_env_id
+              on rt_version_selector(environment_id);
+      </sql>
+  </change>
+  <change number="24">
+    <description>Allow Desired Inventory without a request</description>
+    <changeref library="inventory" change="6"/>
+  </change>
+  <change number="25">
+    <description>Add artifact list permission</description>
+    <sql separator=";">
+      insert into sec_action (id, version, name, description, enabled, cascading, sec_resource_type_id, category)
+      values ('200000000000000000000000001b0005', 0, 'Read Artifact Set List', 'Read list of all artifact sets.', 'Y', 'Y', '20000000000000000000000000000201', null);
+    </sql>
+  </change>
+  <change number="26">
+    <description>Add property context mapping index counter</description>
+    <sql separator=";">
+      alter table rt_property_context add column next_mapping_index numeric default 100000 not null;
+      alter table rt_property_context alter column next_mapping_index set default 0;
+    </sql>
+  </change>
+
+<!--
+- REMINDER: Upgrades for product version 6.0.1.x. Place additions above this comment.
+-->
+</change-set>

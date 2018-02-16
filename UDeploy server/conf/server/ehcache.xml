@@ -1,0 +1,36 @@
+<!--
+- Licensed Materials - Property of IBM Corp.
+- IBM UrbanCode Deploy
+- (c) Copyright IBM Corporation 2011, 2014. All Rights Reserved.
+-
+- U.S. Government Users Restricted Rights - Use, duplication or disclosure restricted by
+- GSA ADP Schedule Contract with IBM Corp.
+-->
+<ehcache updateCheck="false">
+  <diskStore path="java.io.tmpdir" />
+  <cache name="deployServerCache" 
+    maxElementsInMemory="10000" 
+    timeToIdleSeconds="480" />
+  <cache name="securityServerCache" 
+    maxElementsInMemory="10000" 
+    timeToIdleSeconds="480" />
+  <cache name="securityServerCacheNoVersion" 
+    maxElementsInMemory="10000" 
+    timeToIdleSeconds="480" />
+  <cache name="vcCache" 
+    maxElementsInMemory="10000" 
+    timeToIdleSeconds="480" />
+  <cache name="propSheetsCache" 
+    maxElementsInMemory="10000" 
+    timeToIdleSeconds="480" />
+  <cache name="workflowCache" 
+    maxElementsInMemory="10000" 
+    timeToIdleSeconds="480" />
+  <cache name="httpPropCache"
+    maxElementsInMemory="10000"
+    timeToLiveSeconds="60" />
+  <defaultCache 
+    maxElementsInMemory="10000" 
+    timeToIdleSeconds="480" 
+    timeToLiveSeconds="3"/>
+</ehcache>
